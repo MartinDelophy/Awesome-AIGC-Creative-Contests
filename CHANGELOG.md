@@ -22,3 +22,4 @@ Notable project-level changes are documented here. Routine contest additions, up
 - Expanded the active directory with verified contests in the United States, Canada, Poland, and the United Kingdom.
 - Strengthened validation for identifiers, empty and unknown fields, duplicate categories, dates, and HTTPS URLs.
 - Expanded continuous integration to validate pull requests and pushes to `main`.
+- Made the Codex daily research refresh the trigger for the WeCom digest, avoiding a second independent notification schedule.
