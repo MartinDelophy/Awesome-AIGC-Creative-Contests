@@ -1,0 +1,61 @@
+name: 提交赛事
+description: 推荐一个仍可报名或即将开放的 AIGC 创作比赛
+title: "[新增赛事] "
+labels: ["new-contest"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: 赛事名称
+    validations:
+      required: true
+  - type: input
+    id: official_url
+    attributes:
+      label: 官方活动页
+      placeholder: https://
+    validations:
+      required: true
+  - type: input
+    id: rules_url
+    attributes:
+      label: 官方规则页
+      placeholder: https://
+    validations:
+      required: true
+  - type: input
+    id: dates
+    attributes:
+      label: 报名时间与时区
+      placeholder: 2026-09-01 至 2026-09-30 23:59 KST
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: 主要类别
+      multiple: true
+      options:
+        - 视频 / 电影 / 动画
+        - 图像 / 视觉艺术
+        - 音频 / 音乐
+        - 文字 / 剧本
+        - 应用 / 交互 / 小程序
+    validations:
+      required: true
+  - type: textarea
+    id: eligibility
+    attributes:
+      label: 参赛资格、费用和奖励
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 提交前确认
+      options:
+        - label: 我已确认当前仍可报名，或官方已经公布未来开放日期。
+          required: true
+        - label: 我提供的日期来自官方页面，而不是只有聚合站或群聊截图。
+          required: true
+

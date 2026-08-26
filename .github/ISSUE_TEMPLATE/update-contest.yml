@@ -1,0 +1,37 @@
+name: 报告赛事变更
+description: 报告延期、提前截止、规则变化或失效链接
+title: "[赛事变更] "
+labels: ["contest-update"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: 赛事名称
+    validations:
+      required: true
+  - type: dropdown
+    id: change
+    attributes:
+      label: 变更类型
+      options:
+        - 延期或日期调整
+        - 已提前截止
+        - 参赛规则变化
+        - 官方链接失效
+        - 信息有误
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: 变更详情
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: 证明变更的官方链接
+      placeholder: https://
+    validations:
+      required: true
+
