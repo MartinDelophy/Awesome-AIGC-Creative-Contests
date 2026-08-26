@@ -7,14 +7,13 @@ import argparse
 import json
 import os
 import sys
-import time
 from datetime import date
 from typing import Callable
 from urllib.error import HTTPError, URLError
 from urllib.parse import parse_qs, urlparse
 from urllib.request import Request, urlopen
 
-from build_readme import CATEGORY_LABELS, load_contests, parse_date, visible_contests
+from build_readme import CATEGORY_LABELS, load_contests, parse_date
 
 
 WEBHOOK_ENV_NAME = "WECOM_WEBHOOK_URL"
@@ -24,8 +23,8 @@ WECOM_WEBHOOK_PATH = "/cgi-bin/webhook/send"
 # future formatting changes.
 # https://developer.work.weixin.qq.com/document/path/91770
 MAX_MESSAGE_BYTES = 3_800
-SEND_INTERVAL_SECONDS = 1.0
 REPOSITORY_URL = "https://github.com/MartinDelophy/Awesome-AIGC-Creative-Contests"
+DIRECTORY_URL = f"{REPOSITORY_URL}/blob/main/README.zh-CN.md"
 
 
 def clean_markdown(value: str) -> str:
@@ -59,73 +58,53 @@ def render_contest(item: dict, today: date) -> str:
     return "\n".join(
         [
             f"### {deadline_status(item, today)}｜{clean_markdown(item['title'])}",
-            f"> **截止**：{clean_markdown(item['deadline'])}（{clean_markdown(item['timezone'])}）",
-            f"> **地区**：{clean_markdown(item['region'])}",
+            (
+                f"> **截止**：{clean_markdown(item['deadline'])}"
+                f"（{clean_markdown(item['timezone'])}）｜**类别**：{categories}"
+            ),
             f"> **参赛资格**：{clean_markdown(item['eligibility'])}",
-            f"> **奖金**：{clean_markdown(item['prize'])}",
-            f"> **费用**：{clean_markdown(item['fee'])}",
-            f"> **类别**：{categories}",
-            f"> **主办方**：{clean_markdown(item['organizer'])}",
             f"[活动地址]({item['official_url']}) ｜ [比赛规则]({item['rules_url']})",
         ]
     )
 
 
-def render_header(
-    today: date,
-    contest_count: int,
-    open_count: int,
-    upcoming_count: int,
-    page: int,
-    page_count: int,
-) -> str:
+def render_header(today: date, contest_count: int) -> str:
     return "\n".join(
         [
-            f"## AIGC 创作比赛每日提醒（{page}/{page_count}）",
-            (
-                f"> 日期：{today.isoformat()}｜共 {contest_count} 项｜"
-                f"报名中 {open_count} 项｜即将开放 {upcoming_count} 项"
-            ),
+            "## AIGC 创作比赛每日提醒",
+            f"> {today.isoformat()}｜最近更新优先｜共 {contest_count} 项",
         ]
     )
 
 
-def render_footer() -> str:
-    return (
-        f"> 数据来自 [Awesome AIGC Creative Contests]({REPOSITORY_URL})，"
-        "报名与投稿前请再次核对官方规则。"
-    )
+def render_footer(hidden_count: int) -> str:
+    if hidden_count:
+        return (
+            f"> 另有 {hidden_count} 项未展示，查看 [完整比赛清单]({DIRECTORY_URL})；"
+            "报名与投稿前请核对官方规则。"
+        )
+    return f"> 已展示全部比赛；报名与投稿前请核对 [官方清单]({DIRECTORY_URL})。"
 
 
 def encoded_size(value: str) -> int:
     return len(value.encode("utf-8"))
 
 
-def pack_blocks(blocks: list[str], available_bytes: int) -> list[list[str]]:
-    if available_bytes <= 0:
-        raise ValueError("消息长度上限不足以容纳摘要标题")
+def active_by_latest(contests: list[dict], today: date) -> list[dict]:
+    active = [
+        item
+        for item in contests
+        if parse_date(item["deadline"], "deadline", item["id"]) >= today
+    ]
+    return sorted(
+        active,
+        key=lambda item: parse_date(item["verified_on"], "verified_on", item["id"]),
+        reverse=True,
+    )
 
-    pages: list[list[str]] = []
-    current: list[str] = []
-    current_size = 0
-    separator_size = encoded_size("\n\n")
 
-    for block in blocks:
-        block_size = encoded_size(block)
-        if block_size > available_bytes:
-            raise ValueError("单条赛事信息超过企业微信消息长度上限，请精简该赛事字段")
-        added_size = block_size + (separator_size if current else 0)
-        if current and current_size + added_size > available_bytes:
-            pages.append(current)
-            current = [block]
-            current_size = block_size
-        else:
-            current.append(block)
-            current_size += added_size
-
-    if current:
-        pages.append(current)
-    return pages
+def compose_message(header: str, blocks: list[str], footer: str) -> str:
+    return "\n\n".join([header, *blocks, footer])
 
 
 def build_digest_messages(
@@ -133,60 +112,31 @@ def build_digest_messages(
     today: date,
     max_message_bytes: int = MAX_MESSAGE_BYTES,
 ) -> list[str]:
-    active = visible_contests(contests, today)
+    active = active_by_latest(contests, today)
+    header = render_header(today, len(active))
     if not active:
         return [
-            "\n".join(
-                [
-                    "## AIGC 创作比赛每日提醒",
-                    f"> 日期：{today.isoformat()}",
-                    "今日暂无尚未截止的已核验赛事。",
-                    render_footer(),
-                ]
+            compose_message(
+                header,
+                ["今日暂无尚未截止的已核验赛事。"],
+                render_footer(0),
             )
         ]
 
-    open_count = sum(
-        parse_date(item["start_date"], "start_date", item["id"]) <= today
-        for item in active
-    )
-    upcoming_count = len(active) - open_count
     blocks = [render_contest(item, today) for item in active]
-
-    # Every page contains at least one contest, so the number of contests is a
-    # safe upper bound for the widest possible page indicator.
-    reserved_header = render_header(
-        today,
-        len(active),
-        open_count,
-        upcoming_count,
-        page=len(active),
-        page_count=len(active),
-    )
-    footer = render_footer()
-    framing_size = (
-        encoded_size(reserved_header)
-        + encoded_size(footer)
-        + encoded_size("\n\n\n\n")
-    )
-    pages = pack_blocks(blocks, max_message_bytes - framing_size)
-
-    messages = []
-    for index, page in enumerate(pages, start=1):
-        header = render_header(
-            today,
-            len(active),
-            open_count,
-            upcoming_count,
-            page=index,
-            page_count=len(pages),
-        )
-        body = "\n\n".join(page)
-        message = f"{header}\n\n{body}\n\n{footer}"
+    selected: list[str] = []
+    for block in blocks:
+        candidate = [*selected, block]
+        hidden_count = len(blocks) - len(candidate)
+        message = compose_message(header, candidate, render_footer(hidden_count))
         if encoded_size(message) > max_message_bytes:
-            raise ValueError("生成的企业微信消息超过长度上限")
-        messages.append(message)
-    return messages
+            break
+        selected = candidate
+
+    if not selected:
+        raise ValueError("单条赛事信息超过企业微信消息长度上限，请精简该赛事字段")
+    hidden_count = len(blocks) - len(selected)
+    return [compose_message(header, selected, render_footer(hidden_count))]
 
 
 def validate_webhook_url(webhook_url: str) -> str:
@@ -270,8 +220,6 @@ def main() -> int:
         for index, message in enumerate(messages, start=1):
             send_markdown(webhook_url, message)
             print(f"已发送企业微信消息 {index}/{len(messages)}")
-            if index < len(messages):
-                time.sleep(SEND_INTERVAL_SECONDS)
         return 0
     except (OSError, ValueError, RuntimeError, json.JSONDecodeError) as exc:
         print(f"错误：{exc}", file=sys.stderr)

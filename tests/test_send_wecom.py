@@ -36,16 +36,19 @@ class SendWecomTests(unittest.TestCase):
 
     def test_digest_contains_requested_contest_fields(self):
         messages = send_wecom.build_digest_messages(self.contests, self.today)
-        digest = "\n".join(messages)
+        self.assertEqual(len(messages), 1)
+        digest = messages[0]
         first = self.contests[0]
 
         self.assertIn(first["title"], digest)
         self.assertIn(first["official_url"], digest)
         self.assertIn(first["deadline"], digest)
-        self.assertIn(first["region"], digest)
         self.assertIn(first["eligibility"], digest)
-        self.assertIn(first["prize"], digest)
-        self.assertIn(first["organizer"], digest)
+        self.assertIn("🎬 视频", digest)
+        self.assertNotIn("**地区**", digest)
+        self.assertNotIn("**主办方**", digest)
+        self.assertNotIn("**费用**", digest)
+        self.assertNotIn("**奖金**", digest)
 
     def test_digest_includes_upcoming_and_omits_expired_contests(self):
         contests = deepcopy(self.contests[:2])
@@ -61,7 +64,7 @@ class SendWecomTests(unittest.TestCase):
         self.assertIn(upcoming["title"], digest)
         self.assertIn("2 天后开放", digest)
 
-    def test_messages_are_split_without_exceeding_byte_limit(self):
+    def test_digest_stays_on_one_page_and_links_to_overflow(self):
         max_bytes = 2_000
         messages = send_wecom.build_digest_messages(
             self.contests,
@@ -69,21 +72,32 @@ class SendWecomTests(unittest.TestCase):
             max_message_bytes=max_bytes,
         )
 
-        self.assertGreater(len(messages), 1)
-        self.assertTrue(
-            all(send_wecom.encoded_size(message) <= max_bytes for message in messages)
-        )
-        for contest in self.contests:
-            self.assertEqual(sum(contest["title"] in message for message in messages), 1)
+        self.assertEqual(len(messages), 1)
+        self.assertLessEqual(send_wecom.encoded_size(messages[0]), max_bytes)
+        shown_count = sum(contest["title"] in messages[0] for contest in self.contests)
+        self.assertGreater(shown_count, 0)
+        self.assertLess(shown_count, len(self.contests))
+        self.assertIn(f"另有 {len(self.contests) - shown_count} 项未展示", messages[0])
 
-    def test_digest_is_sorted_by_deadline(self):
+    def test_digest_is_sorted_by_latest_verification_not_deadline(self):
+        contests = deepcopy(self.contests[:2])
+        contests[0]["deadline"] = "2026-08-30"
+        contests[0]["verified_on"] = "2026-08-25"
+        contests[1]["deadline"] = "2026-09-30"
+        contests[1]["verified_on"] = "2026-08-26"
+
+        digest = "\n".join(send_wecom.build_digest_messages(contests, self.today))
+
+        self.assertLess(digest.index(contests[1]["title"]), digest.index(contests[0]["title"]))
+
+    def test_equal_verification_dates_keep_data_order(self):
         contests = deepcopy(self.contests[:2])
         contests[0]["deadline"] = "2026-09-30"
         contests[1]["deadline"] = "2026-08-30"
 
         digest = "\n".join(send_wecom.build_digest_messages(contests, self.today))
 
-        self.assertLess(digest.index(contests[1]["title"]), digest.index(contests[0]["title"]))
+        self.assertLess(digest.index(contests[0]["title"]), digest.index(contests[1]["title"]))
 
     def test_no_active_contests_returns_an_empty_digest(self):
         messages = send_wecom.build_digest_messages(self.contests, date(2027, 1, 1))

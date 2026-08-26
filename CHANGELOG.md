@@ -13,7 +13,7 @@ Notable project-level changes are documented here. Routine contest additions, up
 - A custom repository social preview image.
 - Initial active AIGC creative contest directory.
 - Data-driven README generation, tests, contribution forms, and daily expiry cleanup.
-- A daily WeCom group digest with deadline-ordered contest details, safe message splitting, and manual dry-run support.
+- A single-page daily WeCom group digest with recent-verification ordering, compact contest details, overflow linking, and manual dry-run support.
 
 ### Changed
 

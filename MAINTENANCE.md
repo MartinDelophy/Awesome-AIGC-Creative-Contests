@@ -6,14 +6,14 @@ This document describes how the active contest directory is kept accurate. 本�
 
 - A scheduled GitHub Actions workflow runs daily in the `Asia/Shanghai` time zone.
 - It validates `data/contests.json`, removes entries whose deadline has passed, and regenerates `README.md`, `README.zh-CN.md`, `feed.xml`, and `deadlines.ics`.
-- A second workflow sends a Chinese WeCom digest of every active and upcoming contest at 09:00 Asia/Shanghai.
+- A second workflow sends a single-page Chinese WeCom digest of recently verified active and upcoming contests at 09:00 Asia/Shanghai.
 - GitHub Pages publishes the generated RSS and ICS files with subscription-friendly content types.
 - Pull requests and pushes to `main` run validation, tests, and generated-file consistency checks.
 - Expired records remain recoverable through Git history.
 
 ## WeCom daily digest / 企业微信每日摘要
 
-The `Send WeCom contest digest` workflow formats all non-expired contests by deadline and splits the digest into messages that stay below the [WeCom markdown size limit](https://developer.work.weixin.qq.com/document/path/91770). Each entry includes the title, official and rules links, deadline and time zone, region, eligibility, prize, fee, category, and organizer. Upcoming contests are included with a separate status label.
+The `Send WeCom contest digest` workflow sorts non-expired contests by `verified_on` in descending order and fits as many recent entries as possible into one message below the [WeCom markdown size limit](https://developer.work.weixin.qq.com/document/path/91770). Equal verification dates retain their order in `data/contests.json`. Each displayed entry includes the title, official and rules links, deadline and time zone, eligibility, and category. A footer links to the complete directory when older entries do not fit, and upcoming contests use a separate status label.
 
 Configure a repository-level Actions secret named `WECOM_WEBHOOK_URL` with the complete group-robot webhook URL. Forks do not inherit this secret, so each repository that runs the workflow must configure its own value. Never put the webhook URL in source code, workflow YAML, test fixtures, commits, or logs.
 
