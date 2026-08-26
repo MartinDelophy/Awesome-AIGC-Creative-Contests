@@ -88,6 +88,10 @@ python3 -m unittest discover -s tests -v
 
 The daily workflow removes expired entries from the active directory and rebuilds both language editions, RSS, and ICS. Previous entries remain available through Git history.
 
+## Community acknowledgment
+
+Thanks to the [LINUX DO](https://linux.do/) community for providing a space for open-source sharing and discussion.
+
 ## Disclaimer
 
 This is a community-maintained information index and is not affiliated with any organizer. It does not guarantee prize payments, licensing terms, fees, or last-minute rule changes. Before entering, pay particular attention to copyright ownership, likeness and voice permissions, AI-tool disclosure requirements, regional restrictions, and the organizer's rights to use submitted works.
