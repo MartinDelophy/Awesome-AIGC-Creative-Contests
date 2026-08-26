@@ -5,9 +5,11 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from datetime import date, datetime
 from pathlib import Path
+from urllib.parse import urlparse
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -40,6 +42,8 @@ CATEGORY_LABELS = {
     "app": "🧩 应用",
 }
 
+ID_PATTERN = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
+
 
 def parse_date(value: str, field: str, contest_id: str) -> date:
     try:
@@ -59,14 +63,29 @@ def load_contests(path: Path = DATA_PATH) -> list[dict]:
 def validate_contests(contests: list[dict]) -> None:
     seen: set[str] = set()
     for item in contests:
+        if not isinstance(item, dict):
+            raise ValueError("每条赛事记录必须是对象")
         missing = REQUIRED_FIELDS - item.keys()
         if missing:
             raise ValueError(f"{item.get('id', '<unknown>')}: 缺少字段 {sorted(missing)}")
+        unknown_fields = item.keys() - REQUIRED_FIELDS
+        if unknown_fields:
+            raise ValueError(f"{item.get('id', '<unknown>')}: 未知字段 {sorted(unknown_fields)}")
 
         contest_id = item["id"]
+        if not isinstance(contest_id, str) or not ID_PATTERN.fullmatch(contest_id):
+            raise ValueError(f"无效 id: {contest_id!r}，只能使用小写字母、数字和连字符")
         if contest_id in seen:
             raise ValueError(f"重复 id: {contest_id}")
         seen.add(contest_id)
+
+        text_fields = REQUIRED_FIELDS - {"categories"}
+        empty_fields = [
+            field for field in text_fields
+            if not isinstance(item[field], str) or not item[field].strip()
+        ]
+        if empty_fields:
+            raise ValueError(f"{contest_id}: 字段不能为空 {sorted(empty_fields)}")
 
         start = parse_date(item["start_date"], "start_date", contest_id)
         deadline = parse_date(item["deadline"], "deadline", contest_id)
@@ -74,16 +93,18 @@ def validate_contests(contests: list[dict]) -> None:
         if start > deadline:
             raise ValueError(f"{contest_id}: start_date 晚于 deadline")
         if verified > date.today():
-            # Future-dated fixture data remains testable through --today.
-            pass
+            raise ValueError(f"{contest_id}: verified_on 不能晚于今天")
 
-        if not item["categories"]:
+        if not isinstance(item["categories"], list) or not item["categories"]:
             raise ValueError(f"{contest_id}: categories 不能为空")
+        if len(item["categories"]) != len(set(item["categories"])):
+            raise ValueError(f"{contest_id}: categories 不能重复")
         unknown = set(item["categories"]) - CATEGORY_LABELS.keys()
         if unknown:
             raise ValueError(f"{contest_id}: 未知类别 {sorted(unknown)}")
         for url_field in ("official_url", "rules_url"):
-            if not item[url_field].startswith("https://"):
+            parsed = urlparse(item[url_field])
+            if parsed.scheme != "https" or not parsed.netloc:
                 raise ValueError(f"{contest_id}: {url_field} 必须使用 https://")
 
 

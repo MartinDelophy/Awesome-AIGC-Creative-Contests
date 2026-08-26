@@ -5,10 +5,19 @@ on:
     # 17:23 UTC = 01:23 Asia/Shanghai on the following calendar day.
     - cron: "23 17 * * *"
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "data/**"
+      - "scripts/**"
+      - "tests/**"
+      - "README.template.md"
+      - "README.md"
   pull_request:
     paths:
       - "data/**"
       - "scripts/**"
+      - "tests/**"
       - "README.template.md"
       - "README.md"
 
@@ -20,7 +29,7 @@ env:
 
 jobs:
   verify:
-    if: github.event_name == 'pull_request'
+    if: github.event_name == 'pull_request' || github.event_name == 'push'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -33,7 +42,7 @@ jobs:
         run: python3 scripts/build_readme.py --check
 
   prune:
-    if: github.event_name != 'pull_request'
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     permissions:
       contents: write

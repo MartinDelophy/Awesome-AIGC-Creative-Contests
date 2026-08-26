@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/MartinDelophy/Awesome-AIGC-Creative-Contests/blob/main/data/schema.json",
+  "title": "AIGC creative contest directory",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "id",
+      "title",
+      "region",
+      "categories",
+      "organizer",
+      "start_date",
+      "deadline",
+      "timezone",
+      "eligibility",
+      "fee",
+      "prize",
+      "official_url",
+      "rules_url",
+      "verified_on"
+    ],
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+        "description": "Stable identifier using lowercase letters, numbers, and hyphens."
+      },
+      "title": { "type": "string", "minLength": 1 },
+      "region": { "type": "string", "minLength": 1 },
+      "categories": {
+        "type": "array",
+        "minItems": 1,
+        "uniqueItems": true,
+        "items": { "enum": ["video", "image", "audio", "text", "app"] }
+      },
+      "organizer": { "type": "string", "minLength": 1 },
+      "start_date": { "type": "string", "format": "date" },
+      "deadline": { "type": "string", "format": "date" },
+      "timezone": { "type": "string", "minLength": 1 },
+      "eligibility": { "type": "string", "minLength": 1 },
+      "fee": { "type": "string", "minLength": 1 },
+      "prize": { "type": "string", "minLength": 1 },
+      "official_url": { "type": "string", "format": "uri", "pattern": "^https://" },
+      "rules_url": { "type": "string", "format": "uri", "pattern": "^https://" },
+      "verified_on": { "type": "string", "format": "date" }
+    }
+  }
+}

@@ -1,5 +1,7 @@
 import importlib.util
+import json
 import unittest
+from copy import deepcopy
 from datetime import date
 from pathlib import Path
 
@@ -31,7 +33,23 @@ class BuildReadmeTests(unittest.TestCase):
         output = build_readme.render_readme(contests, date(2026, 11, 1))
         self.assertNotIn("Seedance 2.5 白模参考创作大赛", output)
 
+    def test_rejects_unknown_fields(self):
+        contests = deepcopy(build_readme.load_contests())
+        contests[0]["unexpected"] = "value"
+        with self.assertRaisesRegex(ValueError, "未知字段"):
+            build_readme.validate_contests(contests)
+
+    def test_rejects_duplicate_categories(self):
+        contests = deepcopy(build_readme.load_contests())
+        contests[0]["categories"] = ["video", "video"]
+        with self.assertRaisesRegex(ValueError, "categories 不能重复"):
+            build_readme.validate_contests(contests)
+
+    def test_schema_required_fields_match_validator(self):
+        schema_path = SCRIPT.parents[1] / "data" / "schema.json"
+        schema = json.loads(schema_path.read_text(encoding="utf-8"))
+        self.assertEqual(set(schema["items"]["required"]), build_readme.REQUIRED_FIELDS)
+
 
 if __name__ == "__main__":
     unittest.main()
-

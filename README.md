@@ -1,5 +1,7 @@
 # Awesome AIGC Creative Contests
 
+[English](README.en.md) | 简体中文
+
 > 持续更新的国内外 AIGC 创作比赛清单：视频、图像、音频、写作与 AI 应用。
 
 ![Contests](https://img.shields.io/badge/active-11-2ea44f) ![Last verified](https://img.shields.io/badge/verified-2026-08-26-0969da)
@@ -65,7 +67,7 @@
 
 发现新比赛、延期、规则变化或失效链接时，请[提交赛事](../../issues/new?template=add-contest.yml)或[报告变更](../../issues/new?template=update-contest.yml)。提交前请阅读 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
-赛事数据保存在 [`data/contests.json`](data/contests.json)，README 由脚本生成：
+赛事数据保存在 [`data/contests.json`](data/contests.json)，字段定义见 [`data/schema.json`](data/schema.json)，README 由脚本生成：
 
 ```bash
 python3 scripts/build_readme.py

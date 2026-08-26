@@ -1,5 +1,7 @@
 # 共创指南
 
+[English contribution guide](README.en.md#contributing) | 简体中文
+
 感谢你一起维护这份不会悄悄过期的 AIGC 比赛清单。
 
 ## 提交新赛事
@@ -16,6 +18,8 @@
 - 官方活动页与规则页，且必须是 HTTPS 链接。
 
 可用类别只有 `video`、`image`、`audio`、`text`、`app`。
+
+完整字段定义和约束见 [`data/schema.json`](data/schema.json)。生成脚本还会检查未知字段、重复类别、空文本、日期顺序和 URL 格式。
 
 ## 信息源优先级
 
@@ -40,4 +44,3 @@ python3 -m unittest discover -s tests -v
 ```
 
 提交 PR 时，请一并提交更新后的 `README.md`。
-
