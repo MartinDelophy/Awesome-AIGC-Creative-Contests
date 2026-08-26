@@ -1,19 +1,20 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Awesome AIGC Creative Contests//Deadlines//ZH
+PRODID:-//Awesome AIGC Creative Contests//Deadlines//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:AIGC 创作赛事截止提醒
-X-WR-CALDESC:Awesome AIGC Creative Contests 当前赛事截止日期
+X-WR-CALNAME:AIGC Creative Contest Deadlines
+X-WR-CALDESC:Current deadlines from Awesome AIGC Creative Contests
 BEGIN:VEVENT
 UID:hong-kong-aigc-cultural-content-2026@awesome-aigc-creative-contests
 DTSTAMP:20260826T000000Z
 DTSTART;VALUE=DATE:20260830
 DTEND;VALUE=DATE:20260831
-SUMMARY:截止：香港国际 AIGC 文化数字内容创作大赛
-DESCRIPTION:设儿童、青少年、大学与社会组；主题聚焦中华
- 文化\n时区：官网未注明\n费用：以组别细则为准\n奖励
- ：决赛单项一等奖 HK$5\,000 起
+SUMMARY:Deadline: Hong Kong International AIGC Cultural Digital Content Cre
+ ation Competition
+DESCRIPTION:Children\, youth\, university\, and open divisions\; works focu
+ s on Chinese culture\nTime zone: Not stated on the official site\nFee: See
+  division rules\nPrize: First prizes in the final round start at HK$5\,000
 URL:https://aigc.eduhk.org/
 TRANSP:TRANSPARENT
 END:VEVENT
@@ -22,12 +23,12 @@ UID:malanshan-ai-micro-drama-2026@awesome-aigc-creative-contests
 DTSTAMP:20260826T000000Z
 DTSTART;VALUE=DATE:20260831
 DTEND;VALUE=DATE:20260901
-SUMMARY:截止：2026「视听中国·马栏山杯」AI 微短剧创智大
- 赛
-DESCRIPTION:微短剧制作机构、创作团队或个人；横屏至少 3 
- 集或竖屏至少 5 集\n时区：北京时间（具体时刻以官网为
- 准）\n费用：未注明\n奖励：超 ¥800\,000 奖池及项目孵化
- 权益
+SUMMARY:Deadline: 2026 Audiovisual China · Malanshan Cup AI Micro-Drama In
+ novation Competition
+DESCRIPTION:Production companies\, creative teams\, or individuals\; at lea
+ st 3 landscape episodes or 5 vertical episodes\nTime zone: China Standard 
+ Time\; exact time not stated\nFee: Not stated\nPrize: Prize pool above CNY
+  800\,000 plus project incubation support
 URL:https://aigc.mgtv.com/challenges/detail?id=15
 TRANSP:TRANSPARENT
 END:VEVENT
@@ -36,10 +37,11 @@ UID:astana-ai-film-festival-2026@awesome-aigc-creative-contests
 DTSTAMP:20260826T000000Z
 DTSTART;VALUE=DATE:20260831
 DTEND;VALUE=DATE:20260901
-SUMMARY:截止：Astana AI Film Festival（AAIFF 2026）
-DESCRIPTION:个人、团队与工作室；生成式 AI 必须是创作核
- 心；非英语作品需英文字幕\n时区：官网未注明\n费用：
- 免费\n奖励：US$1\,000\,000 竞赛奖金 + US$1\,000\,000 制作基金
+SUMMARY:Deadline: Astana AI Film Festival (AAIFF 2026)
+DESCRIPTION:Individuals\, teams\, and studios\; generative AI must be integ
+ ral\; non-English films require English subtitles\nTime zone: Not stated o
+ n the official site\nFee: Free\nPrize: US$1\,000\,000 competition prizes +
+  US$1\,000\,000 production fund
 URL:https://aaiff.ai/
 TRANSP:TRANSPARENT
 END:VEVENT
@@ -48,13 +50,28 @@ UID:dreamina-seedance-2-5-blockout-2026@awesome-aigc-creative-contests
 DTSTAMP:20260826T000000Z
 DTSTART;VALUE=DATE:20260831
 DTEND;VALUE=DATE:20260901
-SUMMARY:截止：故事盲盒：即梦 Seedance 2.5 白模参考创作大
- 赛
-DESCRIPTION:全球 AI 创作者；15 秒横版视频，须使用官方白
- 模与 Seedance 2.5\n时区：北京时间 23:59\n费用：未注明\n奖
- 励：冠军 US$50\,000 + 100 万即梦积分
+SUMMARY:Deadline: Story Blind Box: Dreamina Seedance 2.5 Blockout Reference
+  Challenge
+DESCRIPTION:AI creators worldwide\; a 15-second landscape video using the o
+ fficial blockout reference and Seedance 2.5\nTime zone: China Standard Tim
+ e\, 23:59\nFee: Not stated\nPrize: US$50\,000 champion prize + 1\,000\,000
+  Dreamina credits
 URL:https://jimeng.jianying.com/ai-tool/activity-detail/2026-805-dreamina-w
  eekly-challenge
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:austin-ai-film-festival-2026@awesome-aigc-creative-contests
+DTSTAMP:20260826T000000Z
+DTSTART;VALUE=DATE:20260915
+DTEND;VALUE=DATE:20260916
+SUMMARY:Deadline: Austin AI Film Festival 2026
+DESCRIPTION:Creators aged 14+ worldwide\; most AI categories require a majo
+ rity of visual content to use AI-assisted creative tools\nTime zone: Not s
+ tated on the official site\nFee: US$20 for most categories\; a free option
+  is listed for the student category\nPrize: Awards and selected screenings
+ \; see official page for prize details
+URL:https://filmfreeway.com/AustinAIFilmFestival
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
@@ -62,10 +79,10 @@ UID:ai-song-contest-bangkok-2026@awesome-aigc-creative-contests
 DTSTAMP:20260826T000000Z
 DTSTART;VALUE=DATE:20260927
 DTEND;VALUE=DATE:20260928
-SUMMARY:截止：AI Song Contest 2026 — Bangkok
-DESCRIPTION:人类与 AI 共创歌曲，最长 4 分钟；仅靠提示词
- 生成、无人类后期参与的作品不合格\n时区：AoE（UTC−12
- ）\n费用：免费\n奖励：US$1\,000 + 曼谷颁奖礼行程
+SUMMARY:Deadline: AI Song Contest 2026 — Bangkok
+DESCRIPTION:Human–AI co-created songs up to 4 minutes\; prompt-only gener
+ ation without human post-production is ineligible\nTime zone: AoE (UTC−1
+ 2)\nFee: Free\nPrize: US$1\,000 plus a trip to the Bangkok award show
 URL:https://www.aisongcontest.com/join
 TRANSP:TRANSPARENT
 END:VEVENT
@@ -74,11 +91,40 @@ UID:next-art-ai-2026@awesome-aigc-creative-contests
 DTSTAMP:20260826T000000Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
-SUMMARY:截止：AI ART AWARD — NEXT ART AI 2026
-DESCRIPTION:不限职业、国籍与年龄；AI 图像与 AI 视频两类\n
- 时区：韩国时间 23:59\n费用：以官方细则为准\n奖励：总
- 奖金 KRW 21\,000\,000
+SUMMARY:Deadline: AI ART AWARD — NEXT ART AI 2026
+DESCRIPTION:Open to all professions\, nationalities\, and ages\; AI image a
+ nd AI video categories\nTime zone: Korea Standard Time\, 23:59\nFee: See o
+ fficial guidelines\nPrize: KRW 21\,000\,000 total prize pool
 URL:https://next-art-ai.com/en/apply/overview
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:on-art-ai-film-festival-2026@awesome-aigc-creative-contests
+DTSTAMP:20260826T000000Z
+DTSTART;VALUE=DATE:20260930
+DTEND;VALUE=DATE:20261001
+SUMMARY:Deadline: On Art AI Film Festival 2026
+DESCRIPTION:Films completed after January 1\, 2025 in which AI plays a key 
+ role\; non-English and non-Polish films need English subtitles\nTime zone:
+  Not stated on the official site\nFee: Paid via FilmFreeway\; varies by ca
+ tegory and deadline stage\nPrize: Diplomas in six categories\; no cash or 
+ material prizes
+URL:https://filmfreeway.com/OnAI
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:gento-toronto-ai-film-festival-2026@awesome-aigc-creative-contests
+DTSTAMP:20260826T000000Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261002
+SUMMARY:Deadline: GenTO: Toronto AI Film Festival 2026
+DESCRIPTION:AI-assisted\, hybrid\, or traditionally made short films\, show
+ case films\, music videos\, and ads\; non-English films need English subti
+ tles\nTime zone: Not stated on the official site\nFee: Regular US$30 / stu
+ dent US$25\; late US$40 / student US$35\nPrize: Festival recognition and p
+ artner prizes\; some categories may include mentorship or technology credi
+ ts
+URL:https://filmfreeway.com/GenTOAIFilmFestival
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
@@ -86,10 +132,11 @@ UID:cuc-aigc-visualization-2026@awesome-aigc-creative-contests
 DTSTAMP:20260826T000000Z
 DTSTART;VALUE=DATE:20261011
 DTEND;VALUE=DATE:20261012
-SUMMARY:截止：首届（2026）AIGC 与可视化创作大赛
-DESCRIPTION:机构组与个人组；个人组含大学生组、成人组\n
- 时区：北京时间（具体时刻以官网为准）\n费用：免费\n
- 奖励：证书及纪念品
+SUMMARY:Deadline: First 2026 AIGC and Visualization Creation Competition
+DESCRIPTION:Institutional and individual divisions\; individual division in
+ cludes university students and adults\nTime zone: China Standard Time\; ex
+ act time not stated\nFee: Free\nPrize: Certificates and commemorative gift
+ s
 URL:https://aigc.capt.cn/
 TRANSP:TRANSPARENT
 END:VEVENT
@@ -98,11 +145,11 @@ UID:ai-filmfest-athens-2026@awesome-aigc-creative-contests
 DTSTAMP:20260826T000000Z
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261016
-SUMMARY:截止：AI Filmfest Athens 2026 — Myths Meet Machine
-DESCRIPTION:3–15 分钟全 AI 生成短片；不接受实拍混合作品
- ；非英语片需英文字幕\n时区：官网未注明\n费用：€30
- （9 月 3 日前）/ €45（最终截止）\n奖励：四个竞赛奖项
- 各 €1\,000
+SUMMARY:Deadline: AI Filmfest Athens 2026 — Myths Meet Machine
+DESCRIPTION:Fully AI-generated short films of 3–15 minutes\; no live-acti
+ on hybrids\; non-English films require English subtitles\nTime zone: Not s
+ tated on the official site\nFee: €30 through September 3 / €45 final d
+ eadline\nPrize: Four competitive awards of €1\,000 each
 URL:https://www.aifilmfestathens.gr/en
 TRANSP:TRANSPARENT
 END:VEVENT
@@ -111,10 +158,10 @@ UID:aigc-global-competition-2026@awesome-aigc-creative-contests
 DTSTAMP:20260826T000000Z
 DTSTART;VALUE=DATE:20261016
 DTEND;VALUE=DATE:20261017
-SUMMARY:截止：AIGC 国际大赛 2026
-DESCRIPTION:小学四年级至成人公开组；按年龄分组，主题与
- 时长各异\n时区：官网未注明\n费用：收费，金额以报名
- 页为准\n奖励：总奖金 HK$120\,000
+SUMMARY:Deadline: AIGC Global Competition 2026
+DESCRIPTION:Age-group divisions from Primary 4 through an adult open divisi
+ on\; themes and durations vary\nTime zone: Not stated on the official site
+ \nFee: Paid\; see registration page\nPrize: HK$120\,000 total prize pool
 URL:https://www.aigcglobal.com.cn/
 TRANSP:TRANSPARENT
 END:VEVENT
@@ -123,11 +170,11 @@ UID:disrupt-ai-film-festival-2026@awesome-aigc-creative-contests
 DTSTAMP:20260826T000000Z
 DTSTART;VALUE=DATE:20261016
 DTEND;VALUE=DATE:20261017
-SUMMARY:截止：Disrupt AI Film Festival（DAIFF 2026）
-DESCRIPTION:作品须以生成式 AI 制作视觉、音频、特效或动
- 画，并提交创作过程说明\n时区：官网未注明\n费用：通
- 过 FilmFreeway，以提交页为准\n奖励：Grand Prix 及分类奖；
- 金额以官网为准
+SUMMARY:Deadline: Disrupt AI Film Festival (DAIFF 2026)
+DESCRIPTION:Generative AI must be used for visuals\, audio\, effects\, or a
+ nimation\; entrants must describe their creative process\nTime zone: Not s
+ tated on the official site\nFee: Via FilmFreeway\; see submission page\nPr
+ ize: Grand Prix and category awards\; amounts not stated
 URL:https://www.daiff.com.au/
 TRANSP:TRANSPARENT
 END:VEVENT
@@ -136,12 +183,26 @@ UID:wechat-mini-program-2026@awesome-aigc-creative-contests
 DTSTAMP:20260826T000000Z
 DTSTART;VALUE=DATE:20261017
 DTEND;VALUE=DATE:20261018
-SUMMARY:截止：2026 微信小程序开发大赛
-DESCRIPTION:不限学历与职业；1–3 人；作品须为已上线的原
- 创小程序（非小游戏）\n时区：北京时间（具体时刻以报
- 名页为准）\n费用：免费\n奖励：总奖金 ¥490\,000；一等
- 奖 ¥100\,000
+SUMMARY:Deadline: 2026 WeChat Mini Program Development Competition
+DESCRIPTION:Open regardless of education or profession\; teams of 1–3\; e
+ ntries must be original published mini programs\, not mini games\nTime zon
+ e: China Standard Time\; see submission page for exact time\nFee: Free\nPr
+ ize: CNY 490\,000 total\; CNY 100\,000 first prize
 URL:https://watcha.cn/activities/activity-74
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:aima-london-2026@awesome-aigc-creative-contests
+DTSTAMP:20260826T000000Z
+DTSTART;VALUE=DATE:20261017
+DTEND;VALUE=DATE:20261018
+SUMMARY:Deadline: AIMA — AI Movie Awards London 2026
+DESCRIPTION:Accepts AI film\, motion art\, image art\, advertising\, and mu
+ sic\; scripts and text must be in English or include a translation\nTime z
+ one: Not stated on the official site\nFee: Paid and non-refundable\; see t
+ he official submission page\nPrize: Trophies and certificates by category\
+ ; selected shorts may opt into a distribution and revenue-sharing offer
+URL:https://www.aimovieawards.org/
 TRANSP:TRANSPARENT
 END:VEVENT
 END:VCALENDAR

@@ -20,7 +20,8 @@
       "prize",
       "official_url",
       "rules_url",
-      "verified_on"
+      "verified_on",
+      "en"
     ],
     "properties": {
       "id": {
@@ -45,7 +46,21 @@
       "prize": { "type": "string", "minLength": 1 },
       "official_url": { "type": "string", "format": "uri", "pattern": "^https://" },
       "rules_url": { "type": "string", "format": "uri", "pattern": "^https://" },
-      "verified_on": { "type": "string", "format": "date" }
+      "verified_on": { "type": "string", "format": "date" },
+      "en": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["title", "region", "organizer", "timezone", "eligibility", "fee", "prize"],
+        "properties": {
+          "title": { "type": "string", "minLength": 1 },
+          "region": { "type": "string", "minLength": 1 },
+          "organizer": { "type": "string", "minLength": 1 },
+          "timezone": { "type": "string", "minLength": 1 },
+          "eligibility": { "type": "string", "minLength": 1 },
+          "fee": { "type": "string", "minLength": 1 },
+          "prize": { "type": "string", "minLength": 1 }
+        }
+      }
     }
   }
 }

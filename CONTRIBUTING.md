@@ -1,6 +1,6 @@
 # 共创指南
 
-[English contribution guide](README.en.md#contributing) | 简体中文
+[English contribution guide](README.md#contributing) | 简体中文
 
 感谢你一起维护这份不会悄悄过期的 AIGC 比赛清单。
 
@@ -16,6 +16,7 @@
 - 时区或“官网未注明”；
 - 参赛资格、费用和奖励；
 - 官方活动页与规则页，且必须是 HTTPS 链接。
+- `en` 对象中的英文赛事名、地区、主办方、时区、资格、费用和奖励。
 
 可用类别只有 `video`、`image`、`audio`、`text`、`app`。
 
@@ -43,4 +44,4 @@ python3 scripts/build_readme.py --check
 python3 -m unittest discover -s tests -v
 ```
 
-提交 PR 时，请一并提交更新后的 `README.md`、`feed.xml` 和 `deadlines.ics`。维护者的复核与发布流程见 [`MAINTENANCE.md`](MAINTENANCE.md)。
+提交 PR 时，请一并提交更新后的 `README.md`、`README.zh-CN.md`、`feed.xml` 和 `deadlines.ics`。维护者的复核与发布流程见 [`MAINTENANCE.md`](MAINTENANCE.md)。

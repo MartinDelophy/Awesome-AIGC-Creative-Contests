@@ -5,7 +5,7 @@ This document describes how the active contest directory is kept accurate. 本�
 ## Maintenance cycle / 维护周期
 
 - A scheduled GitHub Actions workflow runs daily in the `Asia/Shanghai` time zone.
-- It validates `data/contests.json`, removes entries whose deadline has passed, and regenerates `README.md`, `feed.xml`, and `deadlines.ics`.
+- It validates `data/contests.json`, removes entries whose deadline has passed, and regenerates `README.md`, `README.zh-CN.md`, `feed.xml`, and `deadlines.ics`.
 - GitHub Pages publishes the generated RSS and ICS files with subscription-friendly content types.
 - Pull requests and pushes to `main` run validation, tests, and generated-file consistency checks.
 - Expired records remain recoverable through Git history.
@@ -28,7 +28,7 @@ The `verified_on` field records the most recent manual verification date. Automa
    python3 -m unittest discover -s tests -v
    ```
 
-4. Commit the data change together with `README.md`, `feed.xml`, and `deadlines.ics`.
+4. Commit the data change together with `README.md`, `README.zh-CN.md`, `feed.xml`, and `deadlines.ics`.
 5. Add a notable project-level change to `CHANGELOG.md` when appropriate. Routine contest additions and removals do not require changelog entries because Git history already records them.
 
 ## Incident handling / 异常处理

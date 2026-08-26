@@ -16,5 +16,8 @@ Notable project-level changes are documented here. Routine contest additions, up
 
 ### Changed
 
+- Made English the primary repository README and added a fully generated Simplified Chinese edition.
+- Localized contest records for bilingual output and switched RSS and ICS content to English.
+- Expanded the active directory with verified contests in the United States, Canada, Poland, and the United Kingdom.
 - Strengthened validation for identifiers, empty and unknown fields, duplicate categories, dates, and HTTPS URLs.
 - Expanded continuous integration to validate pull requests and pushes to `main`.

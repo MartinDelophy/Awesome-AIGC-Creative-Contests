@@ -1,88 +1,93 @@
 # Awesome AIGC Creative Contests
 
-[English](README.en.md) | 简体中文
+English | [简体中文](README.zh-CN.md)
 
-> 持续更新的国内外 AIGC 创作比赛清单：视频、图像、音频、写作与 AI 应用。
+> A continuously maintained directory of active and officially announced AIGC creative contests worldwide, covering video, images, audio, writing, and AI applications.
 
-![Contests](https://img.shields.io/badge/active-11-2ea44f) ![Last verified](https://img.shields.io/badge/verified-2026-08-26-0969da) [![License: MIT](https://img.shields.io/badge/license-MIT-yellow.svg)](LICENSE)
+![Contests](https://img.shields.io/badge/active-15-2ea44f) ![Last verified](https://img.shields.io/badge/verified-2026-08-26-0969da) [![License: MIT](https://img.shields.io/badge/license-MIT-yellow.svg)](LICENSE)
 
-错过比赛往往不是能力问题，而是信息没有在正确的时间出现。这个项目只保留仍可报名或已经官宣、即将开放的 AIGC 创作赛事；截止条目由自动任务从清单中移除，仍可通过 Git 历史查阅。
+Missing a contest is often an information problem rather than a creative one. This directory keeps only contests that are open for submissions or officially announced with a future opening date. Expired entries are removed automatically and remain available through Git history.
 
-**数据核验日期：2026-08-26。** 截止时间、参赛资格和授权条款可能临时调整，提交前请再次阅读官方规则。
+**Data verified on 2026-08-26.** Deadlines, eligibility, fees, and licensing terms may change without notice. Always read the official rules before submitting.
 
-## 订阅截止提醒
+## Subscribe to deadline reminders
 
-- [订阅 RSS](https://martindelophy.github.io/Awesome-AIGC-Creative-Contests/feed.xml)：获取当前赛事清单更新。
-- [订阅日历](webcal://martindelophy.github.io/Awesome-AIGC-Creative-Contests/deadlines.ics) / [下载 ICS](deadlines.ics)：把所有赛事截止日加入 Apple Calendar、Google Calendar、Outlook 等日历应用。
+- [Subscribe via RSS](https://martindelophy.github.io/Awesome-AIGC-Creative-Contests/feed.xml) for active-directory updates.
+- [Subscribe to the calendar](webcal://martindelophy.github.io/Awesome-AIGC-Creative-Contests/deadlines.ics) or [download the ICS file](deadlines.ics) to add every deadline to Apple Calendar, Google Calendar, Outlook, or another calendar app.
 
-RSS 和 ICS 均由赛事数据自动生成；清单更新后，订阅内容会同步更新。
+Both feeds are generated from the contest data and update automatically when the directory changes.
 
-## 正在报名
+## Open for submissions
 
-| 状态 | 截止时间 | 类别 | 赛事与要求 | 地区 / 资格 | 奖励 / 费用 |
+| Status | Deadline | Category | Contest & requirements | Region / eligibility | Prize / fee |
 |---|---|---|---|---|---|
-| ⏳ 7 天内截止 | 2026-08-30<br><sub>官网未注明</sub> | 🖼️ 图像<br>🎬 视频<br>🎵 音频 | **[香港国际 AIGC 文化数字内容创作大赛](https://aigc.eduhk.org/)**<br><sub>设儿童、青少年、大学与社会组；主题聚焦中华文化 · [规则](https://aigc.eduhk.org/)</sub> | 中国香港 / 分年龄组 | 决赛单项一等奖 HK$5,000 起<br><sub>费用：以组别细则为准</sub> |
-| ⏳ 7 天内截止 | 2026-08-31<br><sub>北京时间（具体时刻以官网为准）</sub> | 🎬 视频 | **[2026「视听中国·马栏山杯」AI 微短剧创智大赛](https://aigc.mgtv.com/challenges/detail?id=15)**<br><sub>微短剧制作机构、创作团队或个人；横屏至少 3 集或竖屏至少 5 集 · [规则](https://gbdsj.hunan.gov.cn/gbdsj/xxgk/tzgg/202606/t20260611_33999282.html)</sub> | 中国 | 超 ¥800,000 奖池及项目孵化权益<br><sub>费用：未注明</sub> |
-| ⏳ 7 天内截止 | 2026-08-31<br><sub>官网未注明</sub> | 🎬 视频 | **[Astana AI Film Festival（AAIFF 2026）](https://aaiff.ai/)**<br><sub>个人、团队与工作室；生成式 AI 必须是创作核心；非英语作品需英文字幕 · [规则](https://aaiff.ai/terms)</sub> | 哈萨克斯坦 / 全球开放 | US$1,000,000 竞赛奖金 + US$1,000,000 制作基金<br><sub>费用：免费</sub> |
-| ⏳ 7 天内截止 | 2026-08-31<br><sub>北京时间 23:59</sub> | 🎬 视频 | **[故事盲盒：即梦 Seedance 2.5 白模参考创作大赛](https://jimeng.jianying.com/ai-tool/activity-detail/2026-805-dreamina-weekly-challenge)**<br><sub>全球 AI 创作者；15 秒横版视频，须使用官方白模与 Seedance 2.5 · [规则](https://jimeng.jianying.com/ai-tool/activity-detail/2026-805-dreamina-weekly-challenge)</sub> | 中国 / 全球开放 | 冠军 US$50,000 + 100 万即梦积分<br><sub>费用：未注明</sub> |
-| 🟢 报名中 | 2026-09-27<br><sub>AoE（UTC−12）</sub> | 🎵 音频 | **[AI Song Contest 2026 — Bangkok](https://www.aisongcontest.com/join)**<br><sub>人类与 AI 共创歌曲，最长 4 分钟；仅靠提示词生成、无人类后期参与的作品不合格 · [规则](https://www.aisongcontest.com/join)</sub> | 泰国 / 全球开放 | US$1,000 + 曼谷颁奖礼行程<br><sub>费用：免费</sub> |
-| 🟢 报名中 | 2026-10-11<br><sub>北京时间（具体时刻以官网为准）</sub> | ✍️ 文字<br>🖼️ 图像<br>🎬 视频<br>🎵 音频<br>🧩 应用 | **[首届（2026）AIGC 与可视化创作大赛](https://aigc.capt.cn/)**<br><sub>机构组与个人组；个人组含大学生组、成人组 · [规则](https://www.cuc.edu.cn/_t86/2026/0811/c1761a273225/page.htm)</sub> | 中国 | 证书及纪念品<br><sub>费用：免费</sub> |
-| 🟢 报名中 | 2026-10-15<br><sub>官网未注明</sub> | 🎬 视频<br>🎵 音频 | **[AI Filmfest Athens 2026 — Myths Meet Machine](https://www.aifilmfestathens.gr/en)**<br><sub>3–15 分钟全 AI 生成短片；不接受实拍混合作品；非英语片需英文字幕 · [规则](https://www.aifilmfestathens.gr/en)</sub> | 希腊 / 全球开放 | 四个竞赛奖项各 €1,000<br><sub>费用：€30（9 月 3 日前）/ €45（最终截止）</sub> |
-| 🟢 报名中 | 2026-10-16<br><sub>官网未注明</sub> | 🎬 视频 | **[AIGC 国际大赛 2026](https://www.aigcglobal.com.cn/)**<br><sub>小学四年级至成人公开组；按年龄分组，主题与时长各异 · [规则](https://www.aigcglobal.com.cn/?a=index&c=Lists&m=home&tid=1)</sub> | 中国香港 / 全球开放 | 总奖金 HK$120,000<br><sub>费用：收费，金额以报名页为准</sub> |
-| 🟢 报名中 | 2026-10-16<br><sub>官网未注明</sub> | 🎬 视频<br>🎵 音频 | **[Disrupt AI Film Festival（DAIFF 2026）](https://www.daiff.com.au/)**<br><sub>作品须以生成式 AI 制作视觉、音频、特效或动画，并提交创作过程说明 · [规则](https://www.daiff.com.au/)</sub> | 澳大利亚 / 全球开放 | Grand Prix 及分类奖；金额以官网为准<br><sub>费用：通过 FilmFreeway，以提交页为准</sub> |
-| 🟢 报名中 | 2026-10-17<br><sub>北京时间（具体时刻以报名页为准）</sub> | 🧩 应用 | **[2026 微信小程序开发大赛](https://watcha.cn/activities/activity-74)**<br><sub>不限学历与职业；1–3 人；作品须为已上线的原创小程序（非小游戏） · [规则](https://watcha.cn/activities/activity-74)</sub> | 中国 / 全球开放 | 总奖金 ¥490,000；一等奖 ¥100,000<br><sub>费用：免费</sub> |
+| ⏳ Due within 7 days | 2026-08-30<br><sub>Not stated on the official site</sub> | 🖼️ Image<br>🎬 Video<br>🎵 Audio | **[Hong Kong International AIGC Cultural Digital Content Creation Competition](https://aigc.eduhk.org/)**<br><sub>Children, youth, university, and open divisions; works focus on Chinese culture · [Rules](https://aigc.eduhk.org/)</sub> | Hong Kong, China / Age-group divisions | First prizes in the final round start at HK$5,000<br><sub>Fee: See division rules</sub> |
+| ⏳ Due within 7 days | 2026-08-31<br><sub>China Standard Time; exact time not stated</sub> | 🎬 Video | **[2026 Audiovisual China · Malanshan Cup AI Micro-Drama Innovation Competition](https://aigc.mgtv.com/challenges/detail?id=15)**<br><sub>Production companies, creative teams, or individuals; at least 3 landscape episodes or 5 vertical episodes · [Rules](https://gbdsj.hunan.gov.cn/gbdsj/xxgk/tzgg/202606/t20260611_33999282.html)</sub> | China | Prize pool above CNY 800,000 plus project incubation support<br><sub>Fee: Not stated</sub> |
+| ⏳ Due within 7 days | 2026-08-31<br><sub>Not stated on the official site</sub> | 🎬 Video | **[Astana AI Film Festival (AAIFF 2026)](https://aaiff.ai/)**<br><sub>Individuals, teams, and studios; generative AI must be integral; non-English films require English subtitles · [Rules](https://aaiff.ai/terms)</sub> | Kazakhstan / Open worldwide | US$1,000,000 competition prizes + US$1,000,000 production fund<br><sub>Fee: Free</sub> |
+| ⏳ Due within 7 days | 2026-08-31<br><sub>China Standard Time, 23:59</sub> | 🎬 Video | **[Story Blind Box: Dreamina Seedance 2.5 Blockout Reference Challenge](https://jimeng.jianying.com/ai-tool/activity-detail/2026-805-dreamina-weekly-challenge)**<br><sub>AI creators worldwide; a 15-second landscape video using the official blockout reference and Seedance 2.5 · [Rules](https://jimeng.jianying.com/ai-tool/activity-detail/2026-805-dreamina-weekly-challenge)</sub> | China / Open worldwide | US$50,000 champion prize + 1,000,000 Dreamina credits<br><sub>Fee: Not stated</sub> |
+| 🟢 Open | 2026-09-15<br><sub>Not stated on the official site</sub> | 🎬 Video | **[Austin AI Film Festival 2026](https://filmfreeway.com/AustinAIFilmFestival)**<br><sub>Creators aged 14+ worldwide; most AI categories require a majority of visual content to use AI-assisted creative tools · [Rules](https://filmfreeway.com/AustinAIFilmFestival)</sub> | United States / Open worldwide except restricted jurisdictions | Awards and selected screenings; see official page for prize details<br><sub>Fee: US$20 for most categories; a free option is listed for the student category</sub> |
+| 🟢 Open | 2026-09-27<br><sub>AoE (UTC−12)</sub> | 🎵 Audio | **[AI Song Contest 2026 — Bangkok](https://www.aisongcontest.com/join)**<br><sub>Human–AI co-created songs up to 4 minutes; prompt-only generation without human post-production is ineligible · [Rules](https://www.aisongcontest.com/join)</sub> | Thailand / Open worldwide | US$1,000 plus a trip to the Bangkok award show<br><sub>Fee: Free</sub> |
+| 🟢 Open | 2026-09-30<br><sub>Not stated on the official site</sub> | 🎬 Video | **[On Art AI Film Festival 2026](https://filmfreeway.com/OnAI)**<br><sub>Films completed after January 1, 2025 in which AI plays a key role; non-English and non-Polish films need English subtitles · [Rules](https://filmfreeway.com/OnAI)</sub> | Poland / Open worldwide | Diplomas in six categories; no cash or material prizes<br><sub>Fee: Paid via FilmFreeway; varies by category and deadline stage</sub> |
+| 🟢 Open | 2026-10-01<br><sub>Not stated on the official site</sub> | 🎬 Video | **[GenTO: Toronto AI Film Festival 2026](https://filmfreeway.com/GenTOAIFilmFestival)**<br><sub>AI-assisted, hybrid, or traditionally made short films, showcase films, music videos, and ads; non-English films need English subtitles · [Rules](https://filmfreeway.com/GenTOAIFilmFestival)</sub> | Canada / Open worldwide | Festival recognition and partner prizes; some categories may include mentorship or technology credits<br><sub>Fee: Regular US$30 / student US$25; late US$40 / student US$35</sub> |
+| 🟢 Open | 2026-10-11<br><sub>China Standard Time; exact time not stated</sub> | ✍️ Writing<br>🖼️ Image<br>🎬 Video<br>🎵 Audio<br>🧩 App | **[First 2026 AIGC and Visualization Creation Competition](https://aigc.capt.cn/)**<br><sub>Institutional and individual divisions; individual division includes university students and adults · [Rules](https://www.cuc.edu.cn/_t86/2026/0811/c1761a273225/page.htm)</sub> | China | Certificates and commemorative gifts<br><sub>Fee: Free</sub> |
+| 🟢 Open | 2026-10-15<br><sub>Not stated on the official site</sub> | 🎬 Video<br>🎵 Audio | **[AI Filmfest Athens 2026 — Myths Meet Machine](https://www.aifilmfestathens.gr/en)**<br><sub>Fully AI-generated short films of 3–15 minutes; no live-action hybrids; non-English films require English subtitles · [Rules](https://www.aifilmfestathens.gr/en)</sub> | Greece / Open worldwide | Four competitive awards of €1,000 each<br><sub>Fee: €30 through September 3 / €45 final deadline</sub> |
+| 🟢 Open | 2026-10-16<br><sub>Not stated on the official site</sub> | 🎬 Video | **[AIGC Global Competition 2026](https://www.aigcglobal.com.cn/)**<br><sub>Age-group divisions from Primary 4 through an adult open division; themes and durations vary · [Rules](https://www.aigcglobal.com.cn/?a=index&c=Lists&m=home&tid=1)</sub> | Hong Kong, China / Open worldwide | HK$120,000 total prize pool<br><sub>Fee: Paid; see registration page</sub> |
+| 🟢 Open | 2026-10-16<br><sub>Not stated on the official site</sub> | 🎬 Video<br>🎵 Audio | **[Disrupt AI Film Festival (DAIFF 2026)](https://www.daiff.com.au/)**<br><sub>Generative AI must be used for visuals, audio, effects, or animation; entrants must describe their creative process · [Rules](https://www.daiff.com.au/)</sub> | Australia / Open worldwide | Grand Prix and category awards; amounts not stated<br><sub>Fee: Via FilmFreeway; see submission page</sub> |
+| 🟢 Open | 2026-10-17<br><sub>China Standard Time; see submission page for exact time</sub> | 🧩 App | **[2026 WeChat Mini Program Development Competition](https://watcha.cn/activities/activity-74)**<br><sub>Open regardless of education or profession; teams of 1–3; entries must be original published mini programs, not mini games · [Rules](https://watcha.cn/activities/activity-74)</sub> | China / Open worldwide | CNY 490,000 total; CNY 100,000 first prize<br><sub>Fee: Free</sub> |
+| 🟢 Open | 2026-10-17<br><sub>Not stated on the official site</sub> | 🎬 Video<br>🖼️ Image<br>🎵 Audio | **[AIMA — AI Movie Awards London 2026](https://www.aimovieawards.org/)**<br><sub>Accepts AI film, motion art, image art, advertising, and music; scripts and text must be in English or include a translation · [Rules](https://www.aimovieawards.org/)</sub> | United Kingdom / Open worldwide | Trophies and certificates by category; selected shorts may opt into a distribution and revenue-sharing offer<br><sub>Fee: Paid and non-refundable; see the official submission page</sub> |
 
-## 即将开始
+## Opening soon
 
-| 状态 | 截止时间 | 类别 | 赛事与要求 | 地区 / 资格 | 奖励 / 费用 |
+| Status | Deadline | Category | Contest & requirements | Region / eligibility | Prize / fee |
 |---|---|---|---|---|---|
-| 🔵 2026-09-01 开放 | 2026-09-30<br><sub>韩国时间 23:59</sub> | 🖼️ 图像<br>🎬 视频 | **[AI ART AWARD — NEXT ART AI 2026](https://next-art-ai.com/en/apply/overview)**<br><sub>不限职业、国籍与年龄；AI 图像与 AI 视频两类 · [规则](https://next-art-ai.com/en/apply/overview)</sub> | 韩国 / 全球开放 | 总奖金 KRW 21,000,000<br><sub>费用：以官方细则为准</sub> |
+| 🔵 Opens 2026-09-01 | 2026-09-30<br><sub>Korea Standard Time, 23:59</sub> | 🖼️ Image<br>🎬 Video | **[AI ART AWARD — NEXT ART AI 2026](https://next-art-ai.com/en/apply/overview)**<br><sub>Open to all professions, nationalities, and ages; AI image and AI video categories · [Rules](https://next-art-ai.com/en/apply/overview)</sub> | South Korea / Open worldwide | KRW 21,000,000 total prize pool<br><sub>Fee: See official guidelines</sub> |
 
-## 类别说明
+## Categories
 
-- 🎬 视频 / 电影 / 动画 / 微短剧
-- 🖼️ 图像 / 视觉艺术
-- 🎵 音频 / 音乐 / 歌曲
-- ✍️ 文字 / 剧本 / 数据新闻
-- 🧩 应用 / 交互作品 / 小程序
+- 🎬 Video, film, animation, and micro-drama
+- 🖼️ Images and visual art
+- 🎵 Audio, music, and songs
+- ✍️ Writing, scripts, and data journalism
+- 🧩 Applications, interactive works, and mini programs
 
-## 长期关注入口
+## Sources worth watching
 
-这些入口本身长期有效，不代表往届比赛仍可投稿。
+These sources remain useful over time, but a listed past edition may no longer accept submissions.
 
-- [芒果灵创赛事中心](https://aigc.mgtv.com/challenges/)：国内 AI 视频、微短剧与动漫创作赛事。
-- [ModelScope 活动与竞赛](https://modelscope.cn/events)：国内模型、开发与 AIGC 创作活动。
-- [Runway AI Festival](https://aif.runwayml.com/)：覆盖电影、设计、广告、时尚、游戏和新媒体的年度赛事。
-- [Reply AI Film Festival](https://challenges.reply.com/challenges/creative/aifilmfestival/home/)：面向全球 AI 电影创作者的年度电影节。
-- [World AI Film Festival](https://worldaifilmfestival.com/)：以生成式 AI 电影为核心的国际赛事。
-- [AI Film Contests](https://aifilmcontests.com/)：第三方 AI 电影赛事日历；发现赛事后仍需回到官网核验。
-- [AI Music Events Deadlines](https://aimusic.events/deadlines)：第三方 AI 音乐机会日历；报名条件以主办方为准。
+- [Runway AI Festival](https://aif.runwayml.com/): an annual program spanning film, design, advertising, fashion, games, and new media.
+- [Reply AI Film Festival](https://challenges.reply.com/challenges/creative/aifilmfestival/home/): a global AI filmmaking competition.
+- [World AI Film Festival](https://worldaifilmfestival.com/): an international festival focused on generative-AI cinema.
+- [AI Film Contests](https://aifilmcontests.com/): a third-party AI film deadline calendar; always verify discoveries on the organizer's official site.
+- [AI Music Events Deadlines](https://aimusic.events/deadlines): a third-party music opportunity calendar; eligibility must be checked with the organizer.
+- [Mango AI Creative Challenges](https://aigc.mgtv.com/challenges/): AI video, micro-drama, and animation contests in China.
+- [ModelScope Events](https://modelscope.cn/events): model, developer, and AIGC events in China.
 
-## 收录标准
+## Inclusion criteria
 
-一个赛事需要同时满足以下条件：
+A contest must meet all of the following requirements:
 
-1. AIGC 是作品创作或评审的核心，而不是只在宣传文案中提到 AI；
-2. 有可访问的官方主页、规则或主办方公告；
-3. 能核验报名窗口、参赛对象与作品要求；
-4. 当前仍可报名，或已官宣且即将开放；
-5. 不收录纯抽奖、课程销售、无法确认主办方或日期相互冲突的活动。
+1. AIGC is central to creating or judging the work, rather than appearing only in promotional copy.
+2. An accessible official event page, rule page, or organizer announcement is available.
+3. The submission window, eligibility, and work requirements can be verified.
+4. Submissions are currently open, or an official future opening date has been announced.
+5. The event is not a giveaway, a course-sales campaign, or an unverifiable listing with conflicting dates.
 
-官方规则页优先级高于媒体报道和聚合站。付费比赛会明确标注，未写“免费”的赛事不代表一定免费。
+Official rules and organizer announcements take priority over media reports and aggregator sites. Paid contests are explicitly marked. A listing that is not marked “free” should not be assumed to be free.
 
-## 一起共创
+## Contributing
 
-发现新比赛、延期、规则变化或失效链接时，请[提交赛事](../../issues/new?template=add-contest.yml)或[报告变更](../../issues/new?template=update-contest.yml)。提交前请阅读 [CONTRIBUTING.md](CONTRIBUTING.md)。
+You can [suggest a contest](../../issues/new?template=add-contest.yml) or [report a change](../../issues/new?template=update-contest.yml). When opening a pull request, add or update the corresponding object in [`data/contests.json`](data/contests.json), run the commands below, and include the regenerated outputs.
 
-赛事数据保存在 [`data/contests.json`](data/contests.json)，字段定义见 [`data/schema.json`](data/schema.json)，维护流程见 [`MAINTENANCE.md`](MAINTENANCE.md)，变更记录见 [`CHANGELOG.md`](CHANGELOG.md)。README、RSS 和 ICS 由脚本生成：
+Field definitions are in [`data/schema.json`](data/schema.json), the maintenance policy is in [`MAINTENANCE.md`](MAINTENANCE.md), and notable updates are recorded in [`CHANGELOG.md`](CHANGELOG.md).
 
 ```bash
 python3 scripts/build_readme.py
 python3 scripts/build_readme.py --check
+python3 -m unittest discover -s tests -v
 ```
 
-每天的自动任务会删除已经超过截止日的记录并重建 README。删除是对当前清单的清理，Git 历史仍保留旧数据。
+The daily workflow removes expired entries from the active directory and rebuilds both language editions, RSS, and ICS. Previous entries remain available through Git history.
 
-## 免责声明
+## Disclaimer
 
-本项目是社区维护的信息索引，不代表任何主办方，也不对奖金发放、版权授权、报名费用或规则临时变化负责。参赛前请特别检查作品版权、肖像与声音授权、AI 工具披露、地区限制和主办方对作品的使用许可。
+This is a community-maintained information index and is not affiliated with any organizer. It does not guarantee prize payments, licensing terms, fees, or last-minute rule changes. Before entering, pay particular attention to copyright ownership, likeness and voice permissions, AI-tool disclosure requirements, regional restrictions, and the organizer's rights to use submitted works.

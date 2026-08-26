@@ -21,18 +21,26 @@ class BuildReadmeTests(unittest.TestCase):
 
     def test_deadline_is_inclusive(self):
         deadline = date(2026, 8, 31)
-        self.assertEqual(build_readme.status_label(deadline, deadline), "🔥 今天截止")
+        self.assertEqual(build_readme.status_label(deadline, deadline), "🔥 Due today")
+        self.assertEqual(build_readme.status_label(deadline, deadline, "zh"), "🔥 今天截止")
 
     def test_future_contest_uses_upcoming_label(self):
         contests = build_readme.load_contests()
         upcoming = [item for item in contests if item["id"] == "next-art-ai-2026"]
         table = build_readme.render_table(upcoming, date(2026, 8, 26), upcoming=True)
-        self.assertIn("🔵 2026-09-01 开放", table)
+        self.assertIn("🔵 Opens 2026-09-01", table)
 
     def test_render_omits_expired_contests(self):
         contests = build_readme.load_contests()
         output = build_readme.render_readme(contests, date(2026, 11, 1))
-        self.assertNotIn("Seedance 2.5 白模参考创作大赛", output)
+        self.assertNotIn("Dreamina Seedance 2.5", output)
+
+    def test_both_readmes_render_full_contest_tables(self):
+        contests = build_readme.load_contests()
+        english = build_readme.render_readme(contests, date(2026, 8, 26), "en")
+        chinese = build_readme.render_readme(contests, date(2026, 8, 26), "zh")
+        self.assertIn("Austin AI Film Festival 2026", english)
+        self.assertIn("美国 / 全球开放", chinese)
 
     def test_rejects_unknown_fields(self):
         contests = deepcopy(build_readme.load_contests())
@@ -56,13 +64,13 @@ class BuildReadmeTests(unittest.TestCase):
         rss = build_readme.render_rss(contests, date(2026, 8, 26))
         root = ET.fromstring(rss)
         self.assertEqual(root.tag, "rss")
-        self.assertEqual(len(root.findall("./channel/item")), 11)
+        self.assertEqual(len(root.findall("./channel/item")), 15)
 
     def test_ics_contains_one_event_per_active_contest(self):
         contests = build_readme.load_contests()
         calendar = build_readme.render_ics(contests, date(2026, 8, 26))
-        self.assertEqual(calendar.count("BEGIN:VEVENT"), 11)
-        self.assertIn("X-WR-CALNAME:AIGC 创作赛事截止提醒", calendar)
+        self.assertEqual(calendar.count("BEGIN:VEVENT"), 15)
+        self.assertIn("X-WR-CALNAME:AIGC Creative Contest Deadlines", calendar)
         self.assertTrue(calendar.endswith("END:VCALENDAR\r\n"))
 
 

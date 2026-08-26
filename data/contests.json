@@ -13,7 +13,16 @@
     "prize": "冠军 US$50,000 + 100 万即梦积分",
     "official_url": "https://jimeng.jianying.com/ai-tool/activity-detail/2026-805-dreamina-weekly-challenge",
     "rules_url": "https://jimeng.jianying.com/ai-tool/activity-detail/2026-805-dreamina-weekly-challenge",
-    "verified_on": "2026-08-26"
+    "verified_on": "2026-08-26",
+    "en": {
+      "title": "Story Blind Box: Dreamina Seedance 2.5 Blockout Reference Challenge",
+      "region": "China / Open worldwide",
+      "organizer": "Dreamina AI",
+      "timezone": "China Standard Time, 23:59",
+      "eligibility": "AI creators worldwide; a 15-second landscape video using the official blockout reference and Seedance 2.5",
+      "fee": "Not stated",
+      "prize": "US$50,000 champion prize + 1,000,000 Dreamina credits"
+    }
   },
   {
     "id": "hong-kong-aigc-cultural-content-2026",
@@ -29,7 +38,16 @@
     "prize": "决赛单项一等奖 HK$5,000 起",
     "official_url": "https://aigc.eduhk.org/",
     "rules_url": "https://aigc.eduhk.org/",
-    "verified_on": "2026-08-26"
+    "verified_on": "2026-08-26",
+    "en": {
+      "title": "Hong Kong International AIGC Cultural Digital Content Creation Competition",
+      "region": "Hong Kong, China / Age-group divisions",
+      "organizer": "Hong Kong International Music Festival and partners",
+      "timezone": "Not stated on the official site",
+      "eligibility": "Children, youth, university, and open divisions; works focus on Chinese culture",
+      "fee": "See division rules",
+      "prize": "First prizes in the final round start at HK$5,000"
+    }
   },
   {
     "id": "malanshan-ai-micro-drama-2026",
@@ -45,7 +63,16 @@
     "prize": "超 ¥800,000 奖池及项目孵化权益",
     "official_url": "https://aigc.mgtv.com/challenges/detail?id=15",
     "rules_url": "https://gbdsj.hunan.gov.cn/gbdsj/xxgk/tzgg/202606/t20260611_33999282.html",
-    "verified_on": "2026-08-26"
+    "verified_on": "2026-08-26",
+    "en": {
+      "title": "2026 Audiovisual China · Malanshan Cup AI Micro-Drama Innovation Competition",
+      "region": "China",
+      "organizer": "Hunan Radio and Television Administration and Hunan Malanshan Group",
+      "timezone": "China Standard Time; exact time not stated",
+      "eligibility": "Production companies, creative teams, or individuals; at least 3 landscape episodes or 5 vertical episodes",
+      "fee": "Not stated",
+      "prize": "Prize pool above CNY 800,000 plus project incubation support"
+    }
   },
   {
     "id": "wechat-mini-program-2026",
@@ -61,7 +88,16 @@
     "prize": "总奖金 ¥490,000；一等奖 ¥100,000",
     "official_url": "https://watcha.cn/activities/activity-74",
     "rules_url": "https://watcha.cn/activities/activity-74",
-    "verified_on": "2026-08-26"
+    "verified_on": "2026-08-26",
+    "en": {
+      "title": "2026 WeChat Mini Program Development Competition",
+      "region": "China / Open worldwide",
+      "organizer": "WeChat Mini Program Team and WAIC Future Tech",
+      "timezone": "China Standard Time; see submission page for exact time",
+      "eligibility": "Open regardless of education or profession; teams of 1–3; entries must be original published mini programs, not mini games",
+      "fee": "Free",
+      "prize": "CNY 490,000 total; CNY 100,000 first prize"
+    }
   },
   {
     "id": "cuc-aigc-visualization-2026",
@@ -77,7 +113,16 @@
     "prize": "证书及纪念品",
     "official_url": "https://aigc.capt.cn/",
     "rules_url": "https://www.cuc.edu.cn/_t86/2026/0811/c1761a273225/page.htm",
-    "verified_on": "2026-08-26"
+    "verified_on": "2026-08-26",
+    "en": {
+      "title": "First 2026 AIGC and Visualization Creation Competition",
+      "region": "China",
+      "organizer": "Communication University of China and China Association of Press Technicians",
+      "timezone": "China Standard Time; exact time not stated",
+      "eligibility": "Institutional and individual divisions; individual division includes university students and adults",
+      "fee": "Free",
+      "prize": "Certificates and commemorative gifts"
+    }
   },
   {
     "id": "aigc-global-competition-2026",
@@ -93,7 +138,16 @@
     "prize": "总奖金 HK$120,000",
     "official_url": "https://www.aigcglobal.com.cn/",
     "rules_url": "https://www.aigcglobal.com.cn/?a=index&c=Lists&m=home&tid=1",
-    "verified_on": "2026-08-26"
+    "verified_on": "2026-08-26",
+    "en": {
+      "title": "AIGC Global Competition 2026",
+      "region": "Hong Kong, China / Open worldwide",
+      "organizer": "Gangjun Power Youth Association and Modou Group",
+      "timezone": "Not stated on the official site",
+      "eligibility": "Age-group divisions from Primary 4 through an adult open division; themes and durations vary",
+      "fee": "Paid; see registration page",
+      "prize": "HK$120,000 total prize pool"
+    }
   },
   {
     "id": "astana-ai-film-festival-2026",
@@ -109,7 +163,16 @@
     "prize": "US$1,000,000 竞赛奖金 + US$1,000,000 制作基金",
     "official_url": "https://aaiff.ai/",
     "rules_url": "https://aaiff.ai/terms",
-    "verified_on": "2026-08-26"
+    "verified_on": "2026-08-26",
+    "en": {
+      "title": "Astana AI Film Festival (AAIFF 2026)",
+      "region": "Kazakhstan / Open worldwide",
+      "organizer": "Astana AI Film Festival",
+      "timezone": "Not stated on the official site",
+      "eligibility": "Individuals, teams, and studios; generative AI must be integral; non-English films require English subtitles",
+      "fee": "Free",
+      "prize": "US$1,000,000 competition prizes + US$1,000,000 production fund"
+    }
   },
   {
     "id": "next-art-ai-2026",
@@ -125,7 +188,16 @@
     "prize": "总奖金 KRW 21,000,000",
     "official_url": "https://next-art-ai.com/en/apply/overview",
     "rules_url": "https://next-art-ai.com/en/apply/overview",
-    "verified_on": "2026-08-26"
+    "verified_on": "2026-08-26",
+    "en": {
+      "title": "AI ART AWARD — NEXT ART AI 2026",
+      "region": "South Korea / Open worldwide",
+      "organizer": "HOBAN Cultural Foundation",
+      "timezone": "Korea Standard Time, 23:59",
+      "eligibility": "Open to all professions, nationalities, and ages; AI image and AI video categories",
+      "fee": "See official guidelines",
+      "prize": "KRW 21,000,000 total prize pool"
+    }
   },
   {
     "id": "ai-song-contest-bangkok-2026",
@@ -141,7 +213,16 @@
     "prize": "US$1,000 + 曼谷颁奖礼行程",
     "official_url": "https://www.aisongcontest.com/join",
     "rules_url": "https://www.aisongcontest.com/join",
-    "verified_on": "2026-08-26"
+    "verified_on": "2026-08-26",
+    "en": {
+      "title": "AI Song Contest 2026 — Bangkok",
+      "region": "Thailand / Open worldwide",
+      "organizer": "Stichting AI Song Contest",
+      "timezone": "AoE (UTC−12)",
+      "eligibility": "Human–AI co-created songs up to 4 minutes; prompt-only generation without human post-production is ineligible",
+      "fee": "Free",
+      "prize": "US$1,000 plus a trip to the Bangkok award show"
+    }
   },
   {
     "id": "ai-filmfest-athens-2026",
@@ -157,7 +238,16 @@
     "prize": "四个竞赛奖项各 €1,000",
     "official_url": "https://www.aifilmfestathens.gr/en",
     "rules_url": "https://www.aifilmfestathens.gr/en",
-    "verified_on": "2026-08-26"
+    "verified_on": "2026-08-26",
+    "en": {
+      "title": "AI Filmfest Athens 2026 — Myths Meet Machine",
+      "region": "Greece / Open worldwide",
+      "organizer": "AI Filmfest Athens",
+      "timezone": "Not stated on the official site",
+      "eligibility": "Fully AI-generated short films of 3–15 minutes; no live-action hybrids; non-English films require English subtitles",
+      "fee": "€30 through September 3 / €45 final deadline",
+      "prize": "Four competitive awards of €1,000 each"
+    }
   },
   {
     "id": "disrupt-ai-film-festival-2026",
@@ -173,6 +263,115 @@
     "prize": "Grand Prix 及分类奖；金额以官网为准",
     "official_url": "https://www.daiff.com.au/",
     "rules_url": "https://www.daiff.com.au/",
-    "verified_on": "2026-08-26"
+    "verified_on": "2026-08-26",
+    "en": {
+      "title": "Disrupt AI Film Festival (DAIFF 2026)",
+      "region": "Australia / Open worldwide",
+      "organizer": "TBWA Australia",
+      "timezone": "Not stated on the official site",
+      "eligibility": "Generative AI must be used for visuals, audio, effects, or animation; entrants must describe their creative process",
+      "fee": "Via FilmFreeway; see submission page",
+      "prize": "Grand Prix and category awards; amounts not stated"
+    }
+  },
+  {
+    "id": "austin-ai-film-festival-2026",
+    "title": "Austin AI Film Festival 2026",
+    "region": "美国 / 全球开放（部分受限地区除外）",
+    "categories": ["video"],
+    "organizer": "Austin AI Film Festival",
+    "start_date": "2026-04-15",
+    "deadline": "2026-09-15",
+    "timezone": "官网未注明",
+    "eligibility": "全球 14 岁及以上创作者；多数 AI 竞赛单元要求主要视觉内容由 AI 辅助工具生成",
+    "fee": "多数单元 US$20；学生单元设免费选项",
+    "prize": "奖项与入选展映；具体奖励以官方页为准",
+    "official_url": "https://filmfreeway.com/AustinAIFilmFestival",
+    "rules_url": "https://filmfreeway.com/AustinAIFilmFestival",
+    "verified_on": "2026-08-26",
+    "en": {
+      "title": "Austin AI Film Festival 2026",
+      "region": "United States / Open worldwide except restricted jurisdictions",
+      "organizer": "Austin AI Film Festival",
+      "timezone": "Not stated on the official site",
+      "eligibility": "Creators aged 14+ worldwide; most AI categories require a majority of visual content to use AI-assisted creative tools",
+      "fee": "US$20 for most categories; a free option is listed for the student category",
+      "prize": "Awards and selected screenings; see official page for prize details"
+    }
+  },
+  {
+    "id": "on-art-ai-film-festival-2026",
+    "title": "On Art AI Film Festival 2026",
+    "region": "波兰 / 全球开放",
+    "categories": ["video"],
+    "organizer": "On Art Film Festival",
+    "start_date": "2026-02-03",
+    "deadline": "2026-09-30",
+    "timezone": "官网未注明",
+    "eligibility": "2025 年 1 月 1 日后完成、AI 发挥关键作用的影片；非英语或波兰语作品需英文字幕",
+    "fee": "通过 FilmFreeway 收费，金额依单元与阶段而定",
+    "prize": "六个单元颁发获奖证书，无现金或实物奖金",
+    "official_url": "https://filmfreeway.com/OnAI",
+    "rules_url": "https://filmfreeway.com/OnAI",
+    "verified_on": "2026-08-26",
+    "en": {
+      "title": "On Art AI Film Festival 2026",
+      "region": "Poland / Open worldwide",
+      "organizer": "On Art Film Festival",
+      "timezone": "Not stated on the official site",
+      "eligibility": "Films completed after January 1, 2025 in which AI plays a key role; non-English and non-Polish films need English subtitles",
+      "fee": "Paid via FilmFreeway; varies by category and deadline stage",
+      "prize": "Diplomas in six categories; no cash or material prizes"
+    }
+  },
+  {
+    "id": "gento-toronto-ai-film-festival-2026",
+    "title": "GenTO：Toronto AI Film Festival 2026",
+    "region": "加拿大 / 全球开放",
+    "categories": ["video"],
+    "organizer": "GenTO",
+    "start_date": "2026-05-04",
+    "deadline": "2026-10-01",
+    "timezone": "官网未注明",
+    "eligibility": "接受 AI 辅助、混合或传统方式制作的短片、展示片、音乐视频与广告；非英语作品需英文字幕",
+    "fee": "常规 US$30 / 学生 US$25；逾期 US$40 / 学生 US$35",
+    "prize": "官方荣誉、合作方奖励；部分单元可能提供辅导与技术积分",
+    "official_url": "https://filmfreeway.com/GenTOAIFilmFestival",
+    "rules_url": "https://filmfreeway.com/GenTOAIFilmFestival",
+    "verified_on": "2026-08-26",
+    "en": {
+      "title": "GenTO: Toronto AI Film Festival 2026",
+      "region": "Canada / Open worldwide",
+      "organizer": "GenTO",
+      "timezone": "Not stated on the official site",
+      "eligibility": "AI-assisted, hybrid, or traditionally made short films, showcase films, music videos, and ads; non-English films need English subtitles",
+      "fee": "Regular US$30 / student US$25; late US$40 / student US$35",
+      "prize": "Festival recognition and partner prizes; some categories may include mentorship or technology credits"
+    }
+  },
+  {
+    "id": "aima-london-2026",
+    "title": "AIMA — AI Movie Awards London 2026",
+    "region": "英国 / 全球开放",
+    "categories": ["video", "image", "audio"],
+    "organizer": "AIMA — AI Movie Awards",
+    "start_date": "2026-06-15",
+    "deadline": "2026-10-17",
+    "timezone": "官网未注明",
+    "eligibility": "接受 AI 电影、动态图像、静态图像、广告与音乐作品；文字内容须为英文或附英文翻译",
+    "fee": "收费且不退款，金额以官方提交页为准",
+    "prize": "各官方单元奖杯与证书；入选短片可选择接受发行与收益分成方案",
+    "official_url": "https://www.aimovieawards.org/",
+    "rules_url": "https://www.aimovieawards.org/",
+    "verified_on": "2026-08-26",
+    "en": {
+      "title": "AIMA — AI Movie Awards London 2026",
+      "region": "United Kingdom / Open worldwide",
+      "organizer": "AIMA — AI Movie Awards",
+      "timezone": "Not stated on the official site",
+      "eligibility": "Accepts AI film, motion art, image art, advertising, and music; scripts and text must be in English or include a translation",
+      "fee": "Paid and non-refundable; see the official submission page",
+      "prize": "Trophies and certificates by category; selected shorts may opt into a distribution and revenue-sharing offer"
+    }
   }
 ]

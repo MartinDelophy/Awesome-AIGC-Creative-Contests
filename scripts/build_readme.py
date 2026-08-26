@@ -17,7 +17,9 @@ from urllib.parse import urlparse
 ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = ROOT / "data" / "contests.json"
 TEMPLATE_PATH = ROOT / "README.template.md"
+ZH_TEMPLATE_PATH = ROOT / "README.zh-CN.template.md"
 README_PATH = ROOT / "README.md"
+ZH_README_PATH = ROOT / "README.zh-CN.md"
 RSS_PATH = ROOT / "feed.xml"
 ICS_PATH = ROOT / "deadlines.ics"
 REPOSITORY_URL = "https://github.com/MartinDelophy/Awesome-AIGC-Creative-Contests"
@@ -38,15 +40,27 @@ REQUIRED_FIELDS = {
     "official_url",
     "rules_url",
     "verified_on",
+    "en",
 }
 
 CATEGORY_LABELS = {
-    "video": "🎬 视频",
-    "image": "🖼️ 图像",
-    "audio": "🎵 音频",
-    "text": "✍️ 文字",
-    "app": "🧩 应用",
+    "en": {
+        "video": "🎬 Video",
+        "image": "🖼️ Image",
+        "audio": "🎵 Audio",
+        "text": "✍️ Writing",
+        "app": "🧩 App",
+    },
+    "zh": {
+        "video": "🎬 视频",
+        "image": "🖼️ 图像",
+        "audio": "🎵 音频",
+        "text": "✍️ 文字",
+        "app": "🧩 应用",
+    },
 }
+
+TRANSLATED_FIELDS = {"title", "region", "organizer", "timezone", "eligibility", "fee", "prize"}
 
 ID_PATTERN = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 
@@ -85,7 +99,7 @@ def validate_contests(contests: list[dict]) -> None:
             raise ValueError(f"重复 id: {contest_id}")
         seen.add(contest_id)
 
-        text_fields = REQUIRED_FIELDS - {"categories"}
+        text_fields = REQUIRED_FIELDS - {"categories", "en"}
         empty_fields = [
             field for field in text_fields
             if not isinstance(item[field], str) or not item[field].strip()
@@ -105,7 +119,7 @@ def validate_contests(contests: list[dict]) -> None:
             raise ValueError(f"{contest_id}: categories 不能为空")
         if len(item["categories"]) != len(set(item["categories"])):
             raise ValueError(f"{contest_id}: categories 不能重复")
-        unknown = set(item["categories"]) - CATEGORY_LABELS.keys()
+        unknown = set(item["categories"]) - CATEGORY_LABELS["en"].keys()
         if unknown:
             raise ValueError(f"{contest_id}: 未知类别 {sorted(unknown)}")
         for url_field in ("official_url", "rules_url"):
@@ -113,58 +127,88 @@ def validate_contests(contests: list[dict]) -> None:
             if parsed.scheme != "https" or not parsed.netloc:
                 raise ValueError(f"{contest_id}: {url_field} 必须使用 https://")
 
+        if not isinstance(item["en"], dict):
+            raise ValueError(f"{contest_id}: en 必须是对象")
+        missing_translations = TRANSLATED_FIELDS - item["en"].keys()
+        unknown_translations = item["en"].keys() - TRANSLATED_FIELDS
+        if missing_translations or unknown_translations:
+            raise ValueError(
+                f"{contest_id}: en 字段不匹配；缺少 {sorted(missing_translations)}；"
+                f"未知 {sorted(unknown_translations)}"
+            )
+        empty_translations = [
+            field for field in TRANSLATED_FIELDS
+            if not isinstance(item["en"][field], str) or not item["en"][field].strip()
+        ]
+        if empty_translations:
+            raise ValueError(f"{contest_id}: en 字段不能为空 {sorted(empty_translations)}")
+
 
 def escape_cell(value: str) -> str:
     return str(value).replace("|", "\\|").replace("\n", " ")
 
 
-def status_label(deadline: date, today: date) -> str:
+def status_label(deadline: date, today: date, language: str = "en") -> str:
     days = (deadline - today).days
     if days <= 3:
-        return f"🔥 {days} 天内截止" if days else "🔥 今天截止"
+        if language == "zh":
+            return f"🔥 {days} 天内截止" if days else "🔥 今天截止"
+        return f"🔥 {days} days left" if days else "🔥 Due today"
     if days <= 7:
-        return "⏳ 7 天内截止"
-    return "🟢 报名中"
+        return "⏳ 7 天内截止" if language == "zh" else "⏳ Due within 7 days"
+    return "🟢 报名中" if language == "zh" else "🟢 Open"
 
 
-def render_table(contests: list[dict], today: date, upcoming: bool = False) -> str:
+def localized(item: dict, field: str, language: str) -> str:
+    return item[field] if language == "zh" else item["en"][field]
+
+
+def render_table(contests: list[dict], today: date, upcoming: bool = False, language: str = "en") -> str:
     if not contests:
-        return "_暂无已核验赛事。欢迎提交补充。_"
+        return "_暂无已核验赛事。欢迎提交补充。_" if language == "zh" else "_No verified contests yet. Contributions are welcome._"
 
-    header = "| 状态 | 截止时间 | 类别 | 赛事与要求 | 地区 / 资格 | 奖励 / 费用 |\n|---|---|---|---|---|---|"
+    header = (
+        "| 状态 | 截止时间 | 类别 | 赛事与要求 | 地区 / 资格 | 奖励 / 费用 |\n|---|---|---|---|---|---|"
+        if language == "zh"
+        else "| Status | Deadline | Category | Contest & requirements | Region / eligibility | Prize / fee |\n|---|---|---|---|---|---|"
+    )
     rows = []
     for item in sorted(contests, key=lambda entry: (entry["deadline"], entry["title"])):
         deadline = parse_date(item["deadline"], "deadline", item["id"])
-        categories = "<br>".join(CATEGORY_LABELS[name] for name in item["categories"])
+        categories = "<br>".join(CATEGORY_LABELS[language][name] for name in item["categories"])
         if upcoming:
-            status = f"🔵 {item['start_date']} 开放"
+            status = f"🔵 {item['start_date']} 开放" if language == "zh" else f"🔵 Opens {item['start_date']}"
         else:
-            status = status_label(deadline, today)
-        title = f"**[{item['title']}]({item['official_url']})**<br><sub>{item['eligibility']} · [规则]({item['rules_url']})</sub>"
-        reward = f"{item['prize']}<br><sub>费用：{item['fee']}</sub>"
+            status = status_label(deadline, today, language)
+        rules_label = "规则" if language == "zh" else "Rules"
+        fee_label = "费用" if language == "zh" else "Fee"
+        label_separator = "：" if language == "zh" else ": "
+        title = f"**[{localized(item, 'title', language)}]({item['official_url']})**<br><sub>{localized(item, 'eligibility', language)} · [{rules_label}]({item['rules_url']})</sub>"
+        reward = f"{localized(item, 'prize', language)}<br><sub>{fee_label}{label_separator}{localized(item, 'fee', language)}</sub>"
         row = [
             status,
-            f"{item['deadline']}<br><sub>{item['timezone']}</sub>",
+            f"{item['deadline']}<br><sub>{localized(item, 'timezone', language)}</sub>",
             categories,
             title,
-            item["region"],
+            localized(item, "region", language),
             reward,
         ]
         rows.append("| " + " | ".join(escape_cell(cell) for cell in row) + " |")
     return header + "\n" + "\n".join(rows)
 
 
-def render_readme(contests: list[dict], today: date) -> str:
+def render_readme(contests: list[dict], today: date, language: str = "en") -> str:
     visible = [item for item in contests if parse_date(item["deadline"], "deadline", item["id"]) >= today]
     open_now = [item for item in visible if parse_date(item["start_date"], "start_date", item["id"]) <= today]
     upcoming = [item for item in visible if parse_date(item["start_date"], "start_date", item["id"]) > today]
     verified_on = max((item["verified_on"] for item in visible), default=today.isoformat())
-    template = TEMPLATE_PATH.read_text(encoding="utf-8")
+    template_path = ZH_TEMPLATE_PATH if language == "zh" else TEMPLATE_PATH
+    template = template_path.read_text(encoding="utf-8")
     replacements = {
         "{{COUNT}}": str(len(visible)),
         "{{UPDATED_AT}}": verified_on,
-        "{{OPEN_TABLE}}": render_table(open_now, today),
-        "{{UPCOMING_TABLE}}": render_table(upcoming, today, upcoming=True),
+        "{{OPEN_TABLE}}": render_table(open_now, today, language=language),
+        "{{UPCOMING_TABLE}}": render_table(upcoming, today, upcoming=True, language=language),
     }
     for marker, value in replacements.items():
         template = template.replace(marker, value)
@@ -190,14 +234,15 @@ def render_rss(contests: list[dict], today: date) -> str:
         item_verified = parse_date(item["verified_on"], "verified_on", item["id"])
         item_pub_date = format_datetime(datetime.combine(item_verified, time.min, tzinfo=timezone.utc))
         description = (
-            f"截止：{item['deadline']}（{item['timezone']}）；"
-            f"地区/资格：{item['region']}；费用：{item['fee']}；奖励：{item['prize']}。"
+            f"Deadline: {item['deadline']} ({item['en']['timezone']}); "
+            f"region/eligibility: {item['en']['region']}; fee: {item['en']['fee']}; "
+            f"prize: {item['en']['prize']}."
         )
         items.append(
             "\n".join(
                 [
                     "    <item>",
-                    f"      <title>{xml_escape(item['title'])}</title>",
+                    f"      <title>{xml_escape(item['en']['title'])}</title>",
                     f"      <link>{xml_escape(item['official_url'])}</link>",
                     f"      <guid isPermaLink=\"false\">{xml_escape(item['id'])}</guid>",
                     f"      <pubDate>{item_pub_date}</pubDate>",
@@ -212,8 +257,8 @@ def render_rss(contests: list[dict], today: date) -> str:
   <channel>
     <title>Awesome AIGC Creative Contests</title>
     <link>{REPOSITORY_URL}</link>
-    <description>仍可报名或即将开放的 AIGC 创作赛事更新</description>
-    <language>zh-CN</language>
+    <description>Updates to active and upcoming AIGC creative contests worldwide</description>
+    <language>en</language>
     <lastBuildDate>{pub_date}</lastBuildDate>
     <atom:link href="{PUBLIC_BASE_URL}/feed.xml" rel="self" type="application/rss+xml" />
 {item_block}
@@ -245,18 +290,18 @@ def render_ics(contests: list[dict], today: date) -> str:
     lines = [
         "BEGIN:VCALENDAR",
         "VERSION:2.0",
-        "PRODID:-//Awesome AIGC Creative Contests//Deadlines//ZH",
+        "PRODID:-//Awesome AIGC Creative Contests//Deadlines//EN",
         "CALSCALE:GREGORIAN",
         "METHOD:PUBLISH",
-        "X-WR-CALNAME:AIGC 创作赛事截止提醒",
-        "X-WR-CALDESC:Awesome AIGC Creative Contests 当前赛事截止日期",
+        "X-WR-CALNAME:AIGC Creative Contest Deadlines",
+        "X-WR-CALDESC:Current deadlines from Awesome AIGC Creative Contests",
     ]
     for item in visible_contests(contests, today):
         deadline = parse_date(item["deadline"], "deadline", item["id"])
         verified = parse_date(item["verified_on"], "verified_on", item["id"])
         description = (
-            f"{item['eligibility']}\n时区：{item['timezone']}\n"
-            f"费用：{item['fee']}\n奖励：{item['prize']}"
+            f"{item['en']['eligibility']}\nTime zone: {item['en']['timezone']}\n"
+            f"Fee: {item['en']['fee']}\nPrize: {item['en']['prize']}"
         )
         lines.extend(
             [
@@ -265,7 +310,7 @@ def render_ics(contests: list[dict], today: date) -> str:
                 f"DTSTAMP:{verified.strftime('%Y%m%d')}T000000Z",
                 f"DTSTART;VALUE=DATE:{deadline.strftime('%Y%m%d')}",
                 f"DTEND;VALUE=DATE:{(deadline + timedelta(days=1)).strftime('%Y%m%d')}",
-                f"SUMMARY:{escape_ics('截止：' + item['title'])}",
+                f"SUMMARY:{escape_ics('Deadline: ' + item['en']['title'])}",
                 f"DESCRIPTION:{escape_ics(description)}",
                 f"URL:{item['official_url']}",
                 "TRANSP:TRANSPARENT",
@@ -296,7 +341,8 @@ def main() -> int:
             contests = active
 
         outputs = {
-            README_PATH: render_readme(contests, args.today),
+            README_PATH: render_readme(contests, args.today, "en"),
+            ZH_README_PATH: render_readme(contests, args.today, "zh"),
             RSS_PATH: render_rss(contests, args.today),
             ICS_PATH: render_ics(contests, args.today),
         }
@@ -308,12 +354,12 @@ def main() -> int:
             if outdated:
                 print(f"生成文件不是最新：{', '.join(outdated)}；请运行 python3 scripts/build_readme.py", file=sys.stderr)
                 return 1
-            print("README.md、feed.xml 和 deadlines.ics 已是最新")
+            print("README.md、README.zh-CN.md、feed.xml 和 deadlines.ics 已是最新")
             return 0
 
         for path, rendered in outputs.items():
             path.write_text(rendered, encoding="utf-8")
-        print(f"已生成 README.md、feed.xml 和 deadlines.ics，收录 {len(contests)} 条赛事")
+        print(f"已生成 README.md、README.zh-CN.md、feed.xml 和 deadlines.ics，收录 {len(contests)} 条赛事")
         return 0
     except (OSError, ValueError, json.JSONDecodeError) as exc:
         print(f"错误：{exc}", file=sys.stderr)

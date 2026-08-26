@@ -3,86 +3,114 @@
   <channel>
     <title>Awesome AIGC Creative Contests</title>
     <link>https://github.com/MartinDelophy/Awesome-AIGC-Creative-Contests</link>
-    <description>仍可报名或即将开放的 AIGC 创作赛事更新</description>
-    <language>zh-CN</language>
+    <description>Updates to active and upcoming AIGC creative contests worldwide</description>
+    <language>en</language>
     <lastBuildDate>Wed, 26 Aug 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://martindelophy.github.io/Awesome-AIGC-Creative-Contests/feed.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>香港国际 AIGC 文化数字内容创作大赛</title>
+      <title>Hong Kong International AIGC Cultural Digital Content Creation Competition</title>
       <link>https://aigc.eduhk.org/</link>
       <guid isPermaLink="false">hong-kong-aigc-cultural-content-2026</guid>
       <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
-      <description>截止：2026-08-30（官网未注明）；地区/资格：中国香港 / 分年龄组；费用：以组别细则为准；奖励：决赛单项一等奖 HK$5,000 起。</description>
+      <description>Deadline: 2026-08-30 (Not stated on the official site); region/eligibility: Hong Kong, China / Age-group divisions; fee: See division rules; prize: First prizes in the final round start at HK$5,000.</description>
     </item>
     <item>
-      <title>2026「视听中国·马栏山杯」AI 微短剧创智大赛</title>
+      <title>2026 Audiovisual China · Malanshan Cup AI Micro-Drama Innovation Competition</title>
       <link>https://aigc.mgtv.com/challenges/detail?id=15</link>
       <guid isPermaLink="false">malanshan-ai-micro-drama-2026</guid>
       <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
-      <description>截止：2026-08-31（北京时间（具体时刻以官网为准））；地区/资格：中国；费用：未注明；奖励：超 ¥800,000 奖池及项目孵化权益。</description>
+      <description>Deadline: 2026-08-31 (China Standard Time; exact time not stated); region/eligibility: China; fee: Not stated; prize: Prize pool above CNY 800,000 plus project incubation support.</description>
     </item>
     <item>
-      <title>Astana AI Film Festival（AAIFF 2026）</title>
+      <title>Astana AI Film Festival (AAIFF 2026)</title>
       <link>https://aaiff.ai/</link>
       <guid isPermaLink="false">astana-ai-film-festival-2026</guid>
       <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
-      <description>截止：2026-08-31（官网未注明）；地区/资格：哈萨克斯坦 / 全球开放；费用：免费；奖励：US$1,000,000 竞赛奖金 + US$1,000,000 制作基金。</description>
+      <description>Deadline: 2026-08-31 (Not stated on the official site); region/eligibility: Kazakhstan / Open worldwide; fee: Free; prize: US$1,000,000 competition prizes + US$1,000,000 production fund.</description>
     </item>
     <item>
-      <title>故事盲盒：即梦 Seedance 2.5 白模参考创作大赛</title>
+      <title>Story Blind Box: Dreamina Seedance 2.5 Blockout Reference Challenge</title>
       <link>https://jimeng.jianying.com/ai-tool/activity-detail/2026-805-dreamina-weekly-challenge</link>
       <guid isPermaLink="false">dreamina-seedance-2-5-blockout-2026</guid>
       <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
-      <description>截止：2026-08-31（北京时间 23:59）；地区/资格：中国 / 全球开放；费用：未注明；奖励：冠军 US$50,000 + 100 万即梦积分。</description>
+      <description>Deadline: 2026-08-31 (China Standard Time, 23:59); region/eligibility: China / Open worldwide; fee: Not stated; prize: US$50,000 champion prize + 1,000,000 Dreamina credits.</description>
+    </item>
+    <item>
+      <title>Austin AI Film Festival 2026</title>
+      <link>https://filmfreeway.com/AustinAIFilmFestival</link>
+      <guid isPermaLink="false">austin-ai-film-festival-2026</guid>
+      <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Deadline: 2026-09-15 (Not stated on the official site); region/eligibility: United States / Open worldwide except restricted jurisdictions; fee: US$20 for most categories; a free option is listed for the student category; prize: Awards and selected screenings; see official page for prize details.</description>
     </item>
     <item>
       <title>AI Song Contest 2026 — Bangkok</title>
       <link>https://www.aisongcontest.com/join</link>
       <guid isPermaLink="false">ai-song-contest-bangkok-2026</guid>
       <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
-      <description>截止：2026-09-27（AoE（UTC−12））；地区/资格：泰国 / 全球开放；费用：免费；奖励：US$1,000 + 曼谷颁奖礼行程。</description>
+      <description>Deadline: 2026-09-27 (AoE (UTC−12)); region/eligibility: Thailand / Open worldwide; fee: Free; prize: US$1,000 plus a trip to the Bangkok award show.</description>
     </item>
     <item>
       <title>AI ART AWARD — NEXT ART AI 2026</title>
       <link>https://next-art-ai.com/en/apply/overview</link>
       <guid isPermaLink="false">next-art-ai-2026</guid>
       <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
-      <description>截止：2026-09-30（韩国时间 23:59）；地区/资格：韩国 / 全球开放；费用：以官方细则为准；奖励：总奖金 KRW 21,000,000。</description>
+      <description>Deadline: 2026-09-30 (Korea Standard Time, 23:59); region/eligibility: South Korea / Open worldwide; fee: See official guidelines; prize: KRW 21,000,000 total prize pool.</description>
     </item>
     <item>
-      <title>首届（2026）AIGC 与可视化创作大赛</title>
+      <title>On Art AI Film Festival 2026</title>
+      <link>https://filmfreeway.com/OnAI</link>
+      <guid isPermaLink="false">on-art-ai-film-festival-2026</guid>
+      <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Deadline: 2026-09-30 (Not stated on the official site); region/eligibility: Poland / Open worldwide; fee: Paid via FilmFreeway; varies by category and deadline stage; prize: Diplomas in six categories; no cash or material prizes.</description>
+    </item>
+    <item>
+      <title>GenTO: Toronto AI Film Festival 2026</title>
+      <link>https://filmfreeway.com/GenTOAIFilmFestival</link>
+      <guid isPermaLink="false">gento-toronto-ai-film-festival-2026</guid>
+      <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Deadline: 2026-10-01 (Not stated on the official site); region/eligibility: Canada / Open worldwide; fee: Regular US$30 / student US$25; late US$40 / student US$35; prize: Festival recognition and partner prizes; some categories may include mentorship or technology credits.</description>
+    </item>
+    <item>
+      <title>First 2026 AIGC and Visualization Creation Competition</title>
       <link>https://aigc.capt.cn/</link>
       <guid isPermaLink="false">cuc-aigc-visualization-2026</guid>
       <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
-      <description>截止：2026-10-11（北京时间（具体时刻以官网为准））；地区/资格：中国；费用：免费；奖励：证书及纪念品。</description>
+      <description>Deadline: 2026-10-11 (China Standard Time; exact time not stated); region/eligibility: China; fee: Free; prize: Certificates and commemorative gifts.</description>
     </item>
     <item>
       <title>AI Filmfest Athens 2026 — Myths Meet Machine</title>
       <link>https://www.aifilmfestathens.gr/en</link>
       <guid isPermaLink="false">ai-filmfest-athens-2026</guid>
       <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
-      <description>截止：2026-10-15（官网未注明）；地区/资格：希腊 / 全球开放；费用：€30（9 月 3 日前）/ €45（最终截止）；奖励：四个竞赛奖项各 €1,000。</description>
+      <description>Deadline: 2026-10-15 (Not stated on the official site); region/eligibility: Greece / Open worldwide; fee: €30 through September 3 / €45 final deadline; prize: Four competitive awards of €1,000 each.</description>
     </item>
     <item>
-      <title>AIGC 国际大赛 2026</title>
+      <title>AIGC Global Competition 2026</title>
       <link>https://www.aigcglobal.com.cn/</link>
       <guid isPermaLink="false">aigc-global-competition-2026</guid>
       <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
-      <description>截止：2026-10-16（官网未注明）；地区/资格：中国香港 / 全球开放；费用：收费，金额以报名页为准；奖励：总奖金 HK$120,000。</description>
+      <description>Deadline: 2026-10-16 (Not stated on the official site); region/eligibility: Hong Kong, China / Open worldwide; fee: Paid; see registration page; prize: HK$120,000 total prize pool.</description>
     </item>
     <item>
-      <title>Disrupt AI Film Festival（DAIFF 2026）</title>
+      <title>Disrupt AI Film Festival (DAIFF 2026)</title>
       <link>https://www.daiff.com.au/</link>
       <guid isPermaLink="false">disrupt-ai-film-festival-2026</guid>
       <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
-      <description>截止：2026-10-16（官网未注明）；地区/资格：澳大利亚 / 全球开放；费用：通过 FilmFreeway，以提交页为准；奖励：Grand Prix 及分类奖；金额以官网为准。</description>
+      <description>Deadline: 2026-10-16 (Not stated on the official site); region/eligibility: Australia / Open worldwide; fee: Via FilmFreeway; see submission page; prize: Grand Prix and category awards; amounts not stated.</description>
     </item>
     <item>
-      <title>2026 微信小程序开发大赛</title>
+      <title>2026 WeChat Mini Program Development Competition</title>
       <link>https://watcha.cn/activities/activity-74</link>
       <guid isPermaLink="false">wechat-mini-program-2026</guid>
       <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
-      <description>截止：2026-10-17（北京时间（具体时刻以报名页为准））；地区/资格：中国 / 全球开放；费用：免费；奖励：总奖金 ¥490,000；一等奖 ¥100,000。</description>
+      <description>Deadline: 2026-10-17 (China Standard Time; see submission page for exact time); region/eligibility: China / Open worldwide; fee: Free; prize: CNY 490,000 total; CNY 100,000 first prize.</description>
+    </item>
+    <item>
+      <title>AIMA — AI Movie Awards London 2026</title>
+      <link>https://www.aimovieawards.org/</link>
+      <guid isPermaLink="false">aima-london-2026</guid>
+      <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Deadline: 2026-10-17 (Not stated on the official site); region/eligibility: United Kingdom / Open worldwide; fee: Paid and non-refundable; see the official submission page; prize: Trophies and certificates by category; selected shorts may opt into a distribution and revenue-sharing offer.</description>
     </item>
   </channel>
 </rss>
