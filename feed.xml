@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Awesome AIGC Creative Contests</title>
+    <link>https://github.com/MartinDelophy/Awesome-AIGC-Creative-Contests</link>
+    <description>仍可报名或即将开放的 AIGC 创作赛事更新</description>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 26 Aug 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://raw.githubusercontent.com/MartinDelophy/Awesome-AIGC-Creative-Contests/main/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>香港国际 AIGC 文化数字内容创作大赛</title>
+      <link>https://aigc.eduhk.org/</link>
+      <guid isPermaLink="false">hong-kong-aigc-cultural-content-2026</guid>
+      <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
+      <description>截止：2026-08-30（官网未注明）；地区/资格：中国香港 / 分年龄组；费用：以组别细则为准；奖励：决赛单项一等奖 HK$5,000 起。</description>
+    </item>
+    <item>
+      <title>2026「视听中国·马栏山杯」AI 微短剧创智大赛</title>
+      <link>https://aigc.mgtv.com/challenges/detail?id=15</link>
+      <guid isPermaLink="false">malanshan-ai-micro-drama-2026</guid>
+      <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
+      <description>截止：2026-08-31（北京时间（具体时刻以官网为准））；地区/资格：中国；费用：未注明；奖励：超 ¥800,000 奖池及项目孵化权益。</description>
+    </item>
+    <item>
+      <title>Astana AI Film Festival（AAIFF 2026）</title>
+      <link>https://aaiff.ai/</link>
+      <guid isPermaLink="false">astana-ai-film-festival-2026</guid>
+      <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
+      <description>截止：2026-08-31（官网未注明）；地区/资格：哈萨克斯坦 / 全球开放；费用：免费；奖励：US$1,000,000 竞赛奖金 + US$1,000,000 制作基金。</description>
+    </item>
+    <item>
+      <title>故事盲盒：即梦 Seedance 2.5 白模参考创作大赛</title>
+      <link>https://jimeng.jianying.com/ai-tool/activity-detail/2026-805-dreamina-weekly-challenge</link>
+      <guid isPermaLink="false">dreamina-seedance-2-5-blockout-2026</guid>
+      <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
+      <description>截止：2026-08-31（北京时间 23:59）；地区/资格：中国 / 全球开放；费用：未注明；奖励：冠军 US$50,000 + 100 万即梦积分。</description>
+    </item>
+    <item>
+      <title>AI Song Contest 2026 — Bangkok</title>
+      <link>https://www.aisongcontest.com/join</link>
+      <guid isPermaLink="false">ai-song-contest-bangkok-2026</guid>
+      <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
+      <description>截止：2026-09-27（AoE（UTC−12））；地区/资格：泰国 / 全球开放；费用：免费；奖励：US$1,000 + 曼谷颁奖礼行程。</description>
+    </item>
+    <item>
+      <title>AI ART AWARD — NEXT ART AI 2026</title>
+      <link>https://next-art-ai.com/en/apply/overview</link>
+      <guid isPermaLink="false">next-art-ai-2026</guid>
+      <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
+      <description>截止：2026-09-30（韩国时间 23:59）；地区/资格：韩国 / 全球开放；费用：以官方细则为准；奖励：总奖金 KRW 21,000,000。</description>
+    </item>
+    <item>
+      <title>首届（2026）AIGC 与可视化创作大赛</title>
+      <link>https://aigc.capt.cn/</link>
+      <guid isPermaLink="false">cuc-aigc-visualization-2026</guid>
+      <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
+      <description>截止：2026-10-11（北京时间（具体时刻以官网为准））；地区/资格：中国；费用：免费；奖励：证书及纪念品。</description>
+    </item>
+    <item>
+      <title>AI Filmfest Athens 2026 — Myths Meet Machine</title>
+      <link>https://www.aifilmfestathens.gr/en</link>
+      <guid isPermaLink="false">ai-filmfest-athens-2026</guid>
+      <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
+      <description>截止：2026-10-15（官网未注明）；地区/资格：希腊 / 全球开放；费用：€30（9 月 3 日前）/ €45（最终截止）；奖励：四个竞赛奖项各 €1,000。</description>
+    </item>
+    <item>
+      <title>AIGC 国际大赛 2026</title>
+      <link>https://www.aigcglobal.com.cn/</link>
+      <guid isPermaLink="false">aigc-global-competition-2026</guid>
+      <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
+      <description>截止：2026-10-16（官网未注明）；地区/资格：中国香港 / 全球开放；费用：收费，金额以报名页为准；奖励：总奖金 HK$120,000。</description>
+    </item>
+    <item>
+      <title>Disrupt AI Film Festival（DAIFF 2026）</title>
+      <link>https://www.daiff.com.au/</link>
+      <guid isPermaLink="false">disrupt-ai-film-festival-2026</guid>
+      <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
+      <description>截止：2026-10-16（官网未注明）；地区/资格：澳大利亚 / 全球开放；费用：通过 FilmFreeway，以提交页为准；奖励：Grand Prix 及分类奖；金额以官网为准。</description>
+    </item>
+    <item>
+      <title>2026 微信小程序开发大赛</title>
+      <link>https://watcha.cn/activities/activity-74</link>
+      <guid isPermaLink="false">wechat-mini-program-2026</guid>
+      <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
+      <description>截止：2026-10-17（北京时间（具体时刻以报名页为准））；地区/资格：中国 / 全球开放；费用：免费；奖励：总奖金 ¥490,000；一等奖 ¥100,000。</description>
+    </item>
+  </channel>
+</rss>

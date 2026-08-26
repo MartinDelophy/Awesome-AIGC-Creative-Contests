@@ -4,7 +4,16 @@
 
 > A continuously maintained directory of active and officially announced AIGC creative contests worldwide, covering video, images, audio, writing, and AI applications.
 
+[![License: MIT](https://img.shields.io/badge/license-MIT-yellow.svg)](LICENSE)
+
 The current contest table is maintained in the [Chinese README](README.md). Contest names link to official event pages, and every listing includes its deadline, time zone, eligibility, fee, prize, and official rules. Always verify the official rules before submitting: organizers may change deadlines, eligibility, licensing terms, or fees without notice.
+
+## Subscribe to deadline reminders
+
+- [Subscribe via RSS](https://raw.githubusercontent.com/MartinDelophy/Awesome-AIGC-Creative-Contests/main/feed.xml) for active-directory updates.
+- [Subscribe to the calendar](webcal://raw.githubusercontent.com/MartinDelophy/Awesome-AIGC-Creative-Contests/main/deadlines.ics) or [download the ICS file](deadlines.ics) to add every deadline to Apple Calendar, Google Calendar, Outlook, or another calendar app.
+
+Both feeds are generated from the contest data and update automatically when the directory changes.
 
 ## What is included
 
@@ -28,7 +37,7 @@ Official rules and organizer announcements take priority over media reports and 
 
 ## Data
 
-The source data lives in [`data/contests.json`](data/contests.json). Its machine-readable field definitions are available in [`data/schema.json`](data/schema.json). `README.md` is generated from the data and should not be edited manually.
+The source data lives in [`data/contests.json`](data/contests.json). Its machine-readable field definitions are available in [`data/schema.json`](data/schema.json). See [`MAINTENANCE.md`](MAINTENANCE.md) for the maintenance policy and [`CHANGELOG.md`](CHANGELOG.md) for notable changes. `README.md`, `feed.xml`, and `deadlines.ics` are generated from the data and should not be edited manually.
 
 ```bash
 python3 scripts/build_readme.py

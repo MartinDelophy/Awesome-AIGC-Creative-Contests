@@ -43,4 +43,4 @@ python3 scripts/build_readme.py --check
 python3 -m unittest discover -s tests -v
 ```
 
-提交 PR 时，请一并提交更新后的 `README.md`。
+提交 PR 时，请一并提交更新后的 `README.md`、`feed.xml` 和 `deadlines.ics`。维护者的复核与发布流程见 [`MAINTENANCE.md`](MAINTENANCE.md)。

@@ -4,11 +4,18 @@
 
 > 持续更新的国内外 AIGC 创作比赛清单：视频、图像、音频、写作与 AI 应用。
 
-![Contests](https://img.shields.io/badge/active-{{COUNT}}-2ea44f) ![Last verified](https://img.shields.io/badge/verified-{{UPDATED_AT}}-0969da)
+![Contests](https://img.shields.io/badge/active-{{COUNT}}-2ea44f) ![Last verified](https://img.shields.io/badge/verified-{{UPDATED_AT}}-0969da) [![License: MIT](https://img.shields.io/badge/license-MIT-yellow.svg)](LICENSE)
 
 错过比赛往往不是能力问题，而是信息没有在正确的时间出现。这个项目只保留仍可报名或已经官宣、即将开放的 AIGC 创作赛事；截止条目由自动任务从清单中移除，仍可通过 Git 历史查阅。
 
 **数据核验日期：{{UPDATED_AT}}。** 截止时间、参赛资格和授权条款可能临时调整，提交前请再次阅读官方规则。
+
+## 订阅截止提醒
+
+- [订阅 RSS](https://raw.githubusercontent.com/MartinDelophy/Awesome-AIGC-Creative-Contests/main/feed.xml)：获取当前赛事清单更新。
+- [订阅日历](webcal://raw.githubusercontent.com/MartinDelophy/Awesome-AIGC-Creative-Contests/main/deadlines.ics) / [下载 ICS](deadlines.ics)：把所有赛事截止日加入 Apple Calendar、Google Calendar、Outlook 等日历应用。
+
+RSS 和 ICS 均由赛事数据自动生成；清单更新后，订阅内容会同步更新。
 
 ## 正在报名
 
@@ -54,7 +61,7 @@
 
 发现新比赛、延期、规则变化或失效链接时，请[提交赛事](../../issues/new?template=add-contest.yml)或[报告变更](../../issues/new?template=update-contest.yml)。提交前请阅读 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
-赛事数据保存在 [`data/contests.json`](data/contests.json)，字段定义见 [`data/schema.json`](data/schema.json)，README 由脚本生成：
+赛事数据保存在 [`data/contests.json`](data/contests.json)，字段定义见 [`data/schema.json`](data/schema.json)，维护流程见 [`MAINTENANCE.md`](MAINTENANCE.md)，变更记录见 [`CHANGELOG.md`](CHANGELOG.md)。README、RSS 和 ICS 由脚本生成：
 
 ```bash
 python3 scripts/build_readme.py

@@ -1,0 +1,147 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Awesome AIGC Creative Contests//Deadlines//ZH
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:AIGC 创作赛事截止提醒
+X-WR-CALDESC:Awesome AIGC Creative Contests 当前赛事截止日期
+BEGIN:VEVENT
+UID:hong-kong-aigc-cultural-content-2026@awesome-aigc-creative-contests
+DTSTAMP:20260826T000000Z
+DTSTART;VALUE=DATE:20260830
+DTEND;VALUE=DATE:20260831
+SUMMARY:截止：香港国际 AIGC 文化数字内容创作大赛
+DESCRIPTION:设儿童、青少年、大学与社会组；主题聚焦中华
+ 文化\n时区：官网未注明\n费用：以组别细则为准\n奖励
+ ：决赛单项一等奖 HK$5\,000 起
+URL:https://aigc.eduhk.org/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:malanshan-ai-micro-drama-2026@awesome-aigc-creative-contests
+DTSTAMP:20260826T000000Z
+DTSTART;VALUE=DATE:20260831
+DTEND;VALUE=DATE:20260901
+SUMMARY:截止：2026「视听中国·马栏山杯」AI 微短剧创智大
+ 赛
+DESCRIPTION:微短剧制作机构、创作团队或个人；横屏至少 3 
+ 集或竖屏至少 5 集\n时区：北京时间（具体时刻以官网为
+ 准）\n费用：未注明\n奖励：超 ¥800\,000 奖池及项目孵化
+ 权益
+URL:https://aigc.mgtv.com/challenges/detail?id=15
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:astana-ai-film-festival-2026@awesome-aigc-creative-contests
+DTSTAMP:20260826T000000Z
+DTSTART;VALUE=DATE:20260831
+DTEND;VALUE=DATE:20260901
+SUMMARY:截止：Astana AI Film Festival（AAIFF 2026）
+DESCRIPTION:个人、团队与工作室；生成式 AI 必须是创作核
+ 心；非英语作品需英文字幕\n时区：官网未注明\n费用：
+ 免费\n奖励：US$1\,000\,000 竞赛奖金 + US$1\,000\,000 制作基金
+URL:https://aaiff.ai/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:dreamina-seedance-2-5-blockout-2026@awesome-aigc-creative-contests
+DTSTAMP:20260826T000000Z
+DTSTART;VALUE=DATE:20260831
+DTEND;VALUE=DATE:20260901
+SUMMARY:截止：故事盲盒：即梦 Seedance 2.5 白模参考创作大
+ 赛
+DESCRIPTION:全球 AI 创作者；15 秒横版视频，须使用官方白
+ 模与 Seedance 2.5\n时区：北京时间 23:59\n费用：未注明\n奖
+ 励：冠军 US$50\,000 + 100 万即梦积分
+URL:https://jimeng.jianying.com/ai-tool/activity-detail/2026-805-dreamina-w
+ eekly-challenge
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ai-song-contest-bangkok-2026@awesome-aigc-creative-contests
+DTSTAMP:20260826T000000Z
+DTSTART;VALUE=DATE:20260927
+DTEND;VALUE=DATE:20260928
+SUMMARY:截止：AI Song Contest 2026 — Bangkok
+DESCRIPTION:人类与 AI 共创歌曲，最长 4 分钟；仅靠提示词
+ 生成、无人类后期参与的作品不合格\n时区：AoE（UTC−12
+ ）\n费用：免费\n奖励：US$1\,000 + 曼谷颁奖礼行程
+URL:https://www.aisongcontest.com/join
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:next-art-ai-2026@awesome-aigc-creative-contests
+DTSTAMP:20260826T000000Z
+DTSTART;VALUE=DATE:20260930
+DTEND;VALUE=DATE:20261001
+SUMMARY:截止：AI ART AWARD — NEXT ART AI 2026
+DESCRIPTION:不限职业、国籍与年龄；AI 图像与 AI 视频两类\n
+ 时区：韩国时间 23:59\n费用：以官方细则为准\n奖励：总
+ 奖金 KRW 21\,000\,000
+URL:https://next-art-ai.com/en/apply/overview
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:cuc-aigc-visualization-2026@awesome-aigc-creative-contests
+DTSTAMP:20260826T000000Z
+DTSTART;VALUE=DATE:20261011
+DTEND;VALUE=DATE:20261012
+SUMMARY:截止：首届（2026）AIGC 与可视化创作大赛
+DESCRIPTION:机构组与个人组；个人组含大学生组、成人组\n
+ 时区：北京时间（具体时刻以官网为准）\n费用：免费\n
+ 奖励：证书及纪念品
+URL:https://aigc.capt.cn/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ai-filmfest-athens-2026@awesome-aigc-creative-contests
+DTSTAMP:20260826T000000Z
+DTSTART;VALUE=DATE:20261015
+DTEND;VALUE=DATE:20261016
+SUMMARY:截止：AI Filmfest Athens 2026 — Myths Meet Machine
+DESCRIPTION:3–15 分钟全 AI 生成短片；不接受实拍混合作品
+ ；非英语片需英文字幕\n时区：官网未注明\n费用：€30
+ （9 月 3 日前）/ €45（最终截止）\n奖励：四个竞赛奖项
+ 各 €1\,000
+URL:https://www.aifilmfestathens.gr/en
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:aigc-global-competition-2026@awesome-aigc-creative-contests
+DTSTAMP:20260826T000000Z
+DTSTART;VALUE=DATE:20261016
+DTEND;VALUE=DATE:20261017
+SUMMARY:截止：AIGC 国际大赛 2026
+DESCRIPTION:小学四年级至成人公开组；按年龄分组，主题与
+ 时长各异\n时区：官网未注明\n费用：收费，金额以报名
+ 页为准\n奖励：总奖金 HK$120\,000
+URL:https://www.aigcglobal.com.cn/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:disrupt-ai-film-festival-2026@awesome-aigc-creative-contests
+DTSTAMP:20260826T000000Z
+DTSTART;VALUE=DATE:20261016
+DTEND;VALUE=DATE:20261017
+SUMMARY:截止：Disrupt AI Film Festival（DAIFF 2026）
+DESCRIPTION:作品须以生成式 AI 制作视觉、音频、特效或动
+ 画，并提交创作过程说明\n时区：官网未注明\n费用：通
+ 过 FilmFreeway，以提交页为准\n奖励：Grand Prix 及分类奖；
+ 金额以官网为准
+URL:https://www.daiff.com.au/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:wechat-mini-program-2026@awesome-aigc-creative-contests
+DTSTAMP:20260826T000000Z
+DTSTART;VALUE=DATE:20261017
+DTEND;VALUE=DATE:20261018
+SUMMARY:截止：2026 微信小程序开发大赛
+DESCRIPTION:不限学历与职业；1–3 人；作品须为已上线的原
+ 创小程序（非小游戏）\n时区：北京时间（具体时刻以报
+ 名页为准）\n费用：免费\n奖励：总奖金 ¥490\,000；一等
+ 奖 ¥100\,000
+URL:https://watcha.cn/activities/activity-74
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

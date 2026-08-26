@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate contest data, remove expired entries, and render README.md."""
+"""Validate contest data, remove expired entries, and render public outputs."""
 
 from __future__ import annotations
 
@@ -7,7 +7,9 @@ import argparse
 import json
 import re
 import sys
-from datetime import date, datetime
+from datetime import date, datetime, time, timedelta, timezone
+from email.utils import format_datetime
+from html import escape as xml_escape
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -16,6 +18,10 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = ROOT / "data" / "contests.json"
 TEMPLATE_PATH = ROOT / "README.template.md"
 README_PATH = ROOT / "README.md"
+RSS_PATH = ROOT / "feed.xml"
+ICS_PATH = ROOT / "deadlines.ics"
+REPOSITORY_URL = "https://github.com/MartinDelophy/Awesome-AIGC-Creative-Contests"
+RAW_BASE_URL = "https://raw.githubusercontent.com/MartinDelophy/Awesome-AIGC-Creative-Contests/main"
 
 REQUIRED_FIELDS = {
     "id",
@@ -165,9 +171,114 @@ def render_readme(contests: list[dict], today: date) -> str:
     return template
 
 
+def visible_contests(contests: list[dict], today: date) -> list[dict]:
+    return sorted(
+        (
+            item for item in contests
+            if parse_date(item["deadline"], "deadline", item["id"]) >= today
+        ),
+        key=lambda item: (item["deadline"], item["title"]),
+    )
+
+
+def render_rss(contests: list[dict], today: date) -> str:
+    active = visible_contests(contests, today)
+    updated = max((parse_date(item["verified_on"], "verified_on", item["id"]) for item in active), default=today)
+    pub_date = format_datetime(datetime.combine(updated, time.min, tzinfo=timezone.utc))
+    items = []
+    for item in active:
+        item_verified = parse_date(item["verified_on"], "verified_on", item["id"])
+        item_pub_date = format_datetime(datetime.combine(item_verified, time.min, tzinfo=timezone.utc))
+        description = (
+            f"截止：{item['deadline']}（{item['timezone']}）；"
+            f"地区/资格：{item['region']}；费用：{item['fee']}；奖励：{item['prize']}。"
+        )
+        items.append(
+            "\n".join(
+                [
+                    "    <item>",
+                    f"      <title>{xml_escape(item['title'])}</title>",
+                    f"      <link>{xml_escape(item['official_url'])}</link>",
+                    f"      <guid isPermaLink=\"false\">{xml_escape(item['id'])}</guid>",
+                    f"      <pubDate>{item_pub_date}</pubDate>",
+                    f"      <description>{xml_escape(description)}</description>",
+                    "    </item>",
+                ]
+            )
+        )
+    item_block = "\n".join(items)
+    return f"""<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Awesome AIGC Creative Contests</title>
+    <link>{REPOSITORY_URL}</link>
+    <description>仍可报名或即将开放的 AIGC 创作赛事更新</description>
+    <language>zh-CN</language>
+    <lastBuildDate>{pub_date}</lastBuildDate>
+    <atom:link href="{RAW_BASE_URL}/feed.xml" rel="self" type="application/rss+xml" />
+{item_block}
+  </channel>
+</rss>
+"""
+
+
+def escape_ics(value: str) -> str:
+    return value.replace("\\", "\\\\").replace(";", "\\;").replace(",", "\\,").replace("\n", "\\n")
+
+
+def fold_ics_line(line: str) -> list[str]:
+    folded: list[str] = []
+    current = ""
+    limit = 75
+    for char in line:
+        if current and len((current + char).encode("utf-8")) > limit:
+            folded.append(current)
+            current = " " + char
+            limit = 75
+        else:
+            current += char
+    folded.append(current)
+    return folded
+
+
+def render_ics(contests: list[dict], today: date) -> str:
+    lines = [
+        "BEGIN:VCALENDAR",
+        "VERSION:2.0",
+        "PRODID:-//Awesome AIGC Creative Contests//Deadlines//ZH",
+        "CALSCALE:GREGORIAN",
+        "METHOD:PUBLISH",
+        "X-WR-CALNAME:AIGC 创作赛事截止提醒",
+        "X-WR-CALDESC:Awesome AIGC Creative Contests 当前赛事截止日期",
+    ]
+    for item in visible_contests(contests, today):
+        deadline = parse_date(item["deadline"], "deadline", item["id"])
+        verified = parse_date(item["verified_on"], "verified_on", item["id"])
+        description = (
+            f"{item['eligibility']}\n时区：{item['timezone']}\n"
+            f"费用：{item['fee']}\n奖励：{item['prize']}"
+        )
+        lines.extend(
+            [
+                "BEGIN:VEVENT",
+                f"UID:{item['id']}@awesome-aigc-creative-contests",
+                f"DTSTAMP:{verified.strftime('%Y%m%d')}T000000Z",
+                f"DTSTART;VALUE=DATE:{deadline.strftime('%Y%m%d')}",
+                f"DTEND;VALUE=DATE:{(deadline + timedelta(days=1)).strftime('%Y%m%d')}",
+                f"SUMMARY:{escape_ics('截止：' + item['title'])}",
+                f"DESCRIPTION:{escape_ics(description)}",
+                f"URL:{item['official_url']}",
+                "TRANSP:TRANSPARENT",
+                "END:VEVENT",
+            ]
+        )
+    lines.append("END:VCALENDAR")
+    return "\r\n".join(part for line in lines for part in fold_ics_line(line)) + "\r\n"
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--check", action="store_true", help="检查 README 是否为最新，不写文件")
+    parser.add_argument("--check", action="store_true", help="检查 README、RSS 和 ICS 是否为最新，不写文件")
     parser.add_argument("--prune", action="store_true", help="从数据文件删除已经截止的赛事")
     parser.add_argument("--today", type=date.fromisoformat, default=date.today(), help="指定当前日期，格式 YYYY-MM-DD")
     args = parser.parse_args()
@@ -184,17 +295,25 @@ def main() -> int:
                 DATA_PATH.write_text(json.dumps(active, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
             contests = active
 
-        rendered = render_readme(contests, args.today)
+        outputs = {
+            README_PATH: render_readme(contests, args.today),
+            RSS_PATH: render_rss(contests, args.today),
+            ICS_PATH: render_ics(contests, args.today),
+        }
         if args.check:
-            current = README_PATH.read_text(encoding="utf-8") if README_PATH.exists() else ""
-            if current != rendered:
-                print("README.md 不是最新，请运行 python3 scripts/build_readme.py", file=sys.stderr)
+            outdated = [
+                path.name for path, rendered in outputs.items()
+                if not path.exists() or path.read_bytes().decode("utf-8") != rendered
+            ]
+            if outdated:
+                print(f"生成文件不是最新：{', '.join(outdated)}；请运行 python3 scripts/build_readme.py", file=sys.stderr)
                 return 1
-            print("README.md 已是最新")
+            print("README.md、feed.xml 和 deadlines.ics 已是最新")
             return 0
 
-        README_PATH.write_text(rendered, encoding="utf-8")
-        print(f"已生成 {README_PATH.relative_to(ROOT)}，收录 {len(contests)} 条赛事")
+        for path, rendered in outputs.items():
+            path.write_text(rendered, encoding="utf-8")
+        print(f"已生成 README.md、feed.xml 和 deadlines.ics，收录 {len(contests)} 条赛事")
         return 0
     except (OSError, ValueError, json.JSONDecodeError) as exc:
         print(f"错误：{exc}", file=sys.stderr)

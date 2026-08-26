@@ -1,6 +1,7 @@
 import importlib.util
 import json
 import unittest
+import xml.etree.ElementTree as ET
 from copy import deepcopy
 from datetime import date
 from pathlib import Path
@@ -49,6 +50,20 @@ class BuildReadmeTests(unittest.TestCase):
         schema_path = SCRIPT.parents[1] / "data" / "schema.json"
         schema = json.loads(schema_path.read_text(encoding="utf-8"))
         self.assertEqual(set(schema["items"]["required"]), build_readme.REQUIRED_FIELDS)
+
+    def test_rss_is_valid_xml_and_contains_active_contests(self):
+        contests = build_readme.load_contests()
+        rss = build_readme.render_rss(contests, date(2026, 8, 26))
+        root = ET.fromstring(rss)
+        self.assertEqual(root.tag, "rss")
+        self.assertEqual(len(root.findall("./channel/item")), 11)
+
+    def test_ics_contains_one_event_per_active_contest(self):
+        contests = build_readme.load_contests()
+        calendar = build_readme.render_ics(contests, date(2026, 8, 26))
+        self.assertEqual(calendar.count("BEGIN:VEVENT"), 11)
+        self.assertIn("X-WR-CALNAME:AIGC 创作赛事截止提醒", calendar)
+        self.assertTrue(calendar.endswith("END:VCALENDAR\r\n"))
 
 
 if __name__ == "__main__":
