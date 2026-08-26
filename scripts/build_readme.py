@@ -21,7 +21,7 @@ README_PATH = ROOT / "README.md"
 RSS_PATH = ROOT / "feed.xml"
 ICS_PATH = ROOT / "deadlines.ics"
 REPOSITORY_URL = "https://github.com/MartinDelophy/Awesome-AIGC-Creative-Contests"
-RAW_BASE_URL = "https://raw.githubusercontent.com/MartinDelophy/Awesome-AIGC-Creative-Contests/main"
+PUBLIC_BASE_URL = "https://martindelophy.github.io/Awesome-AIGC-Creative-Contests"
 
 REQUIRED_FIELDS = {
     "id",
@@ -215,7 +215,7 @@ def render_rss(contests: list[dict], today: date) -> str:
     <description>仍可报名或即将开放的 AIGC 创作赛事更新</description>
     <language>zh-CN</language>
     <lastBuildDate>{pub_date}</lastBuildDate>
-    <atom:link href="{RAW_BASE_URL}/feed.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="{PUBLIC_BASE_URL}/feed.xml" rel="self" type="application/rss+xml" />
 {item_block}
   </channel>
 </rss>

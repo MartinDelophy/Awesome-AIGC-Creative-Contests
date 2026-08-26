@@ -6,7 +6,7 @@
     <description>仍可报名或即将开放的 AIGC 创作赛事更新</description>
     <language>zh-CN</language>
     <lastBuildDate>Wed, 26 Aug 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://raw.githubusercontent.com/MartinDelophy/Awesome-AIGC-Creative-Contests/main/feed.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://martindelophy.github.io/Awesome-AIGC-Creative-Contests/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>香港国际 AIGC 文化数字内容创作大赛</title>
       <link>https://aigc.eduhk.org/</link>

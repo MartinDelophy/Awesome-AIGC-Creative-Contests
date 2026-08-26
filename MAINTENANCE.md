@@ -6,6 +6,7 @@ This document describes how the active contest directory is kept accurate. æœ¬æ–
 
 - A scheduled GitHub Actions workflow runs daily in the `Asia/Shanghai` time zone.
 - It validates `data/contests.json`, removes entries whose deadline has passed, and regenerates `README.md`, `feed.xml`, and `deadlines.ics`.
+- GitHub Pages publishes the generated RSS and ICS files with subscription-friendly content types.
 - Pull requests and pushes to `main` run validation, tests, and generated-file consistency checks.
 - Expired records remain recoverable through Git history.
 

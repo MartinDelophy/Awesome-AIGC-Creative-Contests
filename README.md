@@ -12,8 +12,8 @@
 
 ## 订阅截止提醒
 
-- [订阅 RSS](https://raw.githubusercontent.com/MartinDelophy/Awesome-AIGC-Creative-Contests/main/feed.xml)：获取当前赛事清单更新。
-- [订阅日历](webcal://raw.githubusercontent.com/MartinDelophy/Awesome-AIGC-Creative-Contests/main/deadlines.ics) / [下载 ICS](deadlines.ics)：把所有赛事截止日加入 Apple Calendar、Google Calendar、Outlook 等日历应用。
+- [订阅 RSS](https://martindelophy.github.io/Awesome-AIGC-Creative-Contests/feed.xml)：获取当前赛事清单更新。
+- [订阅日历](webcal://martindelophy.github.io/Awesome-AIGC-Creative-Contests/deadlines.ics) / [下载 ICS](deadlines.ics)：把所有赛事截止日加入 Apple Calendar、Google Calendar、Outlook 等日历应用。
 
 RSS 和 ICS 均由赛事数据自动生成；清单更新后，订阅内容会同步更新。
 

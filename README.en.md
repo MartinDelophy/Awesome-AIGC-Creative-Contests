@@ -10,8 +10,8 @@ The current contest table is maintained in the [Chinese README](README.md). Cont
 
 ## Subscribe to deadline reminders
 
-- [Subscribe via RSS](https://raw.githubusercontent.com/MartinDelophy/Awesome-AIGC-Creative-Contests/main/feed.xml) for active-directory updates.
-- [Subscribe to the calendar](webcal://raw.githubusercontent.com/MartinDelophy/Awesome-AIGC-Creative-Contests/main/deadlines.ics) or [download the ICS file](deadlines.ics) to add every deadline to Apple Calendar, Google Calendar, Outlook, or another calendar app.
+- [Subscribe via RSS](https://martindelophy.github.io/Awesome-AIGC-Creative-Contests/feed.xml) for active-directory updates.
+- [Subscribe to the calendar](webcal://martindelophy.github.io/Awesome-AIGC-Creative-Contests/deadlines.ics) or [download the ICS file](deadlines.ics) to add every deadline to Apple Calendar, Google Calendar, Outlook, or another calendar app.
 
 Both feeds are generated from the contest data and update automatically when the directory changes.
 
