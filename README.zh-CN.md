@@ -21,7 +21,7 @@ RSS 和 ICS 均由赛事数据自动生成；清单更新后，订阅内容会�
 
 | 状态 | 截止时间 | 类别 | 赛事与要求 | 地区 / 资格 | 奖励 / 费用 |
 |---|---|---|---|---|---|
-| ⏳ 7 天内截止 | 2026-08-30<br><sub>官网未注明</sub> | 🖼️ 图像<br>🎬 视频<br>🎵 音频 | **[香港国际 AIGC 文化数字内容创作大赛](https://aigc.eduhk.org/)**<br><sub>设儿童、青少年、大学与社会组；主题聚焦中华文化 · [规则](https://aigc.eduhk.org/)</sub> | 中国香港 / 分年龄组 | 决赛单项一等奖 HK$5,000 起<br><sub>费用：以组别细则为准</sub> |
+| 🔥 3 天内截止 | 2026-08-30<br><sub>官网未注明</sub> | 🖼️ 图像<br>🎬 视频<br>🎵 音频 | **[香港国际 AIGC 文化数字内容创作大赛](https://aigc.eduhk.org/)**<br><sub>设儿童、青少年、大学与社会组；主题聚焦中华文化 · [规则](https://aigc.eduhk.org/)</sub> | 中国香港 / 分年龄组 | 决赛单项一等奖 HK$5,000 起<br><sub>费用：以组别细则为准</sub> |
 | ⏳ 7 天内截止 | 2026-08-31<br><sub>北京时间（具体时刻以官网为准）</sub> | 🎬 视频 | **[2026「视听中国·马栏山杯」AI 微短剧创智大赛](https://aigc.mgtv.com/challenges/detail?id=15)**<br><sub>微短剧制作机构、创作团队或个人；横屏至少 3 集或竖屏至少 5 集 · [规则](https://gbdsj.hunan.gov.cn/gbdsj/xxgk/tzgg/202606/t20260611_33999282.html)</sub> | 中国 | 超 ¥800,000 奖池及项目孵化权益<br><sub>费用：未注明</sub> |
 | ⏳ 7 天内截止 | 2026-08-31<br><sub>官网未注明</sub> | 🎬 视频 | **[Astana AI Film Festival（AAIFF 2026）](https://aaiff.ai/)**<br><sub>个人、团队与工作室；生成式 AI 必须是创作核心；非英语作品需英文字幕 · [规则](https://aaiff.ai/terms)</sub> | 哈萨克斯坦 / 全球开放 | US$1,000,000 竞赛奖金 + US$1,000,000 制作基金<br><sub>费用：免费</sub> |
 | ⏳ 7 天内截止 | 2026-08-31<br><sub>北京时间 23:59</sub> | 🎬 视频 | **[故事盲盒：即梦 Seedance 2.5 白模参考创作大赛](https://jimeng.jianying.com/ai-tool/activity-detail/2026-805-dreamina-weekly-challenge)**<br><sub>全球 AI 创作者；15 秒横版视频，须使用官方白模与 Seedance 2.5 · [规则](https://jimeng.jianying.com/ai-tool/activity-detail/2026-805-dreamina-weekly-challenge)</sub> | 中国 / 全球开放 | 冠军 US$50,000 + 100 万即梦积分<br><sub>费用：未注明</sub> |
