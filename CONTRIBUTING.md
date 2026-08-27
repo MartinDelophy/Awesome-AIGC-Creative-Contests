@@ -44,4 +44,10 @@ python3 scripts/build_readme.py --check
 python3 -m unittest discover -s tests -v
 ```
 
+如果修改了企业微信摘要脚本，请额外运行以下命令预览完整消息。该命令不需要配置 webhook，也不会真正发送通知：
+
+```bash
+python3 scripts/send_wecom.py --dry-run
+```
+
 提交 PR 时，请一并提交更新后的 `README.md`、`README.zh-CN.md`、`feed.xml` 和 `deadlines.ics`。维护者的复核与发布流程见 [`MAINTENANCE.md`](MAINTENANCE.md)。
