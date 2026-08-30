@@ -6,19 +6,6 @@ METHOD:PUBLISH
 X-WR-CALNAME:AIGC Creative Contest Deadlines
 X-WR-CALDESC:Current deadlines from Awesome AIGC Creative Contests
 BEGIN:VEVENT
-UID:hong-kong-aigc-cultural-content-2026@awesome-aigc-creative-contests
-DTSTAMP:20260826T000000Z
-DTSTART;VALUE=DATE:20260830
-DTEND;VALUE=DATE:20260831
-SUMMARY:Deadline: Hong Kong International AIGC Cultural Digital Content Cre
- ation Competition
-DESCRIPTION:Children\, youth\, university\, and open divisions\; works focu
- s on Chinese culture\nTime zone: Not stated on the official site\nFee: See
-  division rules\nPrize: First prizes in the final round start at HK$5\,000
-URL:https://aigc.eduhk.org/
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
 UID:malanshan-ai-micro-drama-2026@awesome-aigc-creative-contests
 DTSTAMP:20260826T000000Z
 DTSTART;VALUE=DATE:20260831

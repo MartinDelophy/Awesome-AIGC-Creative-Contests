@@ -3,7 +3,9 @@
     "id": "dreamina-seedance-2-5-blockout-2026",
     "title": "故事盲盒：即梦 Seedance 2.5 白模参考创作大赛",
     "region": "中国 / 全球开放",
-    "categories": ["video"],
+    "categories": [
+      "video"
+    ],
     "organizer": "即梦 AI",
     "start_date": "2026-08-05",
     "deadline": "2026-08-31",
@@ -25,35 +27,12 @@
     }
   },
   {
-    "id": "hong-kong-aigc-cultural-content-2026",
-    "title": "香港国际 AIGC 文化数字内容创作大赛",
-    "region": "中国香港 / 分年龄组",
-    "categories": ["image", "video", "audio"],
-    "organizer": "香港国际音乐节等",
-    "start_date": "2026-05-01",
-    "deadline": "2026-08-30",
-    "timezone": "官网未注明",
-    "eligibility": "设儿童、青少年、大学与社会组；主题聚焦中华文化",
-    "fee": "以组别细则为准",
-    "prize": "决赛单项一等奖 HK$5,000 起",
-    "official_url": "https://aigc.eduhk.org/",
-    "rules_url": "https://aigc.eduhk.org/",
-    "verified_on": "2026-08-26",
-    "en": {
-      "title": "Hong Kong International AIGC Cultural Digital Content Creation Competition",
-      "region": "Hong Kong, China / Age-group divisions",
-      "organizer": "Hong Kong International Music Festival and partners",
-      "timezone": "Not stated on the official site",
-      "eligibility": "Children, youth, university, and open divisions; works focus on Chinese culture",
-      "fee": "See division rules",
-      "prize": "First prizes in the final round start at HK$5,000"
-    }
-  },
-  {
     "id": "malanshan-ai-micro-drama-2026",
     "title": "2026「视听中国·马栏山杯」AI 微短剧创智大赛",
     "region": "中国",
-    "categories": ["video"],
+    "categories": [
+      "video"
+    ],
     "organizer": "湖南省广播电视局、湖南马栏山集团",
     "start_date": "2026-06-01",
     "deadline": "2026-08-31",
@@ -78,7 +57,9 @@
     "id": "wechat-mini-program-2026",
     "title": "2026 微信小程序开发大赛",
     "region": "中国 / 全球开放",
-    "categories": ["app"],
+    "categories": [
+      "app"
+    ],
     "organizer": "微信小程序团队、WAIC Future Tech",
     "start_date": "2026-07-17",
     "deadline": "2026-10-17",
@@ -103,7 +84,13 @@
     "id": "cuc-aigc-visualization-2026",
     "title": "首届（2026）AIGC 与可视化创作大赛",
     "region": "中国",
-    "categories": ["text", "image", "video", "audio", "app"],
+    "categories": [
+      "text",
+      "image",
+      "video",
+      "audio",
+      "app"
+    ],
     "organizer": "中国传媒大学、中国新闻技术工作者联合会",
     "start_date": "2026-08-01",
     "deadline": "2026-10-11",
@@ -128,7 +115,9 @@
     "id": "aigc-global-competition-2026",
     "title": "AIGC 国际大赛 2026",
     "region": "中国香港 / 全球开放",
-    "categories": ["video"],
+    "categories": [
+      "video"
+    ],
     "organizer": "港隽动力青年协会、魔豆集团",
     "start_date": "2026-06-08",
     "deadline": "2026-10-16",
@@ -153,7 +142,9 @@
     "id": "astana-ai-film-festival-2026",
     "title": "Astana AI Film Festival（AAIFF 2026）",
     "region": "哈萨克斯坦 / 全球开放",
-    "categories": ["video"],
+    "categories": [
+      "video"
+    ],
     "organizer": "Astana AI Film Festival",
     "start_date": "2026-05-25",
     "deadline": "2026-08-31",
@@ -178,7 +169,10 @@
     "id": "next-art-ai-2026",
     "title": "AI ART AWARD — NEXT ART AI 2026",
     "region": "韩国 / 全球开放",
-    "categories": ["image", "video"],
+    "categories": [
+      "image",
+      "video"
+    ],
     "organizer": "HOBAN Cultural Foundation",
     "start_date": "2026-09-01",
     "deadline": "2026-09-30",
@@ -203,7 +197,9 @@
     "id": "ai-song-contest-bangkok-2026",
     "title": "AI Song Contest 2026 — Bangkok",
     "region": "泰国 / 全球开放",
-    "categories": ["audio"],
+    "categories": [
+      "audio"
+    ],
     "organizer": "Stichting AI Song Contest",
     "start_date": "2026-07-29",
     "deadline": "2026-09-27",
@@ -228,7 +224,10 @@
     "id": "ai-filmfest-athens-2026",
     "title": "AI Filmfest Athens 2026 — Myths Meet Machine",
     "region": "希腊 / 全球开放",
-    "categories": ["video", "audio"],
+    "categories": [
+      "video",
+      "audio"
+    ],
     "organizer": "AI Filmfest Athens",
     "start_date": "2026-08-01",
     "deadline": "2026-10-15",
@@ -253,7 +252,10 @@
     "id": "disrupt-ai-film-festival-2026",
     "title": "Disrupt AI Film Festival（DAIFF 2026）",
     "region": "澳大利亚 / 全球开放",
-    "categories": ["video", "audio"],
+    "categories": [
+      "video",
+      "audio"
+    ],
     "organizer": "TBWA Australia",
     "start_date": "2026-06-15",
     "deadline": "2026-10-16",
@@ -278,7 +280,9 @@
     "id": "austin-ai-film-festival-2026",
     "title": "Austin AI Film Festival 2026",
     "region": "美国 / 全球开放（部分受限地区除外）",
-    "categories": ["video"],
+    "categories": [
+      "video"
+    ],
     "organizer": "Austin AI Film Festival",
     "start_date": "2026-04-15",
     "deadline": "2026-09-15",
@@ -303,7 +307,9 @@
     "id": "on-art-ai-film-festival-2026",
     "title": "On Art AI Film Festival 2026",
     "region": "波兰 / 全球开放",
-    "categories": ["video"],
+    "categories": [
+      "video"
+    ],
     "organizer": "On Art Film Festival",
     "start_date": "2026-02-03",
     "deadline": "2026-09-30",
@@ -328,7 +334,9 @@
     "id": "gento-toronto-ai-film-festival-2026",
     "title": "GenTO：Toronto AI Film Festival 2026",
     "region": "加拿大 / 全球开放",
-    "categories": ["video"],
+    "categories": [
+      "video"
+    ],
     "organizer": "GenTO",
     "start_date": "2026-05-04",
     "deadline": "2026-10-01",
@@ -353,7 +361,11 @@
     "id": "aima-london-2026",
     "title": "AIMA — AI Movie Awards London 2026",
     "region": "英国 / 全球开放",
-    "categories": ["video", "image", "audio"],
+    "categories": [
+      "video",
+      "image",
+      "audio"
+    ],
     "organizer": "AIMA — AI Movie Awards",
     "start_date": "2026-06-15",
     "deadline": "2026-10-17",
