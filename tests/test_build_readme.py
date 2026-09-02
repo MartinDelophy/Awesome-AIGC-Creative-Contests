@@ -41,6 +41,9 @@ class BuildReadmeTests(unittest.TestCase):
         chinese = build_readme.render_readme(contests, date(2026, 8, 26), "zh")
         self.assertIn("Austin AI Film Festival 2026", english)
         self.assertIn("美国 / 全球开放", chinese)
+        self.assertNotIn("{{SOURCE_COUNT}}", english)
+        self.assertIn("registered sources", english)
+        self.assertIn("个来源", chinese)
 
     def test_rejects_unknown_fields(self):
         contests = deepcopy(build_readme.load_contests())
@@ -58,18 +61,54 @@ class BuildReadmeTests(unittest.TestCase):
         schema_path = SCRIPT.parents[1] / "data" / "schema.json"
         schema = json.loads(schema_path.read_text(encoding="utf-8"))
         self.assertEqual(set(schema["items"]["required"]), build_readme.REQUIRED_FIELDS)
+        self.assertEqual(
+            set(schema["items"]["properties"]),
+            build_readme.REQUIRED_FIELDS | build_readme.OPTIONAL_FIELDS,
+        )
+
+    def test_accepts_backward_compatible_discovery_metadata(self):
+        contests = deepcopy(build_readme.load_contests())
+        contests[0].update({
+            "scope": "aigc-native",
+            "opportunity_type": "contest",
+            "industries": ["ai-ml", "film-video"],
+            "audiences": ["individual", "team"],
+            "ai_policy": "required",
+            "geography": {
+                "event_mode": "online",
+                "country_code": "CN",
+                "eligibility_scope": "global",
+                "eligible_regions": ["GLOBAL"],
+            },
+            "source_meta": {
+                "source_id": "mango-aigc-challenges",
+                "source_tier": "official-page",
+                "first_seen": "2026-08-01",
+                "last_checked": "2026-08-26",
+                "evidence_urls": [contests[0]["official_url"]],
+            },
+        })
+        build_readme.validate_contests(contests)
+
+    def test_rejects_invalid_optional_metadata(self):
+        contests = deepcopy(build_readme.load_contests())
+        contests[0]["ai_policy"] = "probably"
+        with self.assertRaisesRegex(ValueError, "ai_policy"):
+            build_readme.validate_contests(contests)
 
     def test_rss_is_valid_xml_and_contains_active_contests(self):
         contests = build_readme.load_contests()
-        rss = build_readme.render_rss(contests, date(2026, 8, 26))
+        today = date(2026, 8, 26)
+        rss = build_readme.render_rss(contests, today)
         root = ET.fromstring(rss)
         self.assertEqual(root.tag, "rss")
-        self.assertEqual(len(root.findall("./channel/item")), 15)
+        self.assertEqual(len(root.findall("./channel/item")), len(build_readme.visible_contests(contests, today)))
 
     def test_ics_contains_one_event_per_active_contest(self):
         contests = build_readme.load_contests()
-        calendar = build_readme.render_ics(contests, date(2026, 8, 26))
-        self.assertEqual(calendar.count("BEGIN:VEVENT"), 15)
+        today = date(2026, 8, 26)
+        calendar = build_readme.render_ics(contests, today)
+        self.assertEqual(calendar.count("BEGIN:VEVENT"), len(build_readme.visible_contests(contests, today)))
         self.assertIn("X-WR-CALNAME:AIGC Creative Contest Deadlines", calendar)
         self.assertTrue(calendar.endswith("END:VCALENDAR\r\n"))
 

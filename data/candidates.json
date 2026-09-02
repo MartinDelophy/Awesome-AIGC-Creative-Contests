@@ -1,0 +1,198 @@
+[
+  {
+    "id": "modelscope-events-64f836685c29d9e6",
+    "source_id": "modelscope-events",
+    "title": "AI+♾️ 开发者创作大赛 第二期：用 AI，提前看见未来！",
+    "discovered_url": "https://modelscope.cn/events/347/%E6%AF%94%E8%B5%9B%E4%BB%8B%E7%BB%8D",
+    "source_tier": "trusted-platform",
+    "first_seen": "2026-09-02",
+    "last_seen": "2026-09-02",
+    "status": "new",
+    "match_reason": [
+      "title:大赛",
+      "url:/events/"
+    ]
+  },
+  {
+    "id": "modelscope-events-71e523187a32a8a6",
+    "source_id": "modelscope-events",
+    "title": "FlagOS开放计算全球挑战赛S2",
+    "discovered_url": "https://modelscope.cn/events/342/FlagOS%E5%BC%80%E6%94%BE%E8%AE%A1%E7%AE%97%E5%85%A8%E7%90%83%E6%8C%91%E6%88%98%E8%B5%9BS2",
+    "source_tier": "trusted-platform",
+    "first_seen": "2026-09-02",
+    "last_seen": "2026-09-02",
+    "status": "new",
+    "match_reason": [
+      "title:挑战赛",
+      "url:/events/"
+    ]
+  },
+  {
+    "id": "modelscope-events-fe95c0e8ef4ff5cf",
+    "source_id": "modelscope-events",
+    "title": "中客松 ING Hackathon 2026",
+    "discovered_url": "https://modelscope.cn/events/352/%E6%AF%94%E8%B5%9B%E4%BB%8B%E7%BB%8D",
+    "source_tier": "trusted-platform",
+    "first_seen": "2026-09-02",
+    "last_seen": "2026-09-02",
+    "status": "new",
+    "match_reason": [
+      "title:Hackathon",
+      "url:/events/"
+    ]
+  },
+  {
+    "id": "usa-government-challenges-00e2238470d60558",
+    "source_id": "usa-government-challenges",
+    "title": "NIH Complement Animal Research in Experimentation NAMs Reduction to Practice Challenge",
+    "discovered_url": "https://www.usa.gov/challenges/nih-new-approach-methodologies-nams",
+    "source_tier": "official-page",
+    "first_seen": "2026-09-02",
+    "last_seen": "2026-09-02",
+    "status": "new",
+    "match_reason": [
+      "title:challenge",
+      "url:challenge"
+    ]
+  },
+  {
+    "id": "usa-government-challenges-149fe07abf65c6aa",
+    "source_id": "usa-government-challenges",
+    "title": "xTech|Kinetic Reach",
+    "discovered_url": "https://www.usa.gov/challenges/xtech-kinetic-reach",
+    "source_tier": "official-page",
+    "first_seen": "2026-09-02",
+    "last_seen": "2026-09-02",
+    "status": "new",
+    "match_reason": [
+      "url:challenge"
+    ]
+  },
+  {
+    "id": "usa-government-challenges-3619be5b465c04e2",
+    "source_id": "usa-government-challenges",
+    "title": "One CDC Data Platform (1CDP) Innovation Challenge",
+    "discovered_url": "https://www.usa.gov/challenges/1cdp-innovation-challenge",
+    "source_tier": "official-page",
+    "first_seen": "2026-09-02",
+    "last_seen": "2026-09-02",
+    "status": "new",
+    "match_reason": [
+      "title:challenge",
+      "url:challenge"
+    ]
+  },
+  {
+    "id": "usa-government-challenges-53b8770261d597b1",
+    "source_id": "usa-government-challenges",
+    "title": "Careers in Your Community Challenge",
+    "discovered_url": "https://www.usa.gov/challenges/careers-in-your-community-challenge",
+    "source_tier": "official-page",
+    "first_seen": "2026-09-02",
+    "last_seen": "2026-09-02",
+    "status": "new",
+    "match_reason": [
+      "title:challenge",
+      "url:challenge"
+    ]
+  },
+  {
+    "id": "usa-government-challenges-59cf9826bf386ed8",
+    "source_id": "usa-government-challenges",
+    "title": "Halt the Hitchhiker: Invasive Species Challenge",
+    "discovered_url": "https://www.usa.gov/challenges/halt-the-hitchhiker-invasive-species",
+    "source_tier": "official-page",
+    "first_seen": "2026-09-02",
+    "last_seen": "2026-09-02",
+    "status": "new",
+    "match_reason": [
+      "title:challenge",
+      "url:challenge"
+    ]
+  },
+  {
+    "id": "usa-government-challenges-773cbc9b57361647",
+    "source_id": "usa-government-challenges",
+    "title": "ACL Caregiver AI Prize Challenge",
+    "discovered_url": "https://www.usa.gov/challenges/acl-caregiver-ai-prize",
+    "source_tier": "official-page",
+    "first_seen": "2026-09-02",
+    "last_seen": "2026-09-02",
+    "status": "rejected",
+    "match_reason": [
+      "title:challenge",
+      "title:prize",
+      "url:challenge",
+      "url:prize"
+    ],
+    "review_notes": "Phase 1 已于 2026-07-31 截止；后续阶段仅限前一阶段获奖者，不属于当前可新报名机会。"
+  },
+  {
+    "id": "usa-government-challenges-7b73628ed20d17a2",
+    "source_id": "usa-government-challenges",
+    "title": "Connecting Talent to Opportunity Challenge",
+    "discovered_url": "https://www.usa.gov/challenges/cto-challenge",
+    "source_tier": "official-page",
+    "first_seen": "2026-09-02",
+    "last_seen": "2026-09-02",
+    "status": "new",
+    "match_reason": [
+      "title:challenge",
+      "url:challenge"
+    ]
+  },
+  {
+    "id": "usa-government-challenges-8d6a3d6ea7234c6a",
+    "source_id": "usa-government-challenges",
+    "title": "Building Disaster-Ready Human Services Systems",
+    "discovered_url": "https://www.usa.gov/challenges/disaster-ready-human-services",
+    "source_tier": "official-page",
+    "first_seen": "2026-09-02",
+    "last_seen": "2026-09-02",
+    "status": "new",
+    "match_reason": [
+      "url:challenge"
+    ]
+  },
+  {
+    "id": "usa-government-challenges-c2b6257f089c7140",
+    "source_id": "usa-government-challenges",
+    "title": "xTech|Search 10",
+    "discovered_url": "https://www.usa.gov/challenges/xtech-search-10",
+    "source_tier": "official-page",
+    "first_seen": "2026-09-02",
+    "last_seen": "2026-09-02",
+    "status": "new",
+    "match_reason": [
+      "url:challenge"
+    ]
+  },
+  {
+    "id": "usa-government-challenges-d30c57dd4ee1ac0b",
+    "source_id": "usa-government-challenges",
+    "title": "NASA's Gateways to Blue Skies (GBS) Competition",
+    "discovered_url": "https://www.usa.gov/challenges/gateways-blue-skies",
+    "source_tier": "official-page",
+    "first_seen": "2026-09-02",
+    "last_seen": "2026-09-02",
+    "status": "new",
+    "match_reason": [
+      "title:competition",
+      "url:challenge"
+    ]
+  },
+  {
+    "id": "usa-government-challenges-d6731568310c38b8",
+    "source_id": "usa-government-challenges",
+    "title": "ACL Cultivating Connected Communities Challenge",
+    "discovered_url": "https://www.usa.gov/challenges/cultivating-connected-communities",
+    "source_tier": "official-page",
+    "first_seen": "2026-09-02",
+    "last_seen": "2026-09-02",
+    "status": "new",
+    "match_reason": [
+      "title:challenge",
+      "url:challenge"
+    ]
+  }
+]

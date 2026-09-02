@@ -48,6 +48,8 @@ jobs:
           python-version: "3.12"
       - name: Run tests
         run: python3 -m unittest discover -s tests -v
+      - name: Validate source registry and candidates
+        run: python3 scripts/collect_sources.py --check
       - name: Verify generated README
         run: python3 scripts/build_readme.py --check
 
@@ -63,6 +65,8 @@ jobs:
           python-version: "3.12"
       - name: Run tests
         run: python3 -m unittest discover -s tests -v
+      - name: Validate source registry and candidates
+        run: python3 scripts/collect_sources.py --check
       - name: Remove expired contests and rebuild README
         run: python3 scripts/build_readme.py --prune
       - name: Commit cleanup

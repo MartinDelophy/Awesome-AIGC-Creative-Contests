@@ -22,6 +22,8 @@ README_PATH = ROOT / "README.md"
 ZH_README_PATH = ROOT / "README.zh-CN.md"
 RSS_PATH = ROOT / "feed.xml"
 ICS_PATH = ROOT / "deadlines.ics"
+SOURCES_PATH = ROOT / "data" / "sources.json"
+CANDIDATES_PATH = ROOT / "data" / "candidates.json"
 REPOSITORY_URL = "https://github.com/MartinDelophy/Awesome-AIGC-Creative-Contests"
 PUBLIC_BASE_URL = "https://martindelophy.github.io/Awesome-AIGC-Creative-Contests"
 
@@ -42,6 +44,62 @@ REQUIRED_FIELDS = {
     "verified_on",
     "en",
 }
+
+OPTIONAL_FIELDS = {
+    "scope",
+    "opportunity_type",
+    "industries",
+    "audiences",
+    "ai_policy",
+    "geography",
+    "source_meta",
+}
+
+SCOPES = {"aigc-native", "ai-compatible", "general"}
+OPPORTUNITY_TYPES = {
+    "contest",
+    "award",
+    "hackathon",
+    "call-for-works",
+    "innovation-challenge",
+    "grant-prize",
+    "accelerator",
+}
+INDUSTRIES = {
+    "ai-ml",
+    "advertising",
+    "architecture",
+    "culture-tourism",
+    "data-science",
+    "design",
+    "education",
+    "entrepreneurship",
+    "film-video",
+    "games",
+    "innovation",
+    "music-audio",
+    "photography",
+    "public-good",
+    "science-engineering",
+    "software",
+    "writing",
+}
+AUDIENCES = {
+    "individual",
+    "team",
+    "student",
+    "youth",
+    "professional",
+    "startup",
+    "company",
+    "nonprofit",
+    "researcher",
+    "educator",
+}
+AI_POLICIES = {"required", "allowed", "restricted", "prohibited", "unknown"}
+EVENT_MODES = {"online", "onsite", "hybrid", "unknown"}
+ELIGIBILITY_SCOPES = {"global", "national", "regional", "local", "restricted", "unknown"}
+SOURCE_TIERS = {"official-api", "official-page", "trusted-platform", "discovery-only"}
 
 CATEGORY_LABELS = {
     "en": {
@@ -88,7 +146,7 @@ def validate_contests(contests: list[dict]) -> None:
         missing = REQUIRED_FIELDS - item.keys()
         if missing:
             raise ValueError(f"{item.get('id', '<unknown>')}: 缺少字段 {sorted(missing)}")
-        unknown_fields = item.keys() - REQUIRED_FIELDS
+        unknown_fields = item.keys() - REQUIRED_FIELDS - OPTIONAL_FIELDS
         if unknown_fields:
             raise ValueError(f"{item.get('id', '<unknown>')}: 未知字段 {sorted(unknown_fields)}")
 
@@ -142,6 +200,91 @@ def validate_contests(contests: list[dict]) -> None:
         ]
         if empty_translations:
             raise ValueError(f"{contest_id}: en 字段不能为空 {sorted(empty_translations)}")
+
+        validate_optional_metadata(item, contest_id)
+
+
+def validate_enum(value, allowed: set[str], label: str) -> None:
+    if value not in allowed:
+        raise ValueError(f"{label}: 未知值 {value!r}")
+
+
+def validate_enum_list(value, allowed: set[str], label: str) -> None:
+    if not isinstance(value, list) or not value:
+        raise ValueError(f"{label}: 必须是非空数组")
+    if len(value) != len(set(value)):
+        raise ValueError(f"{label}: 不能重复")
+    if unknown := set(value) - allowed:
+        raise ValueError(f"{label}: 未知值 {sorted(unknown)}")
+
+
+def validate_optional_metadata(item: dict, contest_id: str) -> None:
+    if "scope" in item:
+        validate_enum(item["scope"], SCOPES, f"{contest_id}.scope")
+    if "opportunity_type" in item:
+        validate_enum(item["opportunity_type"], OPPORTUNITY_TYPES, f"{contest_id}.opportunity_type")
+    if "industries" in item:
+        validate_enum_list(item["industries"], INDUSTRIES, f"{contest_id}.industries")
+    if "audiences" in item:
+        validate_enum_list(item["audiences"], AUDIENCES, f"{contest_id}.audiences")
+    if "ai_policy" in item:
+        validate_enum(item["ai_policy"], AI_POLICIES, f"{contest_id}.ai_policy")
+
+    if "geography" in item:
+        geography = item["geography"]
+        required = {"event_mode", "eligibility_scope"}
+        allowed = required | {"country_code", "administrative_area", "city", "eligible_regions"}
+        if not isinstance(geography, dict):
+            raise ValueError(f"{contest_id}.geography: 必须是对象")
+        if missing := required - geography.keys():
+            raise ValueError(f"{contest_id}.geography: 缺少字段 {sorted(missing)}")
+        if unknown := geography.keys() - allowed:
+            raise ValueError(f"{contest_id}.geography: 未知字段 {sorted(unknown)}")
+        validate_enum(geography["event_mode"], EVENT_MODES, f"{contest_id}.geography.event_mode")
+        validate_enum(
+            geography["eligibility_scope"],
+            ELIGIBILITY_SCOPES,
+            f"{contest_id}.geography.eligibility_scope",
+        )
+        if "country_code" in geography and not re.fullmatch(r"[A-Z]{2}", geography["country_code"]):
+            raise ValueError(f"{contest_id}.geography.country_code: 必须是两个大写字母")
+        for field in ("administrative_area", "city"):
+            if field in geography and (not isinstance(geography[field], str) or not geography[field].strip()):
+                raise ValueError(f"{contest_id}.geography.{field}: 不能为空")
+        if "eligible_regions" in geography:
+            regions = geography["eligible_regions"]
+            if not isinstance(regions, list) or not regions or any(
+                not isinstance(region, str) or not region.strip() for region in regions
+            ):
+                raise ValueError(f"{contest_id}.geography.eligible_regions: 必须是非空字符串数组")
+            if len(regions) != len(set(regions)):
+                raise ValueError(f"{contest_id}.geography.eligible_regions: 不能重复")
+
+    if "source_meta" in item:
+        source_meta = item["source_meta"]
+        required = {"source_id", "source_tier", "first_seen", "last_checked", "evidence_urls"}
+        if not isinstance(source_meta, dict):
+            raise ValueError(f"{contest_id}.source_meta: 必须是对象")
+        if missing := required - source_meta.keys():
+            raise ValueError(f"{contest_id}.source_meta: 缺少字段 {sorted(missing)}")
+        if unknown := source_meta.keys() - required:
+            raise ValueError(f"{contest_id}.source_meta: 未知字段 {sorted(unknown)}")
+        if not isinstance(source_meta["source_id"], str) or not ID_PATTERN.fullmatch(source_meta["source_id"]):
+            raise ValueError(f"{contest_id}.source_meta.source_id: 格式无效")
+        validate_enum(source_meta["source_tier"], SOURCE_TIERS, f"{contest_id}.source_meta.source_tier")
+        first_seen = parse_date(source_meta["first_seen"], "source_meta.first_seen", contest_id)
+        last_checked = parse_date(source_meta["last_checked"], "source_meta.last_checked", contest_id)
+        if first_seen > last_checked:
+            raise ValueError(f"{contest_id}.source_meta: first_seen 晚于 last_checked")
+        evidence_urls = source_meta["evidence_urls"]
+        if not isinstance(evidence_urls, list) or not evidence_urls:
+            raise ValueError(f"{contest_id}.source_meta.evidence_urls: 必须是非空数组")
+        if len(evidence_urls) != len(set(evidence_urls)):
+            raise ValueError(f"{contest_id}.source_meta.evidence_urls: 不能重复")
+        for evidence_url in evidence_urls:
+            parsed = urlparse(evidence_url)
+            if parsed.scheme != "https" or not parsed.netloc:
+                raise ValueError(f"{contest_id}.source_meta.evidence_urls: 必须使用 https://")
 
 
 def escape_cell(value: str) -> str:
@@ -204,9 +347,14 @@ def render_readme(contests: list[dict], today: date, language: str = "en") -> st
     verified_on = max((item["verified_on"] for item in visible), default=today.isoformat())
     template_path = ZH_TEMPLATE_PATH if language == "zh" else TEMPLATE_PATH
     template = template_path.read_text(encoding="utf-8")
+    sources = json.loads(SOURCES_PATH.read_text(encoding="utf-8")) if SOURCES_PATH.exists() else []
+    candidates = json.loads(CANDIDATES_PATH.read_text(encoding="utf-8")) if CANDIDATES_PATH.exists() else []
     replacements = {
         "{{COUNT}}": str(len(visible)),
         "{{UPDATED_AT}}": verified_on,
+        "{{SOURCE_COUNT}}": str(len(sources)),
+        "{{ENABLED_SOURCE_COUNT}}": str(sum(bool(source.get("enabled")) for source in sources)),
+        "{{CANDIDATE_COUNT}}": str(sum(candidate.get("status") in {"new", "reviewing"} for candidate in candidates)),
         "{{OPEN_TABLE}}": render_table(open_now, today, language=language),
         "{{UPCOMING_TABLE}}": render_table(upcoming, today, upcoming=True, language=language),
     }

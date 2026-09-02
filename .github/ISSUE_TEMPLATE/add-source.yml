@@ -1,0 +1,53 @@
+name: 推荐来源
+description: 推荐可持续发现比赛机会的官方入口或平台
+title: "[新增来源] "
+labels: ["new-source"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: 来源名称
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: 公开列表或官方入口
+      placeholder: https://
+    validations:
+      required: true
+  - type: textarea
+    id: coverage
+    attributes:
+      label: 覆盖地区与行业
+      placeholder: 例如：中国广东；文旅、设计、短视频
+    validations:
+      required: true
+  - type: dropdown
+    id: source_kind
+    attributes:
+      label: 来源类型
+      options:
+        - 政府部门
+        - 主办方
+        - 行业协会
+        - 官方赛事平台
+        - 聚合站（仅发现线索）
+    validations:
+      required: true
+  - type: textarea
+    id: examples
+    attributes:
+      label: 最近赛事样例
+      description: 请提供至少一个近期比赛的官方页面，帮助确认来源质量。
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 提交前确认
+      options:
+        - label: 该入口无需登录即可查看基本比赛信息。
+          required: true
+        - label: 如果它是聚合站，我理解正式发布前还需要寻找主办方官网。
+          required: true

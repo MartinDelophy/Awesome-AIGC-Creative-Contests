@@ -6,48 +6,6 @@ METHOD:PUBLISH
 X-WR-CALNAME:AIGC Creative Contest Deadlines
 X-WR-CALDESC:Current deadlines from Awesome AIGC Creative Contests
 BEGIN:VEVENT
-UID:malanshan-ai-micro-drama-2026@awesome-aigc-creative-contests
-DTSTAMP:20260826T000000Z
-DTSTART;VALUE=DATE:20260831
-DTEND;VALUE=DATE:20260901
-SUMMARY:Deadline: 2026 Audiovisual China · Malanshan Cup AI Micro-Drama In
- novation Competition
-DESCRIPTION:Production companies\, creative teams\, or individuals\; at lea
- st 3 landscape episodes or 5 vertical episodes\nTime zone: China Standard 
- Time\; exact time not stated\nFee: Not stated\nPrize: Prize pool above CNY
-  800\,000 plus project incubation support
-URL:https://aigc.mgtv.com/challenges/detail?id=15
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:astana-ai-film-festival-2026@awesome-aigc-creative-contests
-DTSTAMP:20260826T000000Z
-DTSTART;VALUE=DATE:20260831
-DTEND;VALUE=DATE:20260901
-SUMMARY:Deadline: Astana AI Film Festival (AAIFF 2026)
-DESCRIPTION:Individuals\, teams\, and studios\; generative AI must be integ
- ral\; non-English films require English subtitles\nTime zone: Not stated o
- n the official site\nFee: Free\nPrize: US$1\,000\,000 competition prizes +
-  US$1\,000\,000 production fund
-URL:https://aaiff.ai/
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:dreamina-seedance-2-5-blockout-2026@awesome-aigc-creative-contests
-DTSTAMP:20260826T000000Z
-DTSTART;VALUE=DATE:20260831
-DTEND;VALUE=DATE:20260901
-SUMMARY:Deadline: Story Blind Box: Dreamina Seedance 2.5 Blockout Reference
-  Challenge
-DESCRIPTION:AI creators worldwide\; a 15-second landscape video using the o
- fficial blockout reference and Seedance 2.5\nTime zone: China Standard Tim
- e\, 23:59\nFee: Not stated\nPrize: US$50\,000 champion prize + 1\,000\,000
-  Dreamina credits
-URL:https://jimeng.jianying.com/ai-tool/activity-detail/2026-805-dreamina-w
- eekly-challenge
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
 UID:austin-ai-film-festival-2026@awesome-aigc-creative-contests
 DTSTAMP:20260826T000000Z
 DTSTART;VALUE=DATE:20260915
@@ -59,6 +17,21 @@ DESCRIPTION:Creators aged 14+ worldwide\; most AI categories require a majo
   is listed for the student category\nPrize: Awards and selected screenings
  \; see official page for prize details
 URL:https://filmfreeway.com/AustinAIFilmFestival
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:arc-white-box-estimation-2026@awesome-aigc-creative-contests
+DTSTAMP:20260902T000000Z
+DTSTART;VALUE=DATE:20260919
+DTEND;VALUE=DATE:20260920
+SUMMARY:Deadline: ARC White-Box Estimation Challenge 2026 (WhestBench)
+DESCRIPTION:Registered AIcrowd participants or teams must submit an executa
+ ble Python estimator that follows the official starter-kit contract\; priz
+ e eligibility is subject to the official rules\nTime zone: 23:59 UTC\nFee:
+  No entry fee is listed on the official page\nPrize: US$150\,000+ total ac
+ ross phases\, including a US$100\,000 Phase 2 prize pool
+URL:https://www.aicrowd.com/challenges/arc-white-box-estimation-challenge-2
+ 026
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
@@ -190,6 +163,23 @@ DESCRIPTION:Accepts AI film\, motion art\, image art\, advertising\, and mu
  he official submission page\nPrize: Trophies and certificates by category\
  ; selected shorts may opt into a distribution and revenue-sharing offer
 URL:https://www.aimovieawards.org/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:nasa-orbital-clarity-challenge-2026@awesome-aigc-creative-contests
+DTSTAMP:20260902T000000Z
+DTSTART;VALUE=DATE:20261111
+DTEND;VALUE=DATE:20261112
+SUMMARY:Deadline: NASA TechLeap Prize: Orbital Clarity Challenge
+DESCRIPTION:Individuals must be U.S. citizens or permanent residents aged 1
+ 8+\; organizations must be incorporated and primarily based in the U.S.\; 
+ teams need an eligible lead\, with foreign members subject to the official
+  restrictions\nTime zone: 5:00 PM ET\; registration is required by 5:00 PM
+  ET on October 28\nFee: No entry fee is listed\; potential winners must sh
+ ow US$250\,000 in liability coverage or equivalent financial responsibilit
+ y\nPrize: US$2\,000\,000 total\; up to four winners may receive up to US$5
+ 00\,000 each plus an opportunity for a no-cost orbital test
+URL:https://occ.nasatechleap.org/
 TRANSP:TRANSPARENT
 END:VEVENT
 END:VCALENDAR

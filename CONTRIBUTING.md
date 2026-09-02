@@ -18,7 +18,7 @@
 - 官方活动页与规则页，且必须是 HTTPS 链接。
 - `en` 对象中的英文赛事名、地区、主办方、时区、资格、费用和奖励。
 
-可用类别只有 `video`、`image`、`audio`、`text`、`app`。
+可用作品形式仍为 `video`、`image`、`audio`、`text`、`app`。新记录还可以提供结构化的范围、机会类型、行业、适用人群、AI 使用政策、举办地以及来源证据；这些字段暂时保持可选，以兼容已有数据消费者。
 
 完整字段定义和约束见 [`data/schema.json`](data/schema.json)。生成脚本还会检查未知字段、重复类别、空文本、日期顺序和 URL 格式。
 
@@ -29,6 +29,26 @@
 3. 主办方认证社交账号；
 4. 媒体报道；
 5. 聚合站与社区转发。
+
+聚合站只能用来发现线索，最终记录必须包含主办方或官方规则链接。来源登记在 `data/sources.json`，自动发现的待审链接保存在 `data/candidates.json`，候选不会自动进入公开清单。
+
+## 提交新来源
+
+可以使用“推荐来源”Issue，或修改 `data/sources.json` 提交 PR。来源需要说明覆盖地区、行业、主体类型和可信等级。只有在公开页面允许低频访问、无需绕过登录或验证码，并且解析规则不会混入大量历史内容时，才能设置 `enabled: true`。
+
+新增自动采集规则时必须同时补充 `tests/test_collect_sources.py`，并先运行 dry-run 检查候选质量：
+
+```bash
+python3 scripts/collect_sources.py --check
+python3 scripts/collect_sources.py --dry-run --source <source-id>
+```
+
+## 审核候选
+
+1. 在 `data/candidates.json` 将候选设为 `reviewing`；
+2. 找到主办方官方页面与完整规则，核验报名状态、日期、资格、费用、奖励及 AI 政策；
+3. 信息完整时在 `data/contests.json` 创建正式记录并重新生成输出；
+4. 信息不可靠时设为 `rejected`，通过 `review_notes` 记录原因，防止后续任务重复添加。
 
 如果不同来源的截止日期冲突，请先向主办方核实，不要猜测。没有官方入口、主办方身份不清或主要目的是售卖课程的活动不会收录。
 
@@ -41,6 +61,7 @@
 ```bash
 python3 scripts/build_readme.py
 python3 scripts/build_readme.py --check
+python3 scripts/collect_sources.py --check
 python3 -m unittest discover -s tests -v
 ```
 

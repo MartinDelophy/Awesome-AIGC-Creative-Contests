@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/MartinDelophy/Awesome-AIGC-Creative-Contests/blob/main/data/sources.schema.json",
+  "title": "Contest discovery source registry",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "id",
+      "name",
+      "url",
+      "source_kind",
+      "trust_tier",
+      "region_codes",
+      "industries",
+      "cadence_hours",
+      "enabled",
+      "collector"
+    ],
+    "properties": {
+      "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+      "name": { "type": "string", "minLength": 1 },
+      "url": { "type": "string", "format": "uri", "pattern": "^https://" },
+      "source_kind": {
+        "enum": ["government", "organizer", "association", "official-platform", "aggregator"]
+      },
+      "trust_tier": {
+        "enum": ["official-api", "official-page", "trusted-platform", "discovery-only"]
+      },
+      "region_codes": {
+        "type": "array",
+        "minItems": 1,
+        "uniqueItems": true,
+        "items": { "type": "string", "minLength": 2 }
+      },
+      "industries": {
+        "type": "array",
+        "minItems": 1,
+        "uniqueItems": true,
+        "items": {
+          "enum": [
+            "ai-ml",
+            "advertising",
+            "architecture",
+            "culture-tourism",
+            "data-science",
+            "design",
+            "education",
+            "entrepreneurship",
+            "film-video",
+            "games",
+            "innovation",
+            "music-audio",
+            "photography",
+            "public-good",
+            "science-engineering",
+            "software",
+            "writing"
+          ]
+        }
+      },
+      "cadence_hours": { "type": "integer" },
+      "enabled": { "type": "boolean" },
+      "collector": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["type"],
+        "properties": {
+          "type": { "enum": ["html-links", "rss-atom", "json-api", "manual"] },
+          "title_keywords": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": { "type": "string", "minLength": 1 }
+          },
+          "link_patterns": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": { "type": "string", "minLength": 1 }
+          },
+          "exclude_keywords": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": { "type": "string", "minLength": 1 }
+          },
+          "same_host_only": { "type": "boolean" },
+          "match_mode": { "enum": ["any", "all"] },
+          "reject_past_years": { "type": "boolean" },
+          "ignore_titles": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": { "type": "string", "minLength": 1 }
+          },
+          "title_split_patterns": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": { "type": "string", "minLength": 1 }
+          },
+          "items_path": { "type": "string", "minLength": 1 },
+          "title_path": { "type": "string", "minLength": 1 },
+          "url_path": { "type": "string", "minLength": 1 }
+        }
+      },
+      "notes": { "type": "string" }
+    }
+  }
+}

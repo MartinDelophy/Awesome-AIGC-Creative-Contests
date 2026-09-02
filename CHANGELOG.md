@@ -2,6 +2,21 @@
 
 Notable project-level changes are documented here. Routine contest additions, updates, and expiry removals remain visible in Git history and are not listed individually.
 
+## 2026-09-02
+
+### Added
+
+- A 52-entry source registry spanning China, regional government entry points, international platforms, organizers, associations, and discovery-only aggregators.
+- A review-only candidate queue with stable URL fingerprints, source provenance, first/last-seen dates, review states, and deduplication against published contests.
+- Low-volume HTML, RSS/Atom, and JSON discovery adapters with robots checks, response limits, tracking-URL normalization, source-specific matching, and failure isolation.
+- A scheduled candidate-discovery workflow and a source-suggestion Issue form.
+- Optional contest metadata for opportunity scope, type, industries, audiences, AI-use policy, normalized geography, and source evidence.
+
+### Changed
+
+- Expanded the directory policy from only AIGC-native events to explicitly tagged AIGC-native, AI-compatible, and selected general high-value competitions.
+- Kept discovery separate from publication so no automatically found link enters the public JSON, RSS, or calendar without official-source verification.
+
 ## 2026-08-26
 
 ### Added
