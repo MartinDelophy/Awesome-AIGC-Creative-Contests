@@ -212,6 +212,25 @@ class ExtractorTests(unittest.TestCase):
 
 
 class CandidateTests(unittest.TestCase):
+    def test_opt_in_shards_are_loaded_only_for_publication_deduplication(self):
+        opportunities = collect_sources.load_opt_in_opportunities()
+        self.assertEqual(
+            {item["id"] for item in opportunities},
+            {"arc-white-box-estimation-2026", "nasa-orbital-clarity-challenge-2026"},
+        )
+
+        source = source_fixture()
+        published = opportunities[0]
+        discoveries = [(source, {
+            "title": published["en"]["title"],
+            "url": published["official_url"],
+            "match_reason": ["title:challenge"],
+        })]
+        self.assertEqual(
+            collect_sources.merge_candidates([], discoveries, opportunities, date(2026, 9, 3)),
+            [],
+        )
+
     def test_merge_filters_published_and_preserves_review_state(self):
         source = source_fixture()
         existing_url = "https://example.com/competitions/existing"

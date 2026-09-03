@@ -1,0 +1,60 @@
+{
+  "$schema": "./manifest.schema.json",
+  "version": 1,
+  "updated_on": "2026-09-03",
+  "default_core_path": "../contests.json",
+  "datasets": [
+    {
+      "id": "global",
+      "path": "global.json",
+      "label": {
+        "zh": "国际与跨地区扩展机会",
+        "en": "International and cross-region opportunities"
+      },
+      "description": {
+        "zh": "核心 AIGC 清单之外的国际、全球平台及其他国家机会；具体资格以记录为准。",
+        "en": "International, global-platform, and country-specific opportunities outside the core AIGC directory; check each record for eligibility."
+      },
+      "region_codes": [
+        "GLOBAL",
+        "US"
+      ],
+      "record_count": 2,
+      "default_included": false
+    },
+    {
+      "id": "cn-national",
+      "path": "cn-national.json",
+      "label": {
+        "zh": "中国全国性扩展机会",
+        "en": "China-wide optional opportunities"
+      },
+      "description": {
+        "zh": "面向全国或多个省级行政区的扩展机会。",
+        "en": "Optional opportunities open nationwide or across multiple provincial-level regions in China."
+      },
+      "region_codes": [
+        "CN"
+      ],
+      "record_count": 0,
+      "default_included": false
+    },
+    {
+      "id": "cn-local",
+      "path": "cn-local.json",
+      "label": {
+        "zh": "中国地方扩展机会",
+        "en": "China local optional opportunities"
+      },
+      "description": {
+        "zh": "仅面向特定省、市、区县或线下举办地的扩展机会；数据增长后可继续按省拆分。",
+        "en": "Optional opportunities limited to specific provinces, cities, counties, or local venues; this shard can be split by province as coverage grows."
+      },
+      "region_codes": [
+        "CN-*"
+      ],
+      "record_count": 0,
+      "default_included": false
+    }
+  ]
+}

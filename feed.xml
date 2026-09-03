@@ -5,7 +5,7 @@
     <link>https://github.com/MartinDelophy/Awesome-AIGC-Creative-Contests</link>
     <description>Updates to active and upcoming AIGC creative contests worldwide</description>
     <language>en</language>
-    <lastBuildDate>Wed, 02 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 26 Aug 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://martindelophy.github.io/Awesome-AIGC-Creative-Contests/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Austin AI Film Festival 2026</title>
@@ -13,13 +13,6 @@
       <guid isPermaLink="false">austin-ai-film-festival-2026</guid>
       <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
       <description>Deadline: 2026-09-15 (Not stated on the official site); region/eligibility: United States / Open worldwide except restricted jurisdictions; fee: US$20 for most categories; a free option is listed for the student category; prize: Awards and selected screenings; see official page for prize details.</description>
-    </item>
-    <item>
-      <title>ARC White-Box Estimation Challenge 2026 (WhestBench)</title>
-      <link>https://www.aicrowd.com/challenges/arc-white-box-estimation-challenge-2026</link>
-      <guid isPermaLink="false">arc-white-box-estimation-2026</guid>
-      <pubDate>Wed, 02 Sep 2026 00:00:00 +0000</pubDate>
-      <description>Deadline: 2026-09-19 (23:59 UTC); region/eligibility: Online / Eligibility subject to the official rules; fee: No entry fee is listed on the official page; prize: US$150,000+ total across phases, including a US$100,000 Phase 2 prize pool.</description>
     </item>
     <item>
       <title>AI Song Contest 2026 — Bangkok</title>
@@ -90,13 +83,6 @@
       <guid isPermaLink="false">aima-london-2026</guid>
       <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
       <description>Deadline: 2026-10-17 (Not stated on the official site); region/eligibility: United Kingdom / Open worldwide; fee: Paid and non-refundable; see the official submission page; prize: Trophies and certificates by category; selected shorts may opt into a distribution and revenue-sharing offer.</description>
-    </item>
-    <item>
-      <title>NASA TechLeap Prize: Orbital Clarity Challenge</title>
-      <link>https://occ.nasatechleap.org/</link>
-      <guid isPermaLink="false">nasa-orbital-clarity-challenge-2026</guid>
-      <pubDate>Wed, 02 Sep 2026 00:00:00 +0000</pubDate>
-      <description>Deadline: 2026-11-11 (5:00 PM ET; registration is required by 5:00 PM ET on October 28); region/eligibility: United States / Online / Restricted eligibility; fee: No entry fee is listed; potential winners must show US$250,000 in liability coverage or equivalent financial responsibility; prize: US$2,000,000 total; up to four winners may receive up to US$500,000 each plus an opportunity for a no-cost orbital test.</description>
     </item>
   </channel>
 </rss>

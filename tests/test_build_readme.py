@@ -61,39 +61,12 @@ class BuildReadmeTests(unittest.TestCase):
         schema_path = SCRIPT.parents[1] / "data" / "schema.json"
         schema = json.loads(schema_path.read_text(encoding="utf-8"))
         self.assertEqual(set(schema["items"]["required"]), build_readme.REQUIRED_FIELDS)
-        self.assertEqual(
-            set(schema["items"]["properties"]),
-            build_readme.REQUIRED_FIELDS | build_readme.OPTIONAL_FIELDS,
-        )
+        self.assertEqual(set(schema["items"]["properties"]), build_readme.REQUIRED_FIELDS)
 
-    def test_accepts_backward_compatible_discovery_metadata(self):
+    def test_core_rejects_extension_metadata(self):
         contests = deepcopy(build_readme.load_contests())
-        contests[0].update({
-            "scope": "aigc-native",
-            "opportunity_type": "contest",
-            "industries": ["ai-ml", "film-video"],
-            "audiences": ["individual", "team"],
-            "ai_policy": "required",
-            "geography": {
-                "event_mode": "online",
-                "country_code": "CN",
-                "eligibility_scope": "global",
-                "eligible_regions": ["GLOBAL"],
-            },
-            "source_meta": {
-                "source_id": "mango-aigc-challenges",
-                "source_tier": "official-page",
-                "first_seen": "2026-08-01",
-                "last_checked": "2026-08-26",
-                "evidence_urls": [contests[0]["official_url"]],
-            },
-        })
-        build_readme.validate_contests(contests)
-
-    def test_rejects_invalid_optional_metadata(self):
-        contests = deepcopy(build_readme.load_contests())
-        contests[0]["ai_policy"] = "probably"
-        with self.assertRaisesRegex(ValueError, "ai_policy"):
+        contests[0]["scope"] = "aigc-native"
+        with self.assertRaisesRegex(ValueError, "未知字段.*scope"):
             build_readme.validate_contests(contests)
 
     def test_rss_is_valid_xml_and_contains_active_contests(self):

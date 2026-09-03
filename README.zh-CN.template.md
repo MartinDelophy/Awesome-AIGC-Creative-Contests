@@ -2,11 +2,11 @@
 
 [English](README.md) | 简体中文
 
-> 持续更新的国内外 AIGC 原生及 AI 可辅助比赛机会：创意、技术、科研与创新挑战。
+> 持续更新的国内外 AIGC 创作比赛清单：视频、图像、音频、写作与 AI 应用。
 
 ![Contests](https://img.shields.io/badge/active-{{COUNT}}-2ea44f) ![Last verified](https://img.shields.io/badge/verified-{{UPDATED_AT}}-0969da) [![License: MIT](https://img.shields.io/badge/license-MIT-yellow.svg)](LICENSE)
 
-错过比赛往往不是能力问题，而是信息没有在正确的时间出现。本项目由“已核验公开清单”和“来源发现管线”组成。公开清单只保留仍可报名或已经官宣、即将开放的机会；截止条目由自动任务移除，仍可通过 Git 历史查阅。
+错过比赛往往不是能力问题，而是信息没有在正确的时间出现。本项目由“已核验 AIGC 核心清单”和“来源发现管线”组成。核心清单只保留仍可报名或已经官宣、即将开放的 AIGC 机会；更广泛的机会放在独立的可选数据集中。截止条目由自动任务移除，仍可通过 Git 历史查阅。
 
 **数据核验日期：{{UPDATED_AT}}。** 截止时间、参赛资格和授权条款可能临时调整，提交前请再次阅读官方规则。
 
@@ -15,7 +15,7 @@
 - [订阅 RSS](https://martindelophy.github.io/Awesome-AIGC-Creative-Contests/feed.xml)：获取当前赛事清单更新。
 - [订阅日历](webcal://martindelophy.github.io/Awesome-AIGC-Creative-Contests/deadlines.ics) / [下载 ICS](deadlines.ics)：把所有赛事截止日加入 Apple Calendar、Google Calendar、Outlook 等日历应用。
 
-RSS 和 ICS 均由赛事数据自动生成；清单更新后，订阅内容会同步更新。
+RSS 和 ICS 只由 AIGC 核心数据生成；核心清单更新后，订阅内容会同步更新。
 
 ## 来源覆盖
 
@@ -24,6 +24,17 @@ RSS 和 ICS 均由赛事数据自动生成；清单更新后，订阅内容会�
 - [`data/candidates.json`](data/candidates.json) 中有 **{{CANDIDATE_COUNT}} 条待核验候选**。候选在官方页面、规则和截止时间通过核验前，不会进入网站公开清单、RSS 或日历。
 
 来源注册表位于 [`data/sources.json`](data/sources.json)。定时发现任务只检查已启用的公开来源，并与正式赛事及历史候选去重，同时保留人工审核状态。
+
+## 可选扩展数据
+
+原有兼容契约保持不变：[`data/contests.json`](data/contests.json)、[`data/schema.json`](data/schema.json)、下方表格、RSS 和 ICS 只包含 AIGC 核心清单，已有使用者无需改代码。
+
+更广泛但已经核验的机会独立放在 [`data/opportunities/`](data/opportunities/)：
+
+- 先读取体积很小的 [`manifest.json`](data/opportunities/manifest.json)；
+- 只按用户需要获取 `global.json`、`cn-national.json` 或 `cn-local.json` 等分片；
+- 所有分片均为 `default_included: false`，不会自动并入核心数据。例如面向海外用户的客户端无需下载中国区县级机会；
+- 可选记录使用独立的 [`schema.json`](data/opportunities/schema.json)，包含范围、行业、人群、AI 政策、地域和来源证据。
 
 ## 正在报名
 
@@ -55,26 +66,29 @@ RSS 和 ICS 均由赛事数据自动生成；清单更新后，订阅内容会�
 
 ## 收录标准
 
-清单明确区分 `aigc-native`（AIGC 原生）、`ai-compatible`（AI 可辅助）和 `general`（普通高价值机会）三种范围；没有标记的历史记录默认按 AIGC 原生处理。一个赛事需要同时满足以下条件：
+核心清单继续保持原有 AIGC 定位，一个赛事需要同时满足以下条件：
 
-1. AIGC 是赛事核心，或规则明确允许有价值的 AI 辅助，或属于有明确作品与结果的高价值创意、技术、科研和创新挑战；
+1. AIGC 是赛事核心，而不是偶然可用的工具；
 2. 有可访问的官方主页、规则或主办方公告；
-3. 报名窗口、参赛对象、作品要求、费用、奖励和 AI 使用规则都能据实记录，无法确认的信息必须明确标为未知；
+3. 报名窗口、参赛对象、作品要求、费用和奖励都能据实记录；
 4. 当前仍可报名，或已官宣且即将开放；
 5. 不收录纯抽奖、课程销售、普通会议、无法确认主办方或日期相互冲突的活动。
+
+已经核验的 AI 可辅助赛事，以及部分高价值创意、技术、科研和创新机会，可以进入可选分片。它们必须有明确的提交物和结果，完整填写范围与 AI 政策等结构化字段，并达到相同的官方来源标准；默认不会进入核心清单。
 
 官方规则页优先级高于媒体报道和聚合站。付费比赛会明确标注，未写“免费”的赛事不代表一定免费。
 
 ## 一起共创
 
-发现新比赛、延期、规则变化或失效链接时，请[提交赛事](../../issues/new?template=add-contest.yml)或[报告变更](../../issues/new?template=update-contest.yml)。提交前请阅读 [CONTRIBUTING.md](CONTRIBUTING.md)。
+发现新比赛、延期、规则变化或失效链接时，请[提交赛事](../../issues/new?template=add-contest.yml)或[报告变更](../../issues/new?template=update-contest.yml)。核心 AIGC 赛事写入 `data/contests.json`；其他符合标准的机会写入 manifest 指定的可选分片。提交前请阅读 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
-赛事数据保存在 [`data/contests.json`](data/contests.json)，字段定义见 [`data/schema.json`](data/schema.json)；来源和候选 Schema 与各自数据文件放在同一目录。维护流程见 [`MAINTENANCE.md`](MAINTENANCE.md)，变更记录见 [`CHANGELOG.md`](CHANGELOG.md)。英文和中文 README、RSS 与 ICS 均由脚本生成：
+核心赛事数据保存在 [`data/contests.json`](data/contests.json)，字段定义见 [`data/schema.json`](data/schema.json)；可选数据及其独立 Schema 位于 [`data/opportunities/`](data/opportunities/)。来源和候选 Schema 与各自数据文件放在同一目录。维护流程见 [`MAINTENANCE.md`](MAINTENANCE.md)，变更记录见 [`CHANGELOG.md`](CHANGELOG.md)。英文和中文 README、RSS 与 ICS 均由核心数据生成：
 
 ```bash
 python3 scripts/build_readme.py
 python3 scripts/build_readme.py --check
 python3 scripts/collect_sources.py --check
+python3 scripts/validate_opportunities.py --check
 python3 scripts/collect_sources.py --dry-run --source modelscope-events
 python3 -m unittest discover -s tests -v
 ```

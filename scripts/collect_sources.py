@@ -30,6 +30,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SOURCES_PATH = ROOT / "data" / "sources.json"
 CANDIDATES_PATH = ROOT / "data" / "candidates.json"
 CONTESTS_PATH = ROOT / "data" / "contests.json"
+OPPORTUNITIES_MANIFEST_PATH = ROOT / "data" / "opportunities" / "manifest.json"
 
 USER_AGENT = "Awesome-AIGC-Creative-Contests/1.0 (+https://github.com/MartinDelophy/Awesome-AIGC-Creative-Contests)"
 MAX_RESPONSE_BYTES = 5 * 1024 * 1024
@@ -274,6 +275,41 @@ def load_candidates(path: Path = CANDIDATES_PATH, source_ids: set[str] | None = 
     candidates = read_json(path) if path.exists() else []
     validate_candidates(candidates, source_ids or {source["id"] for source in load_sources()})
     return candidates
+
+
+def load_opt_in_opportunities(manifest_path: Path = OPPORTUNITIES_MANIFEST_PATH) -> list[dict]:
+    """Load every opt-in shard for publication deduplication only.
+
+    The collector never merges these records into the core feed. It reads them
+    so an already-published optional opportunity does not re-enter the review
+    queue on every scheduled discovery run.
+    """
+    if not manifest_path.exists():
+        return []
+    manifest = read_json(manifest_path)
+    if not isinstance(manifest, dict) or not isinstance(manifest.get("datasets"), list):
+        raise ValueError("data/opportunities/manifest.json 必须包含 datasets 数组")
+    records: list[dict] = []
+    seen_paths: set[str] = set()
+    for dataset in manifest["datasets"]:
+        if not isinstance(dataset, dict):
+            raise ValueError("data/opportunities/manifest.json 中的分片必须是对象")
+        shard_name = dataset.get("path")
+        if (
+            not isinstance(shard_name, str)
+            or Path(shard_name).name != shard_name
+            or not shard_name.endswith(".json")
+            or shard_name in {"manifest.json", "schema.json", "manifest.schema.json"}
+        ):
+            raise ValueError(f"无效可选分片路径: {shard_name!r}")
+        if shard_name in seen_paths:
+            raise ValueError(f"重复可选分片路径: {shard_name}")
+        seen_paths.add(shard_name)
+        shard_records = read_json(manifest_path.parent / shard_name)
+        if not isinstance(shard_records, list):
+            raise ValueError(f"data/opportunities/{shard_name} 顶层必须是数组")
+        records.extend(shard_records)
+    return records
 
 
 def normalize_text(value: str) -> str:
@@ -671,8 +707,10 @@ def main() -> int:
         sources = load_sources()
         source_ids = {source["id"] for source in sources}
         candidates = load_candidates(source_ids=source_ids)
-        contests = read_json(CONTESTS_PATH)
-        validate_contest_source_references(contests, source_ids)
+        core_contests = read_json(CONTESTS_PATH)
+        optional_opportunities = load_opt_in_opportunities()
+        published_records = core_contests + optional_opportunities
+        validate_contest_source_references(published_records, source_ids)
         if args.check:
             enabled = sum(source["enabled"] for source in sources)
             print(f"已校验 {len(sources)} 个来源（{enabled} 个启用）和 {len(candidates)} 条候选")
@@ -701,7 +739,7 @@ def main() -> int:
             for source_id, message in failures:
                 print(f"警告：{source_id}: {message}", file=sys.stderr)
             raise RuntimeError("所有已启用来源均抓取失败，未更新候选库")
-        merged = merge_candidates(candidates, discoveries, contests, args.today)
+        merged = merge_candidates(candidates, discoveries, published_records, args.today)
         validate_candidates(merged, source_ids)
 
         new_ids = {item["id"] for item in merged} - {item["id"] for item in candidates}

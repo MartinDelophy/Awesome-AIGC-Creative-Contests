@@ -45,7 +45,7 @@ REQUIRED_FIELDS = {
     "en",
 }
 
-OPTIONAL_FIELDS = {
+EXTENDED_FIELDS = {
     "scope",
     "opportunity_type",
     "industries",
@@ -138,7 +138,26 @@ def load_contests(path: Path = DATA_PATH) -> list[dict]:
     return contests
 
 
-def validate_contests(contests: list[dict]) -> None:
+def validate_contests(
+    contests: list[dict],
+    *,
+    allowed_extra_fields: set[str] | frozenset[str] = frozenset(),
+    category_names: set[str] | None = None,
+    required_extra_fields: set[str] | frozenset[str] = frozenset(),
+) -> None:
+    """Validate records against the legacy core contract by default.
+
+    The opt-in opportunity validator reuses this routine by explicitly passing
+    the extended fields and categories. Keeping the default strict prevents a
+    broader record from silently leaking into data/contests.json and its RSS or
+    calendar outputs.
+    """
+    allowed_extra_fields = set(allowed_extra_fields)
+    required_extra_fields = set(required_extra_fields)
+    if not required_extra_fields <= allowed_extra_fields:
+        raise ValueError("required_extra_fields 必须包含在 allowed_extra_fields 中")
+    category_names = category_names or set(CATEGORY_LABELS["en"])
+
     seen: set[str] = set()
     for item in contests:
         if not isinstance(item, dict):
@@ -146,7 +165,10 @@ def validate_contests(contests: list[dict]) -> None:
         missing = REQUIRED_FIELDS - item.keys()
         if missing:
             raise ValueError(f"{item.get('id', '<unknown>')}: 缺少字段 {sorted(missing)}")
-        unknown_fields = item.keys() - REQUIRED_FIELDS - OPTIONAL_FIELDS
+        missing_extra = required_extra_fields - item.keys()
+        if missing_extra:
+            raise ValueError(f"{item.get('id', '<unknown>')}: 缺少扩展字段 {sorted(missing_extra)}")
+        unknown_fields = item.keys() - REQUIRED_FIELDS - allowed_extra_fields
         if unknown_fields:
             raise ValueError(f"{item.get('id', '<unknown>')}: 未知字段 {sorted(unknown_fields)}")
 
@@ -177,7 +199,7 @@ def validate_contests(contests: list[dict]) -> None:
             raise ValueError(f"{contest_id}: categories 不能为空")
         if len(item["categories"]) != len(set(item["categories"])):
             raise ValueError(f"{contest_id}: categories 不能重复")
-        unknown = set(item["categories"]) - CATEGORY_LABELS["en"].keys()
+        unknown = set(item["categories"]) - category_names
         if unknown:
             raise ValueError(f"{contest_id}: 未知类别 {sorted(unknown)}")
         for url_field in ("official_url", "rules_url"):
@@ -201,7 +223,8 @@ def validate_contests(contests: list[dict]) -> None:
         if empty_translations:
             raise ValueError(f"{contest_id}: en 字段不能为空 {sorted(empty_translations)}")
 
-        validate_optional_metadata(item, contest_id)
+        if item.keys() & EXTENDED_FIELDS:
+            validate_optional_metadata(item, contest_id)
 
 
 def validate_enum(value, allowed: set[str], label: str) -> None:

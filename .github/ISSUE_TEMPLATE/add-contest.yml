@@ -1,5 +1,5 @@
 name: 提交赛事
-description: 推荐一个仍可报名或即将开放的 AIGC 原生、AI 可辅助或其他高价值比赛
+description: 推荐一个仍可报名或即将开放的核心 AIGC 赛事，或可选扩展机会
 title: "[新增赛事] "
 labels: ["new-contest"]
 body:
@@ -49,8 +49,8 @@ body:
       label: 机会范围
       options:
         - AIGC 原生赛事
-        - AI 可辅助赛事
-        - 普通高价值赛事
+        - AI 可辅助赛事（进入可选扩展数据集）
+        - 普通高价值赛事（进入可选扩展数据集）
     validations:
       required: true
   - type: dropdown

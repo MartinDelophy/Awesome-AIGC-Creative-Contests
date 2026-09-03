@@ -13,6 +13,7 @@
 - [ ] 已检查截止时间与时区
 - [ ] 已运行 `python3 scripts/build_readme.py`
 - [ ] 已运行 `python3 scripts/collect_sources.py --check`
+- [ ] 已运行 `python3 scripts/validate_opportunities.py --check`
 - [ ] 已运行 `python3 -m unittest discover -s tests -v`
 
 官方来源：
