@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/MartinDelophy/Awesome-AIGC-Creative-Contests/blob/main/data/candidates.schema.json",
+  "title": "Contest discovery candidates",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "id",
+      "source_id",
+      "title",
+      "discovered_url",
+      "source_tier",
+      "first_seen",
+      "last_seen",
+      "status",
+      "match_reason"
+    ],
+    "properties": {
+      "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+      "source_id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+      "title": { "type": "string", "minLength": 1 },
+      "discovered_url": { "type": "string", "format": "uri", "pattern": "^https://" },
+      "source_tier": {
+        "enum": ["official-api", "official-page", "trusted-platform", "discovery-only"]
+      },
+      "first_seen": { "type": "string", "format": "date" },
+      "last_seen": { "type": "string", "format": "date" },
+      "status": { "enum": ["new", "reviewing", "accepted", "rejected"] },
+      "match_reason": {
+        "type": "array",
+        "minItems": 1,
+        "uniqueItems": true,
+        "items": { "type": "string", "minLength": 1 }
+      },
+      "review_notes": { "type": "string" }
+    }
+  }
+}

@@ -6,48 +6,6 @@ METHOD:PUBLISH
 X-WR-CALNAME:AIGC Creative Contest Deadlines
 X-WR-CALDESC:Current deadlines from Awesome AIGC Creative Contests
 BEGIN:VEVENT
-UID:malanshan-ai-micro-drama-2026@awesome-aigc-creative-contests
-DTSTAMP:20260826T000000Z
-DTSTART;VALUE=DATE:20260831
-DTEND;VALUE=DATE:20260901
-SUMMARY:Deadline: 2026 Audiovisual China · Malanshan Cup AI Micro-Drama In
- novation Competition
-DESCRIPTION:Production companies\, creative teams\, or individuals\; at lea
- st 3 landscape episodes or 5 vertical episodes\nTime zone: China Standard 
- Time\; exact time not stated\nFee: Not stated\nPrize: Prize pool above CNY
-  800\,000 plus project incubation support
-URL:https://aigc.mgtv.com/challenges/detail?id=15
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:astana-ai-film-festival-2026@awesome-aigc-creative-contests
-DTSTAMP:20260826T000000Z
-DTSTART;VALUE=DATE:20260831
-DTEND;VALUE=DATE:20260901
-SUMMARY:Deadline: Astana AI Film Festival (AAIFF 2026)
-DESCRIPTION:Individuals\, teams\, and studios\; generative AI must be integ
- ral\; non-English films require English subtitles\nTime zone: Not stated o
- n the official site\nFee: Free\nPrize: US$1\,000\,000 competition prizes +
-  US$1\,000\,000 production fund
-URL:https://aaiff.ai/
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:dreamina-seedance-2-5-blockout-2026@awesome-aigc-creative-contests
-DTSTAMP:20260826T000000Z
-DTSTART;VALUE=DATE:20260831
-DTEND;VALUE=DATE:20260901
-SUMMARY:Deadline: Story Blind Box: Dreamina Seedance 2.5 Blockout Reference
-  Challenge
-DESCRIPTION:AI creators worldwide\; a 15-second landscape video using the o
- fficial blockout reference and Seedance 2.5\nTime zone: China Standard Tim
- e\, 23:59\nFee: Not stated\nPrize: US$50\,000 champion prize + 1\,000\,000
-  Dreamina credits
-URL:https://jimeng.jianying.com/ai-tool/activity-detail/2026-805-dreamina-w
- eekly-challenge
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
 UID:austin-ai-film-festival-2026@awesome-aigc-creative-contests
 DTSTAMP:20260826T000000Z
 DTSTART;VALUE=DATE:20260915

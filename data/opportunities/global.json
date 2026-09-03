@@ -1,0 +1,119 @@
+[
+  {
+    "id": "arc-white-box-estimation-2026",
+    "title": "ARC 白盒估计挑战赛 2026（WhestBench）",
+    "region": "线上 / 资格以官方规则为准",
+    "categories": [
+      "code"
+    ],
+    "organizer": "Alignment Research Center、AIcrowd",
+    "start_date": "2026-05-28",
+    "deadline": "2026-09-19",
+    "timezone": "UTC 23:59",
+    "eligibility": "AIcrowd 注册参赛者或团队；须提交符合官方 starter kit 规范的可执行 Python 估计器，奖金资格以官方规则为准",
+    "fee": "官网未列报名费",
+    "prize": "总奖池 US$150,000+；其中第二阶段奖池 US$100,000",
+    "official_url": "https://www.aicrowd.com/challenges/arc-white-box-estimation-challenge-2026",
+    "rules_url": "https://www.aicrowd.com/challenges/arc-white-box-estimation-challenge-2026/challenge_rules",
+    "verified_on": "2026-09-02",
+    "scope": "ai-compatible",
+    "opportunity_type": "innovation-challenge",
+    "industries": [
+      "ai-ml",
+      "data-science",
+      "science-engineering"
+    ],
+    "audiences": [
+      "individual",
+      "team",
+      "professional",
+      "researcher"
+    ],
+    "ai_policy": "allowed",
+    "geography": {
+      "event_mode": "online",
+      "eligibility_scope": "unknown"
+    },
+    "source_meta": {
+      "source_id": "aicrowd-challenges",
+      "source_tier": "trusted-platform",
+      "first_seen": "2026-09-02",
+      "last_checked": "2026-09-02",
+      "evidence_urls": [
+        "https://www.aicrowd.com/challenges/arc-white-box-estimation-challenge-2026",
+        "https://www.aicrowd.com/challenges/arc-white-box-estimation-challenge-2026/challenge_rules",
+        "https://discourse.aicrowd.com/t/arc-white-box-estimation-challenge-is-now-open/17997"
+      ]
+    },
+    "en": {
+      "title": "ARC White-Box Estimation Challenge 2026 (WhestBench)",
+      "region": "Online / Eligibility subject to the official rules",
+      "organizer": "Alignment Research Center and AIcrowd",
+      "timezone": "23:59 UTC",
+      "eligibility": "Registered AIcrowd participants or teams must submit an executable Python estimator that follows the official starter-kit contract; prize eligibility is subject to the official rules",
+      "fee": "No entry fee is listed on the official page",
+      "prize": "US$150,000+ total across phases, including a US$100,000 Phase 2 prize pool"
+    }
+  },
+  {
+    "id": "nasa-orbital-clarity-challenge-2026",
+    "title": "NASA TechLeap Prize：Orbital Clarity Challenge",
+    "region": "美国 / 线上 / 资格受限",
+    "categories": [
+      "hardware"
+    ],
+    "organizer": "NASA",
+    "start_date": "2026-08-19",
+    "deadline": "2026-11-11",
+    "timezone": "美国东部时间 17:00；须于 10 月 28 日 17:00 前注册",
+    "eligibility": "个人须为年满 18 岁的美国公民或永久居民；机构须在美国注册并以美国为主要营业地；团队须由合资格人士领队，外籍成员另受官方规则限制",
+    "fee": "官网未列报名费；潜在获奖者须证明具备 US$250,000 责任险或同等财务能力",
+    "prize": "总奖池 US$2,000,000；最多四名获奖者各可获最高 US$500,000，并有机会免费进行在轨测试",
+    "official_url": "https://occ.nasatechleap.org/",
+    "rules_url": "https://occ.nasatechleap.org/rules-terms-and-conditions/",
+    "verified_on": "2026-09-02",
+    "scope": "general",
+    "opportunity_type": "grant-prize",
+    "industries": [
+      "innovation",
+      "science-engineering"
+    ],
+    "audiences": [
+      "individual",
+      "team",
+      "company",
+      "nonprofit",
+      "researcher"
+    ],
+    "ai_policy": "unknown",
+    "geography": {
+      "event_mode": "online",
+      "country_code": "US",
+      "eligibility_scope": "restricted",
+      "eligible_regions": [
+        "United States"
+      ]
+    },
+    "source_meta": {
+      "source_id": "nasa-prizes-challenges",
+      "source_tier": "official-page",
+      "first_seen": "2026-09-02",
+      "last_checked": "2026-09-02",
+      "evidence_urls": [
+        "https://www.nasa.gov/directorates/stmd/prizes-challenges-crowdsourcing-program/nasa-techleap-prize-orbital-clarity-challenge/",
+        "https://occ.nasatechleap.org/",
+        "https://occ.nasatechleap.org/rules-terms-and-conditions/",
+        "https://occ.nasatechleap.org/technical-guidelines/"
+      ]
+    },
+    "en": {
+      "title": "NASA TechLeap Prize: Orbital Clarity Challenge",
+      "region": "United States / Online / Restricted eligibility",
+      "organizer": "NASA",
+      "timezone": "5:00 PM ET; registration is required by 5:00 PM ET on October 28",
+      "eligibility": "Individuals must be U.S. citizens or permanent residents aged 18+; organizations must be incorporated and primarily based in the U.S.; teams need an eligible lead, with foreign members subject to the official restrictions",
+      "fee": "No entry fee is listed; potential winners must show US$250,000 in liability coverage or equivalent financial responsibility",
+      "prize": "US$2,000,000 total; up to four winners may receive up to US$500,000 each plus an opportunity for a no-cost orbital test"
+    }
+  }
+]

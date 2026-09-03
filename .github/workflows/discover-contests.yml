@@ -1,0 +1,104 @@
+name: Discover contest candidates
+
+on:
+  schedule:
+    # Four scheduler windows per day; cadence selects due sources for a robots check and one content request.
+    - cron: "17 1,7,13,19 * * *"
+  workflow_dispatch:
+    inputs:
+      source:
+        description: "Optional registered source id to run by itself"
+        required: false
+        type: string
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/discover-contests.yml"
+      - "data/sources.json"
+      - "data/sources.schema.json"
+      - "data/candidates.json"
+      - "data/candidates.schema.json"
+      - "data/contests.json"
+      - "data/opportunities/**"
+      - "scripts/collect_sources.py"
+      - "scripts/validate_opportunities.py"
+      - "tests/test_collect_sources.py"
+      - "tests/test_validate_opportunities.py"
+  pull_request:
+    paths:
+      - ".github/workflows/discover-contests.yml"
+      - "data/sources.json"
+      - "data/sources.schema.json"
+      - "data/candidates.json"
+      - "data/candidates.schema.json"
+      - "data/contests.json"
+      - "data/opportunities/**"
+      - "scripts/collect_sources.py"
+      - "scripts/validate_opportunities.py"
+      - "tests/test_collect_sources.py"
+      - "tests/test_validate_opportunities.py"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: contest-candidate-discovery
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    if: github.event_name == 'push' || github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate registry and candidate data
+        run: python3 scripts/collect_sources.py --check
+      - name: Validate opt-in opportunity datasets
+        run: python3 scripts/validate_opportunities.py --check
+      - name: Run discovery tests
+        run: python3 -m unittest tests.test_collect_sources -v
+
+  discover:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate registry and candidate data
+        run: python3 scripts/collect_sources.py --check
+      - name: Validate opt-in opportunity datasets
+        run: python3 scripts/validate_opportunities.py --check
+      - name: Discover candidates
+        env:
+          REQUESTED_SOURCE: ${{ inputs.source }}
+        run: |
+          if [ -n "$REQUESTED_SOURCE" ]; then
+            python3 scripts/collect_sources.py --collect --source "$REQUESTED_SOURCE"
+          else
+            python3 scripts/collect_sources.py --collect --respect-cadence
+          fi
+      - name: Revalidate generated candidates
+        run: |
+          python3 scripts/collect_sources.py --check
+          python3 scripts/validate_opportunities.py --check
+      - name: Commit candidate changes
+        run: |
+          if git diff --quiet -- data/candidates.json; then
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/candidates.json
+          git commit -m "chore(discovery): refresh contest candidates"
+          git push

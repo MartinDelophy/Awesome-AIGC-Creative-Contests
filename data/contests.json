@@ -1,59 +1,5 @@
 [
   {
-    "id": "dreamina-seedance-2-5-blockout-2026",
-    "title": "故事盲盒：即梦 Seedance 2.5 白模参考创作大赛",
-    "region": "中国 / 全球开放",
-    "categories": [
-      "video"
-    ],
-    "organizer": "即梦 AI",
-    "start_date": "2026-08-05",
-    "deadline": "2026-08-31",
-    "timezone": "北京时间 23:59",
-    "eligibility": "全球 AI 创作者；15 秒横版视频，须使用官方白模与 Seedance 2.5",
-    "fee": "未注明",
-    "prize": "冠军 US$50,000 + 100 万即梦积分",
-    "official_url": "https://jimeng.jianying.com/ai-tool/activity-detail/2026-805-dreamina-weekly-challenge",
-    "rules_url": "https://jimeng.jianying.com/ai-tool/activity-detail/2026-805-dreamina-weekly-challenge",
-    "verified_on": "2026-08-26",
-    "en": {
-      "title": "Story Blind Box: Dreamina Seedance 2.5 Blockout Reference Challenge",
-      "region": "China / Open worldwide",
-      "organizer": "Dreamina AI",
-      "timezone": "China Standard Time, 23:59",
-      "eligibility": "AI creators worldwide; a 15-second landscape video using the official blockout reference and Seedance 2.5",
-      "fee": "Not stated",
-      "prize": "US$50,000 champion prize + 1,000,000 Dreamina credits"
-    }
-  },
-  {
-    "id": "malanshan-ai-micro-drama-2026",
-    "title": "2026「视听中国·马栏山杯」AI 微短剧创智大赛",
-    "region": "中国",
-    "categories": [
-      "video"
-    ],
-    "organizer": "湖南省广播电视局、湖南马栏山集团",
-    "start_date": "2026-06-01",
-    "deadline": "2026-08-31",
-    "timezone": "北京时间（具体时刻以官网为准）",
-    "eligibility": "微短剧制作机构、创作团队或个人；横屏至少 3 集或竖屏至少 5 集",
-    "fee": "未注明",
-    "prize": "超 ¥800,000 奖池及项目孵化权益",
-    "official_url": "https://aigc.mgtv.com/challenges/detail?id=15",
-    "rules_url": "https://gbdsj.hunan.gov.cn/gbdsj/xxgk/tzgg/202606/t20260611_33999282.html",
-    "verified_on": "2026-08-26",
-    "en": {
-      "title": "2026 Audiovisual China · Malanshan Cup AI Micro-Drama Innovation Competition",
-      "region": "China",
-      "organizer": "Hunan Radio and Television Administration and Hunan Malanshan Group",
-      "timezone": "China Standard Time; exact time not stated",
-      "eligibility": "Production companies, creative teams, or individuals; at least 3 landscape episodes or 5 vertical episodes",
-      "fee": "Not stated",
-      "prize": "Prize pool above CNY 800,000 plus project incubation support"
-    }
-  },
-  {
     "id": "wechat-mini-program-2026",
     "title": "2026 微信小程序开发大赛",
     "region": "中国 / 全球开放",
@@ -136,33 +82,6 @@
       "eligibility": "Age-group divisions from Primary 4 through an adult open division; themes and durations vary",
       "fee": "Paid; see registration page",
       "prize": "HK$120,000 total prize pool"
-    }
-  },
-  {
-    "id": "astana-ai-film-festival-2026",
-    "title": "Astana AI Film Festival（AAIFF 2026）",
-    "region": "哈萨克斯坦 / 全球开放",
-    "categories": [
-      "video"
-    ],
-    "organizer": "Astana AI Film Festival",
-    "start_date": "2026-05-25",
-    "deadline": "2026-08-31",
-    "timezone": "官网未注明",
-    "eligibility": "个人、团队与工作室；生成式 AI 必须是创作核心；非英语作品需英文字幕",
-    "fee": "免费",
-    "prize": "US$1,000,000 竞赛奖金 + US$1,000,000 制作基金",
-    "official_url": "https://aaiff.ai/",
-    "rules_url": "https://aaiff.ai/terms",
-    "verified_on": "2026-08-26",
-    "en": {
-      "title": "Astana AI Film Festival (AAIFF 2026)",
-      "region": "Kazakhstan / Open worldwide",
-      "organizer": "Astana AI Film Festival",
-      "timezone": "Not stated on the official site",
-      "eligibility": "Individuals, teams, and studios; generative AI must be integral; non-English films require English subtitles",
-      "fee": "Free",
-      "prize": "US$1,000,000 competition prizes + US$1,000,000 production fund"
     }
   },
   {

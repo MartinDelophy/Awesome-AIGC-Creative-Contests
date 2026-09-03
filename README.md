@@ -4,9 +4,9 @@ English | [简体中文](README.zh-CN.md)
 
 > A continuously maintained directory of active and officially announced AIGC creative contests worldwide, covering video, images, audio, writing, and AI applications.
 
-![Contests](https://img.shields.io/badge/active-14-2ea44f) ![Last verified](https://img.shields.io/badge/verified-2026-08-26-0969da) [![License: MIT](https://img.shields.io/badge/license-MIT-yellow.svg)](LICENSE)
+![Contests](https://img.shields.io/badge/active-11-2ea44f) ![Last verified](https://img.shields.io/badge/verified-2026-08-26-0969da) [![License: MIT](https://img.shields.io/badge/license-MIT-yellow.svg)](LICENSE)
 
-Missing a contest is often an information problem rather than a creative one. This directory keeps only contests that are open for submissions or officially announced with a future opening date. Expired entries are removed automatically and remain available through Git history.
+Missing a contest is often an information problem rather than a creative one. This project combines a verified core AIGC directory with a source-discovery pipeline. The core directory keeps only opportunities that are open for submissions or officially announced with a future opening date. Broader opportunities live in separate opt-in datasets. Expired entries are removed automatically and remain available through Git history.
 
 **Data verified on 2026-08-26.** Deadlines, eligibility, fees, and licensing terms may change without notice. Always read the official rules before submitting.
 
@@ -15,17 +15,34 @@ Missing a contest is often an information problem rather than a creative one. Th
 - [Subscribe via RSS](https://martindelophy.github.io/Awesome-AIGC-Creative-Contests/feed.xml) for active-directory updates.
 - [Subscribe to the calendar](webcal://martindelophy.github.io/Awesome-AIGC-Creative-Contests/deadlines.ics) or [download the ICS file](deadlines.ics) to add every deadline to Apple Calendar, Google Calendar, Outlook, or another calendar app.
 
-Both feeds are generated from the contest data and update automatically when the directory changes.
+Both feeds are generated only from the core AIGC data and update automatically when that directory changes.
+
+## Discovery coverage
+
+- **52 registered sources** across China and international government, organizer, association, platform, and discovery-only entry points.
+- **5 sources in the low-volume automated pilot**; sources blocked by robots, client-only rendering, or unclear listing status remain manual until a compliant adapter exists.
+- **13 candidates awaiting review** in [`data/candidates.json`](data/candidates.json). Candidates never appear in the public directory, RSS, or calendar until an official page and rules are verified.
+
+The source registry lives in [`data/sources.json`](data/sources.json). The scheduled discovery workflow checks enabled public sources, deduplicates links against published contests and previous candidates, and preserves review decisions.
+
+## Opt-in opportunity datasets
+
+The original compatibility contract stays unchanged: [`data/contests.json`](data/contests.json), [`data/schema.json`](data/schema.json), the tables below, RSS, and ICS contain only the core AIGC directory. Existing consumers do not need to change anything.
+
+Broader verified opportunities are published separately under [`data/opportunities/`](data/opportunities/):
+
+- Read the small [`manifest.json`](data/opportunities/manifest.json) first.
+- Fetch only the shards relevant to your users, such as `global.json`, `cn-national.json`, or `cn-local.json`.
+- Every shard has `default_included: false`; nothing is merged into the core feed automatically. An international client therefore does not need to download local Chinese opportunities.
+- Optional records use their own [`schema.json`](data/opportunities/schema.json), including scope, industry, audience, AI policy, geography, and source evidence.
 
 ## Open for submissions
 
 | Status | Deadline | Category | Contest & requirements | Region / eligibility | Prize / fee |
 |---|---|---|---|---|---|
-| 🔥 Due today | 2026-08-31<br><sub>China Standard Time; exact time not stated</sub> | 🎬 Video | **[2026 Audiovisual China · Malanshan Cup AI Micro-Drama Innovation Competition](https://aigc.mgtv.com/challenges/detail?id=15)**<br><sub>Production companies, creative teams, or individuals; at least 3 landscape episodes or 5 vertical episodes · [Rules](https://gbdsj.hunan.gov.cn/gbdsj/xxgk/tzgg/202606/t20260611_33999282.html)</sub> | China | Prize pool above CNY 800,000 plus project incubation support<br><sub>Fee: Not stated</sub> |
-| 🔥 Due today | 2026-08-31<br><sub>Not stated on the official site</sub> | 🎬 Video | **[Astana AI Film Festival (AAIFF 2026)](https://aaiff.ai/)**<br><sub>Individuals, teams, and studios; generative AI must be integral; non-English films require English subtitles · [Rules](https://aaiff.ai/terms)</sub> | Kazakhstan / Open worldwide | US$1,000,000 competition prizes + US$1,000,000 production fund<br><sub>Fee: Free</sub> |
-| 🔥 Due today | 2026-08-31<br><sub>China Standard Time, 23:59</sub> | 🎬 Video | **[Story Blind Box: Dreamina Seedance 2.5 Blockout Reference Challenge](https://jimeng.jianying.com/ai-tool/activity-detail/2026-805-dreamina-weekly-challenge)**<br><sub>AI creators worldwide; a 15-second landscape video using the official blockout reference and Seedance 2.5 · [Rules](https://jimeng.jianying.com/ai-tool/activity-detail/2026-805-dreamina-weekly-challenge)</sub> | China / Open worldwide | US$50,000 champion prize + 1,000,000 Dreamina credits<br><sub>Fee: Not stated</sub> |
 | 🟢 Open | 2026-09-15<br><sub>Not stated on the official site</sub> | 🎬 Video | **[Austin AI Film Festival 2026](https://filmfreeway.com/AustinAIFilmFestival)**<br><sub>Creators aged 14+ worldwide; most AI categories require a majority of visual content to use AI-assisted creative tools · [Rules](https://filmfreeway.com/AustinAIFilmFestival)</sub> | United States / Open worldwide except restricted jurisdictions | Awards and selected screenings; see official page for prize details<br><sub>Fee: US$20 for most categories; a free option is listed for the student category</sub> |
 | 🟢 Open | 2026-09-27<br><sub>AoE (UTC−12)</sub> | 🎵 Audio | **[AI Song Contest 2026 — Bangkok](https://www.aisongcontest.com/join)**<br><sub>Human–AI co-created songs up to 4 minutes; prompt-only generation without human post-production is ineligible · [Rules](https://www.aisongcontest.com/join)</sub> | Thailand / Open worldwide | US$1,000 plus a trip to the Bangkok award show<br><sub>Fee: Free</sub> |
+| 🟢 Open | 2026-09-30<br><sub>Korea Standard Time, 23:59</sub> | 🖼️ Image<br>🎬 Video | **[AI ART AWARD — NEXT ART AI 2026](https://next-art-ai.com/en/apply/overview)**<br><sub>Open to all professions, nationalities, and ages; AI image and AI video categories · [Rules](https://next-art-ai.com/en/apply/overview)</sub> | South Korea / Open worldwide | KRW 21,000,000 total prize pool<br><sub>Fee: See official guidelines</sub> |
 | 🟢 Open | 2026-09-30<br><sub>Not stated on the official site</sub> | 🎬 Video | **[On Art AI Film Festival 2026](https://filmfreeway.com/OnAI)**<br><sub>Films completed after January 1, 2025 in which AI plays a key role; non-English and non-Polish films need English subtitles · [Rules](https://filmfreeway.com/OnAI)</sub> | Poland / Open worldwide | Diplomas in six categories; no cash or material prizes<br><sub>Fee: Paid via FilmFreeway; varies by category and deadline stage</sub> |
 | 🟢 Open | 2026-10-01<br><sub>Not stated on the official site</sub> | 🎬 Video | **[GenTO: Toronto AI Film Festival 2026](https://filmfreeway.com/GenTOAIFilmFestival)**<br><sub>AI-assisted, hybrid, or traditionally made short films, showcase films, music videos, and ads; non-English films need English subtitles · [Rules](https://filmfreeway.com/GenTOAIFilmFestival)</sub> | Canada / Open worldwide | Festival recognition and partner prizes; some categories may include mentorship or technology credits<br><sub>Fee: Regular US$30 / student US$25; late US$40 / student US$35</sub> |
 | 🟢 Open | 2026-10-11<br><sub>China Standard Time; exact time not stated</sub> | ✍️ Writing<br>🖼️ Image<br>🎬 Video<br>🎵 Audio<br>🧩 App | **[First 2026 AIGC and Visualization Creation Competition](https://aigc.capt.cn/)**<br><sub>Institutional and individual divisions; individual division includes university students and adults · [Rules](https://www.cuc.edu.cn/_t86/2026/0811/c1761a273225/page.htm)</sub> | China | Certificates and commemorative gifts<br><sub>Fee: Free</sub> |
@@ -37,9 +54,7 @@ Both feeds are generated from the contest data and update automatically when the
 
 ## Opening soon
 
-| Status | Deadline | Category | Contest & requirements | Region / eligibility | Prize / fee |
-|---|---|---|---|---|---|
-| 🔵 Opens 2026-09-01 | 2026-09-30<br><sub>Korea Standard Time, 23:59</sub> | 🖼️ Image<br>🎬 Video | **[AI ART AWARD — NEXT ART AI 2026](https://next-art-ai.com/en/apply/overview)**<br><sub>Open to all professions, nationalities, and ages; AI image and AI video categories · [Rules](https://next-art-ai.com/en/apply/overview)</sub> | South Korea / Open worldwide | KRW 21,000,000 total prize pool<br><sub>Fee: See official guidelines</sub> |
+_No verified contests yet. Contributions are welcome._
 
 ## Categories
 
@@ -63,25 +78,30 @@ These sources remain useful over time, but a listed past edition may no longer a
 
 ## Inclusion criteria
 
-A contest must meet all of the following requirements:
+The core directory keeps its original AIGC focus. A contest must meet all of the following requirements:
 
-1. AIGC is central to creating or judging the work, rather than appearing only in promotional copy.
+1. AIGC is central to the contest rather than incidental.
 2. An accessible official event page, rule page, or organizer announcement is available.
-3. The submission window, eligibility, and work requirements can be verified.
+3. The submission window, eligibility, work requirements, fee, and reward can be recorded without guessing.
 4. Submissions are currently open, or an official future opening date has been announced.
-5. The event is not a giveaway, a course-sales campaign, or an unverifiable listing with conflicting dates.
+5. The event is not a giveaway, a course-sales campaign, an ordinary conference, or an unverifiable listing with conflicting dates.
+
+Verified AI-compatible and selected general creative, technical, research, or innovation opportunities may instead enter an opt-in shard. They must have a concrete submission and outcome, explicit structured scope and AI-policy fields, and the same official-source standard. They never enter the core directory by default.
 
 Official rules and organizer announcements take priority over media reports and aggregator sites. Paid contests are explicitly marked. A listing that is not marked “free” should not be assumed to be free.
 
 ## Contributing
 
-You can [suggest a contest](../../issues/new?template=add-contest.yml) or [report a change](../../issues/new?template=update-contest.yml). When opening a pull request, add or update the corresponding object in [`data/contests.json`](data/contests.json), run the commands below, and include the regenerated outputs.
+You can [suggest a contest](../../issues/new?template=add-contest.yml) or [report a change](../../issues/new?template=update-contest.yml). When opening a pull request, put core AIGC contests in [`data/contests.json`](data/contests.json) and broader opportunities in the matching opt-in shard listed by [`data/opportunities/manifest.json`](data/opportunities/manifest.json).
 
-Field definitions are in [`data/schema.json`](data/schema.json), the maintenance policy is in [`MAINTENANCE.md`](MAINTENANCE.md), and notable updates are recorded in [`CHANGELOG.md`](CHANGELOG.md).
+Core field definitions are in [`data/schema.json`](data/schema.json), optional field definitions are in [`data/opportunities/schema.json`](data/opportunities/schema.json), source and candidate schemas sit beside their data files, the maintenance policy is in [`MAINTENANCE.md`](MAINTENANCE.md), and notable updates are recorded in [`CHANGELOG.md`](CHANGELOG.md).
 
 ```bash
 python3 scripts/build_readme.py
 python3 scripts/build_readme.py --check
+python3 scripts/collect_sources.py --check
+python3 scripts/validate_opportunities.py --check
+python3 scripts/collect_sources.py --dry-run --source modelscope-events
 python3 -m unittest discover -s tests -v
 ```
 

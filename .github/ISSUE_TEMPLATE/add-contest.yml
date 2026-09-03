@@ -1,5 +1,5 @@
 name: 提交赛事
-description: 推荐一个仍可报名或即将开放的 AIGC 创作比赛
+description: 推荐一个仍可报名或即将开放的核心 AIGC 赛事，或可选扩展机会
 title: "[新增赛事] "
 labels: ["new-contest"]
 body:
@@ -43,6 +43,35 @@ body:
         - 应用 / 交互 / 小程序
     validations:
       required: true
+  - type: dropdown
+    id: scope
+    attributes:
+      label: 机会范围
+      options:
+        - AIGC 原生赛事
+        - AI 可辅助赛事（进入可选扩展数据集）
+        - 普通高价值赛事（进入可选扩展数据集）
+    validations:
+      required: true
+  - type: dropdown
+    id: ai_policy
+    attributes:
+      label: AI 使用政策
+      options:
+        - 要求使用 AI
+        - 允许使用 AI
+        - 限制使用 AI
+        - 禁止使用 AI
+        - 官方规则未说明
+    validations:
+      required: true
+  - type: textarea
+    id: region_industry
+    attributes:
+      label: 举办地、可参赛地区与行业
+      placeholder: 例如：活动在宁夏举办、全国均可参加；文旅与产品设计
+    validations:
+      required: true
   - type: textarea
     id: eligibility
     attributes:
@@ -58,4 +87,3 @@ body:
           required: true
         - label: 我提供的日期来自官方页面，而不是只有聚合站或群聊截图。
           required: true
-

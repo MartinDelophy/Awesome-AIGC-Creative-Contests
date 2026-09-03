@@ -48,6 +48,10 @@ jobs:
           python-version: "3.12"
       - name: Run tests
         run: python3 -m unittest discover -s tests -v
+      - name: Validate source registry and candidates
+        run: python3 scripts/collect_sources.py --check
+      - name: Validate opt-in opportunity datasets
+        run: python3 scripts/validate_opportunities.py --check
       - name: Verify generated README
         run: python3 scripts/build_readme.py --check
 
@@ -63,6 +67,10 @@ jobs:
           python-version: "3.12"
       - name: Run tests
         run: python3 -m unittest discover -s tests -v
+      - name: Validate source registry and candidates
+        run: python3 scripts/collect_sources.py --check
+      - name: Remove expired opt-in opportunities
+        run: python3 scripts/validate_opportunities.py --prune
       - name: Remove expired contests and rebuild README
         run: python3 scripts/build_readme.py --prune
       - name: Commit cleanup
@@ -72,6 +80,6 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/contests.json README.md README.zh-CN.md feed.xml deadlines.ics
-          git commit -m "chore: remove expired contests"
+          git add data/contests.json data/opportunities/*.json README.md README.zh-CN.md feed.xml deadlines.ics
+          git commit -m "chore: remove expired opportunities"
           git push

@@ -1,0 +1,189 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/MartinDelophy/Awesome-AIGC-Creative-Contests/blob/main/data/opportunities/schema.json",
+  "title": "Opt-in extended opportunity directory",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "id",
+      "title",
+      "region",
+      "categories",
+      "organizer",
+      "start_date",
+      "deadline",
+      "timezone",
+      "eligibility",
+      "fee",
+      "prize",
+      "official_url",
+      "rules_url",
+      "verified_on",
+      "scope",
+      "opportunity_type",
+      "industries",
+      "audiences",
+      "ai_policy",
+      "geography",
+      "source_meta",
+      "en"
+    ],
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+      },
+      "title": { "type": "string", "minLength": 1 },
+      "region": { "type": "string", "minLength": 1 },
+      "categories": {
+        "type": "array",
+        "minItems": 1,
+        "uniqueItems": true,
+        "items": {
+          "enum": [
+            "video",
+            "image",
+            "audio",
+            "text",
+            "app",
+            "code",
+            "research",
+            "hardware",
+            "business",
+            "other"
+          ]
+        }
+      },
+      "organizer": { "type": "string", "minLength": 1 },
+      "start_date": { "type": "string", "format": "date" },
+      "deadline": { "type": "string", "format": "date" },
+      "timezone": { "type": "string", "minLength": 1 },
+      "eligibility": { "type": "string", "minLength": 1 },
+      "fee": { "type": "string", "minLength": 1 },
+      "prize": { "type": "string", "minLength": 1 },
+      "official_url": { "type": "string", "format": "uri", "pattern": "^https://" },
+      "rules_url": { "type": "string", "format": "uri", "pattern": "^https://" },
+      "verified_on": { "type": "string", "format": "date" },
+      "scope": {
+        "enum": ["aigc-native", "ai-compatible", "general"]
+      },
+      "opportunity_type": {
+        "enum": [
+          "contest",
+          "award",
+          "hackathon",
+          "call-for-works",
+          "innovation-challenge",
+          "grant-prize",
+          "accelerator"
+        ]
+      },
+      "industries": {
+        "type": "array",
+        "minItems": 1,
+        "uniqueItems": true,
+        "items": {
+          "enum": [
+            "ai-ml",
+            "advertising",
+            "architecture",
+            "culture-tourism",
+            "data-science",
+            "design",
+            "education",
+            "entrepreneurship",
+            "film-video",
+            "games",
+            "innovation",
+            "music-audio",
+            "photography",
+            "public-good",
+            "science-engineering",
+            "software",
+            "writing"
+          ]
+        }
+      },
+      "audiences": {
+        "type": "array",
+        "minItems": 1,
+        "uniqueItems": true,
+        "items": {
+          "enum": [
+            "individual",
+            "team",
+            "student",
+            "youth",
+            "professional",
+            "startup",
+            "company",
+            "nonprofit",
+            "researcher",
+            "educator"
+          ]
+        }
+      },
+      "ai_policy": {
+        "enum": ["required", "allowed", "restricted", "prohibited", "unknown"]
+      },
+      "geography": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["event_mode", "eligibility_scope"],
+        "properties": {
+          "event_mode": { "enum": ["online", "onsite", "hybrid", "unknown"] },
+          "country_code": { "type": "string", "pattern": "^[A-Z]{2}$" },
+          "administrative_area": { "type": "string", "minLength": 1 },
+          "city": { "type": "string", "minLength": 1 },
+          "eligibility_scope": {
+            "enum": ["global", "national", "regional", "local", "restricted", "unknown"]
+          },
+          "eligible_regions": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": { "type": "string", "minLength": 1 }
+          }
+        }
+      },
+      "source_meta": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["source_id", "source_tier", "first_seen", "last_checked", "evidence_urls"],
+        "properties": {
+          "source_id": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          },
+          "source_tier": {
+            "enum": ["official-api", "official-page", "trusted-platform", "discovery-only"]
+          },
+          "first_seen": { "type": "string", "format": "date" },
+          "last_checked": { "type": "string", "format": "date" },
+          "evidence_urls": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": { "type": "string", "format": "uri", "pattern": "^https://" }
+          }
+        }
+      },
+      "en": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["title", "region", "organizer", "timezone", "eligibility", "fee", "prize"],
+        "properties": {
+          "title": { "type": "string", "minLength": 1 },
+          "region": { "type": "string", "minLength": 1 },
+          "organizer": { "type": "string", "minLength": 1 },
+          "timezone": { "type": "string", "minLength": 1 },
+          "eligibility": { "type": "string", "minLength": 1 },
+          "fee": { "type": "string", "minLength": 1 },
+          "prize": { "type": "string", "minLength": 1 }
+        }
+      }
+    }
+  }
+}
