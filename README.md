@@ -21,7 +21,7 @@ Both feeds are generated only from the core AIGC data and update automatically w
 
 - **52 registered sources** across China and international government, organizer, association, platform, and discovery-only entry points.
 - **5 sources in the low-volume automated pilot**; sources blocked by robots, client-only rendering, or unclear listing status remain manual until a compliant adapter exists.
-- **13 candidates awaiting review** in [`data/candidates.json`](data/candidates.json). Candidates never appear in the public directory, RSS, or calendar until an official page and rules are verified.
+- **14 candidates awaiting review** in [`data/candidates.json`](data/candidates.json). Candidates never appear in the public directory, RSS, or calendar until an official page and rules are verified.
 
 The source registry lives in [`data/sources.json`](data/sources.json). The scheduled discovery workflow checks enabled public sources, deduplicates links against published contests and previous candidates, and preserves review decisions.
 
