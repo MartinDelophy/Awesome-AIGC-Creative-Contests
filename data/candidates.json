@@ -48,7 +48,7 @@
     "discovered_url": "https://www.usa.gov/challenges/nih-new-approach-methodologies-nams",
     "source_tier": "official-page",
     "first_seen": "2026-09-02",
-    "last_seen": "2026-09-06",
+    "last_seen": "2026-09-07",
     "status": "new",
     "match_reason": [
       "title:challenge",
@@ -62,7 +62,7 @@
     "discovered_url": "https://www.usa.gov/challenges/xtech-kinetic-reach",
     "source_tier": "official-page",
     "first_seen": "2026-09-02",
-    "last_seen": "2026-09-06",
+    "last_seen": "2026-09-07",
     "status": "new",
     "match_reason": [
       "url:challenge"
@@ -75,7 +75,7 @@
     "discovered_url": "https://www.usa.gov/challenges/1cdp-innovation-challenge",
     "source_tier": "official-page",
     "first_seen": "2026-09-02",
-    "last_seen": "2026-09-06",
+    "last_seen": "2026-09-07",
     "status": "new",
     "match_reason": [
       "title:challenge",
@@ -89,7 +89,7 @@
     "discovered_url": "https://www.usa.gov/challenges/careers-in-your-community-challenge",
     "source_tier": "official-page",
     "first_seen": "2026-09-02",
-    "last_seen": "2026-09-06",
+    "last_seen": "2026-09-07",
     "status": "new",
     "match_reason": [
       "title:challenge",
@@ -103,7 +103,7 @@
     "discovered_url": "https://www.usa.gov/challenges/halt-the-hitchhiker-invasive-species",
     "source_tier": "official-page",
     "first_seen": "2026-09-02",
-    "last_seen": "2026-09-06",
+    "last_seen": "2026-09-07",
     "status": "new",
     "match_reason": [
       "title:challenge",
@@ -117,7 +117,7 @@
     "discovered_url": "https://www.usa.gov/challenges/cto-challenge",
     "source_tier": "official-page",
     "first_seen": "2026-09-02",
-    "last_seen": "2026-09-06",
+    "last_seen": "2026-09-07",
     "status": "new",
     "match_reason": [
       "title:challenge",
@@ -131,7 +131,7 @@
     "discovered_url": "https://www.usa.gov/challenges/disaster-ready-human-services",
     "source_tier": "official-page",
     "first_seen": "2026-09-02",
-    "last_seen": "2026-09-06",
+    "last_seen": "2026-09-07",
     "status": "new",
     "match_reason": [
       "url:challenge"
@@ -144,7 +144,7 @@
     "discovered_url": "https://www.usa.gov/challenges/xtech-search-10",
     "source_tier": "official-page",
     "first_seen": "2026-09-02",
-    "last_seen": "2026-09-06",
+    "last_seen": "2026-09-07",
     "status": "new",
     "match_reason": [
       "url:challenge"
@@ -157,7 +157,7 @@
     "discovered_url": "https://www.usa.gov/challenges/gateways-blue-skies",
     "source_tier": "official-page",
     "first_seen": "2026-09-02",
-    "last_seen": "2026-09-06",
+    "last_seen": "2026-09-07",
     "status": "new",
     "match_reason": [
       "title:competition",
@@ -171,7 +171,7 @@
     "discovered_url": "https://www.usa.gov/challenges/cultivating-connected-communities",
     "source_tier": "official-page",
     "first_seen": "2026-09-02",
-    "last_seen": "2026-09-06",
+    "last_seen": "2026-09-07",
     "status": "new",
     "match_reason": [
       "title:challenge",
@@ -185,7 +185,7 @@
     "discovered_url": "https://www.usa.gov/challenges/nasa-techrise-student-challenge",
     "source_tier": "official-page",
     "first_seen": "2026-09-04",
-    "last_seen": "2026-09-06",
+    "last_seen": "2026-09-07",
     "status": "new",
     "match_reason": [
       "title:challenge",
@@ -199,7 +199,7 @@
     "discovered_url": "https://www.usa.gov/challenges/acl-caregiver-ai-prize",
     "source_tier": "official-page",
     "first_seen": "2026-09-02",
-    "last_seen": "2026-09-06",
+    "last_seen": "2026-09-07",
     "status": "rejected",
     "match_reason": [
       "title:challenge",
