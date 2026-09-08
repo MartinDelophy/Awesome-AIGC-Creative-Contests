@@ -193,6 +193,20 @@
     ]
   },
   {
+    "id": "usa-government-challenges-44afedbefe14bd07",
+    "source_id": "usa-government-challenges",
+    "title": "Ready, Set...ID the Biothreat Challenge",
+    "discovered_url": "https://www.usa.gov/challenges/ready-set-id-biothreat",
+    "source_tier": "official-page",
+    "first_seen": "2026-09-08",
+    "last_seen": "2026-09-08",
+    "status": "new",
+    "match_reason": [
+      "title:challenge",
+      "url:challenge"
+    ]
+  },
+  {
     "id": "usa-government-challenges-773cbc9b57361647",
     "source_id": "usa-government-challenges",
     "title": "ACL Caregiver AI Prize Challenge",
