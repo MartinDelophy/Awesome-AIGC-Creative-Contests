@@ -40,7 +40,7 @@ RSS 和 ICS 只由 AIGC 核心数据生成；核心清单更新后，订阅内�
 
 | 状态 | 截止时间 | 类别 | 赛事与要求 | 地区 / 资格 | 奖励 / 费用 |
 |---|---|---|---|---|---|
-| 🔥 3 天内截止 | 2026-09-15<br><sub>官网未注明</sub> | 🎬 视频 | **[Austin AI Film Festival 2026](https://filmfreeway.com/AustinAIFilmFestival)**<br><sub>全球 14 岁及以上创作者；多数 AI 竞赛单元要求主要视觉内容由 AI 辅助工具生成 · [规则](https://filmfreeway.com/AustinAIFilmFestival)</sub> | 美国 / 全球开放（部分受限地区除外） | 奖项与入选展映；具体奖励以官方页为准<br><sub>费用：多数单元 US$20；学生单元设免费选项</sub> |
+| 🔥 2 天内截止 | 2026-09-15<br><sub>官网未注明</sub> | 🎬 视频 | **[Austin AI Film Festival 2026](https://filmfreeway.com/AustinAIFilmFestival)**<br><sub>全球 14 岁及以上创作者；多数 AI 竞赛单元要求主要视觉内容由 AI 辅助工具生成 · [规则](https://filmfreeway.com/AustinAIFilmFestival)</sub> | 美国 / 全球开放（部分受限地区除外） | 奖项与入选展映；具体奖励以官方页为准<br><sub>费用：多数单元 US$20；学生单元设免费选项</sub> |
 | 🟢 报名中 | 2026-09-27<br><sub>AoE（UTC−12）</sub> | 🎵 音频 | **[AI Song Contest 2026 — Bangkok](https://www.aisongcontest.com/join)**<br><sub>人类与 AI 共创歌曲，最长 4 分钟；仅靠提示词生成、无人类后期参与的作品不合格 · [规则](https://www.aisongcontest.com/join)</sub> | 泰国 / 全球开放 | US$1,000 + 曼谷颁奖礼行程<br><sub>费用：免费</sub> |
 | 🟢 报名中 | 2026-09-30<br><sub>韩国时间 23:59</sub> | 🖼️ 图像<br>🎬 视频 | **[AI ART AWARD — NEXT ART AI 2026](https://next-art-ai.com/en/apply/overview)**<br><sub>不限职业、国籍与年龄；AI 图像与 AI 视频两类 · [规则](https://next-art-ai.com/en/apply/overview)</sub> | 韩国 / 全球开放 | 总奖金 KRW 21,000,000<br><sub>费用：以官方细则为准</sub> |
 | 🟢 报名中 | 2026-09-30<br><sub>官网未注明</sub> | 🎬 视频 | **[On Art AI Film Festival 2026](https://filmfreeway.com/OnAI)**<br><sub>2025 年 1 月 1 日后完成、AI 发挥关键作用的影片；非英语或波兰语作品需英文字幕 · [规则](https://filmfreeway.com/OnAI)</sub> | 波兰 / 全球开放 | 六个单元颁发获奖证书，无现金或实物奖金<br><sub>费用：通过 FilmFreeway 收费，金额依单元与阶段而定</sub> |
