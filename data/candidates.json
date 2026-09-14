@@ -6,7 +6,7 @@
     "discovered_url": "https://modelscope.cn/events/347/%E6%AF%94%E8%B5%9B%E4%BB%8B%E7%BB%8D",
     "source_tier": "trusted-platform",
     "first_seen": "2026-09-02",
-    "last_seen": "2026-09-13",
+    "last_seen": "2026-09-14",
     "status": "new",
     "match_reason": [
       "title:大赛",
@@ -20,7 +20,7 @@
     "discovered_url": "https://modelscope.cn/events/342/FlagOS%E5%BC%80%E6%94%BE%E8%AE%A1%E7%AE%97%E5%85%A8%E7%90%83%E6%8C%91%E6%88%98%E8%B5%9BS2",
     "source_tier": "trusted-platform",
     "first_seen": "2026-09-02",
-    "last_seen": "2026-09-09",
+    "last_seen": "2026-09-14",
     "status": "new",
     "match_reason": [
       "title:挑战赛",
@@ -34,7 +34,7 @@
     "discovered_url": "https://modelscope.cn/events/352/%E6%AF%94%E8%B5%9B%E4%BB%8B%E7%BB%8D",
     "source_tier": "trusted-platform",
     "first_seen": "2026-09-02",
-    "last_seen": "2026-09-13",
+    "last_seen": "2026-09-14",
     "status": "new",
     "match_reason": [
       "title:Hackathon",
@@ -204,6 +204,20 @@
     "match_reason": [
       "title:challenge",
       "url:challenge"
+    ]
+  },
+  {
+    "id": "modelscope-events-64deb759d9dc1c74",
+    "source_id": "modelscope-events",
+    "title": "蚂蚁灵波具身大模型挑战赛",
+    "discovered_url": "https://modelscope.cn/events/367/%E6%AF%94%E8%B5%9B%E4%BB%8B%E7%BB%8D",
+    "source_tier": "trusted-platform",
+    "first_seen": "2026-09-14",
+    "last_seen": "2026-09-14",
+    "status": "new",
+    "match_reason": [
+      "title:挑战赛",
+      "url:/events/"
     ]
   },
   {
