@@ -213,10 +213,38 @@
     "discovered_url": "https://modelscope.cn/events/367/%E6%AF%94%E8%B5%9B%E4%BB%8B%E7%BB%8D",
     "source_tier": "trusted-platform",
     "first_seen": "2026-09-14",
-    "last_seen": "2026-09-14",
+    "last_seen": "2026-09-15",
     "status": "new",
     "match_reason": [
       "title:挑战赛",
+      "url:/events/"
+    ]
+  },
+  {
+    "id": "modelscope-events-289fa7fca161ca33",
+    "source_id": "modelscope-events",
+    "title": "第八届工业互联网大赛",
+    "discovered_url": "https://modelscope.cn/events/370/%E6%AF%94%E8%B5%9B%E4%BB%8B%E7%BB%8D",
+    "source_tier": "trusted-platform",
+    "first_seen": "2026-09-15",
+    "last_seen": "2026-09-15",
+    "status": "new",
+    "match_reason": [
+      "title:大赛",
+      "url:/events/"
+    ]
+  },
+  {
+    "id": "modelscope-events-78cdf91a950a991f",
+    "source_id": "modelscope-events",
+    "title": "罕见·无界黑客松",
+    "discovered_url": "https://modelscope.cn/events/371/%E6%AF%94%E8%B5%9B%E4%BB%8B%E7%BB%8D",
+    "source_tier": "trusted-platform",
+    "first_seen": "2026-09-15",
+    "last_seen": "2026-09-15",
+    "status": "new",
+    "match_reason": [
+      "title:黑客松",
       "url:/events/"
     ]
   },
