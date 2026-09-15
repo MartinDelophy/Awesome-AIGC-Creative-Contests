@@ -6,20 +6,6 @@ METHOD:PUBLISH
 X-WR-CALNAME:AIGC Creative Contest Deadlines
 X-WR-CALDESC:Current deadlines from Awesome AIGC Creative Contests
 BEGIN:VEVENT
-UID:austin-ai-film-festival-2026@awesome-aigc-creative-contests
-DTSTAMP:20260826T000000Z
-DTSTART;VALUE=DATE:20260915
-DTEND;VALUE=DATE:20260916
-SUMMARY:Deadline: Austin AI Film Festival 2026
-DESCRIPTION:Creators aged 14+ worldwide\; most AI categories require a majo
- rity of visual content to use AI-assisted creative tools\nTime zone: Not s
- tated on the official site\nFee: US$20 for most categories\; a free option
-  is listed for the student category\nPrize: Awards and selected screenings
- \; see official page for prize details
-URL:https://filmfreeway.com/AustinAIFilmFestival
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
 UID:ai-song-contest-bangkok-2026@awesome-aigc-creative-contests
 DTSTAMP:20260826T000000Z
 DTSTART;VALUE=DATE:20260927

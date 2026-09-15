@@ -4,7 +4,7 @@ English | [简体中文](README.zh-CN.md)
 
 > A continuously maintained directory of active and officially announced AIGC creative contests worldwide, covering video, images, audio, writing, and AI applications.
 
-![Contests](https://img.shields.io/badge/active-11-2ea44f) ![Last verified](https://img.shields.io/badge/verified-2026-08-26-0969da) [![License: MIT](https://img.shields.io/badge/license-MIT-yellow.svg)](LICENSE)
+![Contests](https://img.shields.io/badge/active-10-2ea44f) ![Last verified](https://img.shields.io/badge/verified-2026-08-26-0969da) [![License: MIT](https://img.shields.io/badge/license-MIT-yellow.svg)](LICENSE)
 
 Missing a contest is often an information problem rather than a creative one. This project combines a verified core AIGC directory with a source-discovery pipeline. The core directory keeps only opportunities that are open for submissions or officially announced with a future opening date. Broader opportunities live in separate opt-in datasets. Expired entries are removed automatically and remain available through Git history.
 
@@ -21,7 +21,7 @@ Both feeds are generated only from the core AIGC data and update automatically w
 
 - **52 registered sources** across China and international government, organizer, association, platform, and discovery-only entry points.
 - **5 sources in the low-volume automated pilot**; sources blocked by robots, client-only rendering, or unclear listing status remain manual until a compliant adapter exists.
-- **16 candidates awaiting review** in [`data/candidates.json`](data/candidates.json). Candidates never appear in the public directory, RSS, or calendar until an official page and rules are verified.
+- **18 candidates awaiting review** in [`data/candidates.json`](data/candidates.json). Candidates never appear in the public directory, RSS, or calendar until an official page and rules are verified.
 
 The source registry lives in [`data/sources.json`](data/sources.json). The scheduled discovery workflow checks enabled public sources, deduplicates links against published contests and previous candidates, and preserves review decisions.
 
@@ -40,7 +40,6 @@ Broader verified opportunities are published separately under [`data/opportuniti
 
 | Status | Deadline | Category | Contest & requirements | Region / eligibility | Prize / fee |
 |---|---|---|---|---|---|
-| 🔥 Due today | 2026-09-15<br><sub>Not stated on the official site</sub> | 🎬 Video | **[Austin AI Film Festival 2026](https://filmfreeway.com/AustinAIFilmFestival)**<br><sub>Creators aged 14+ worldwide; most AI categories require a majority of visual content to use AI-assisted creative tools · [Rules](https://filmfreeway.com/AustinAIFilmFestival)</sub> | United States / Open worldwide except restricted jurisdictions | Awards and selected screenings; see official page for prize details<br><sub>Fee: US$20 for most categories; a free option is listed for the student category</sub> |
 | 🟢 Open | 2026-09-27<br><sub>AoE (UTC−12)</sub> | 🎵 Audio | **[AI Song Contest 2026 — Bangkok](https://www.aisongcontest.com/join)**<br><sub>Human–AI co-created songs up to 4 minutes; prompt-only generation without human post-production is ineligible · [Rules](https://www.aisongcontest.com/join)</sub> | Thailand / Open worldwide | US$1,000 plus a trip to the Bangkok award show<br><sub>Fee: Free</sub> |
 | 🟢 Open | 2026-09-30<br><sub>Korea Standard Time, 23:59</sub> | 🖼️ Image<br>🎬 Video | **[AI ART AWARD — NEXT ART AI 2026](https://next-art-ai.com/en/apply/overview)**<br><sub>Open to all professions, nationalities, and ages; AI image and AI video categories · [Rules](https://next-art-ai.com/en/apply/overview)</sub> | South Korea / Open worldwide | KRW 21,000,000 total prize pool<br><sub>Fee: See official guidelines</sub> |
 | 🟢 Open | 2026-09-30<br><sub>Not stated on the official site</sub> | 🎬 Video | **[On Art AI Film Festival 2026](https://filmfreeway.com/OnAI)**<br><sub>Films completed after January 1, 2025 in which AI plays a key role; non-English and non-Polish films need English subtitles · [Rules](https://filmfreeway.com/OnAI)</sub> | Poland / Open worldwide | Diplomas in six categories; no cash or material prizes<br><sub>Fee: Paid via FilmFreeway; varies by category and deadline stage</sub> |

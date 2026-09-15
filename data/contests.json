@@ -196,33 +196,6 @@
     }
   },
   {
-    "id": "austin-ai-film-festival-2026",
-    "title": "Austin AI Film Festival 2026",
-    "region": "美国 / 全球开放（部分受限地区除外）",
-    "categories": [
-      "video"
-    ],
-    "organizer": "Austin AI Film Festival",
-    "start_date": "2026-04-15",
-    "deadline": "2026-09-15",
-    "timezone": "官网未注明",
-    "eligibility": "全球 14 岁及以上创作者；多数 AI 竞赛单元要求主要视觉内容由 AI 辅助工具生成",
-    "fee": "多数单元 US$20；学生单元设免费选项",
-    "prize": "奖项与入选展映；具体奖励以官方页为准",
-    "official_url": "https://filmfreeway.com/AustinAIFilmFestival",
-    "rules_url": "https://filmfreeway.com/AustinAIFilmFestival",
-    "verified_on": "2026-08-26",
-    "en": {
-      "title": "Austin AI Film Festival 2026",
-      "region": "United States / Open worldwide except restricted jurisdictions",
-      "organizer": "Austin AI Film Festival",
-      "timezone": "Not stated on the official site",
-      "eligibility": "Creators aged 14+ worldwide; most AI categories require a majority of visual content to use AI-assisted creative tools",
-      "fee": "US$20 for most categories; a free option is listed for the student category",
-      "prize": "Awards and selected screenings; see official page for prize details"
-    }
-  },
-  {
     "id": "on-art-ai-film-festival-2026",
     "title": "On Art AI Film Festival 2026",
     "region": "波兰 / 全球开放",
