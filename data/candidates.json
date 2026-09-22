@@ -276,6 +276,21 @@
     ]
   },
   {
+    "id": "usa-government-challenges-cae1403d8bd5b61d",
+    "source_id": "usa-government-challenges",
+    "title": "DARPA Surgical Competition",
+    "discovered_url": "https://www.usa.gov/challenges/darpa-surgical-competition",
+    "source_tier": "official-page",
+    "first_seen": "2026-09-22",
+    "last_seen": "2026-09-22",
+    "status": "new",
+    "match_reason": [
+      "title:competition",
+      "url:challenge",
+      "url:competition"
+    ]
+  },
+  {
     "id": "usa-government-challenges-773cbc9b57361647",
     "source_id": "usa-government-challenges",
     "title": "ACL Caregiver AI Prize Challenge",
