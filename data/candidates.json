@@ -403,6 +403,20 @@
     ]
   },
   {
+    "id": "modelscope-events-0a88cf23fdd1a914",
+    "source_id": "modelscope-events",
+    "title": "支付宝AI付年度黑客松",
+    "discovered_url": "https://modelscope.cn/events/380/%E6%AF%94%E8%B5%9B%E4%BB%8B%E7%BB%8D",
+    "source_tier": "trusted-platform",
+    "first_seen": "2026-10-10",
+    "last_seen": "2026-10-10",
+    "status": "new",
+    "match_reason": [
+      "title:黑客松",
+      "url:/events/"
+    ]
+  },
+  {
     "id": "nasa-prizes-challenges-b4578af0fd231142",
     "source_id": "nasa-prizes-challenges",
     "title": "Article 2 Min Read Lunar Grounding Challenge",
