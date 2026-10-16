@@ -445,6 +445,21 @@
     ]
   },
   {
+    "id": "modelscope-events-5dcf872245effb7f",
+    "source_id": "modelscope-events",
+    "title": "天猫 AI 黑客松·高校挑战赛",
+    "discovered_url": "https://modelscope.cn/events/383/%E6%AF%94%E8%B5%9B%E4%BB%8B%E7%BB%8D",
+    "source_tier": "trusted-platform",
+    "first_seen": "2026-10-16",
+    "last_seen": "2026-10-16",
+    "status": "new",
+    "match_reason": [
+      "title:挑战赛",
+      "title:黑客松",
+      "url:/events/"
+    ]
+  },
+  {
     "id": "usa-government-challenges-773cbc9b57361647",
     "source_id": "usa-government-challenges",
     "title": "ACL Caregiver AI Prize Challenge",
