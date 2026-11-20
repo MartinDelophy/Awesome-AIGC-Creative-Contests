@@ -642,6 +642,76 @@
     ]
   },
   {
+    "id": "modelscope-events-0b8999529a030c22",
+    "source_id": "modelscope-events",
+    "title": "魔搭社区 X 虹桥国际科技周黑客松｜选手火热招募🚀",
+    "discovered_url": "https://modelscope.cn/events/432/%E6%AF%94%E8%B5%9B%E4%BB%8B%E7%BB%8D?from=list",
+    "source_tier": "trusted-platform",
+    "first_seen": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "status": "new",
+    "match_reason": [
+      "title:黑客松",
+      "url:/events/"
+    ]
+  },
+  {
+    "id": "modelscope-events-117c6119424c4d84",
+    "source_id": "modelscope-events",
+    "title": "AI造游戏，人人都是游戏制作人｜AI+∞开发者创作大赛第三期",
+    "discovered_url": "https://modelscope.cn/events/394/%E6%AF%94%E8%B5%9B%E4%BB%8B%E7%BB%8D?from=list",
+    "source_tier": "trusted-platform",
+    "first_seen": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "status": "new",
+    "match_reason": [
+      "title:大赛",
+      "url:/events/"
+    ]
+  },
+  {
+    "id": "modelscope-events-623f9142b6beb050",
+    "source_id": "modelscope-events",
+    "title": "48H和真实世界碰一碰｜首届地瓜机器人黑客松",
+    "discovered_url": "https://modelscope.cn/events/416/%E6%AF%94%E8%B5%9B%E7%AE%80%E4%BB%8B?from=list",
+    "source_tier": "trusted-platform",
+    "first_seen": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "status": "new",
+    "match_reason": [
+      "title:黑客松",
+      "url:/events/"
+    ]
+  },
+  {
+    "id": "modelscope-events-a430af46b6cd96a2",
+    "source_id": "modelscope-events",
+    "title": "群核科技Ahoolo 全球3D AI黑客松",
+    "discovered_url": "https://modelscope.cn/events/386/%E6%AF%94%E8%B5%9B%E4%BB%8B%E7%BB%8D?from=list",
+    "source_tier": "trusted-platform",
+    "first_seen": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "status": "new",
+    "match_reason": [
+      "title:黑客松",
+      "url:/events/"
+    ]
+  },
+  {
+    "id": "modelscope-events-c1455ceabc58c66c",
+    "source_id": "modelscope-events",
+    "title": "知乎黑客松S3 |湾区共创季",
+    "discovered_url": "https://modelscope.cn/events/421/%E6%AF%94%E8%B5%9B%E4%BB%8B%E7%BB%8D?from=list",
+    "source_tier": "trusted-platform",
+    "first_seen": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "status": "new",
+    "match_reason": [
+      "title:黑客松",
+      "url:/events/"
+    ]
+  },
+  {
     "id": "usa-government-challenges-773cbc9b57361647",
     "source_id": "usa-government-challenges",
     "title": "ACL Caregiver AI Prize Challenge",
