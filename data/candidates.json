@@ -712,6 +712,34 @@
     ]
   },
   {
+    "id": "modelscope-events-11cef0dfdf53fcad",
+    "source_id": "modelscope-events",
+    "title": "支付宝AI付年度黑客松",
+    "discovered_url": "https://modelscope.cn/events/380/%E6%AF%94%E8%B5%9B%E4%BB%8B%E7%BB%8D?from=list",
+    "source_tier": "trusted-platform",
+    "first_seen": "2026-11-22",
+    "last_seen": "2026-11-22",
+    "status": "new",
+    "match_reason": [
+      "title:黑客松",
+      "url:/events/"
+    ]
+  },
+  {
+    "id": "modelscope-events-b4f2437bb7a4ea23",
+    "source_id": "modelscope-events",
+    "title": "FlagOS开放计算全球挑战赛S2",
+    "discovered_url": "https://modelscope.cn/events/342/FlagOS%E5%BC%80%E6%94%BE%E8%AE%A1%E7%AE%97%E5%85%A8%E7%90%83%E6%8C%91%E6%88%98%E8%B5%9BS2?from=list",
+    "source_tier": "trusted-platform",
+    "first_seen": "2026-11-22",
+    "last_seen": "2026-11-22",
+    "status": "new",
+    "match_reason": [
+      "title:挑战赛",
+      "url:/events/"
+    ]
+  },
+  {
     "id": "usa-government-challenges-773cbc9b57361647",
     "source_id": "usa-government-challenges",
     "title": "ACL Caregiver AI Prize Challenge",
