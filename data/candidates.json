@@ -662,7 +662,7 @@
     "discovered_url": "https://modelscope.cn/events/394/%E6%AF%94%E8%B5%9B%E4%BB%8B%E7%BB%8D?from=list",
     "source_tier": "trusted-platform",
     "first_seen": "2026-11-20",
-    "last_seen": "2026-11-22",
+    "last_seen": "2026-11-23",
     "status": "new",
     "match_reason": [
       "title:大赛",
@@ -676,7 +676,7 @@
     "discovered_url": "https://modelscope.cn/events/416/%E6%AF%94%E8%B5%9B%E7%AE%80%E4%BB%8B?from=list",
     "source_tier": "trusted-platform",
     "first_seen": "2026-11-20",
-    "last_seen": "2026-11-22",
+    "last_seen": "2026-11-23",
     "status": "new",
     "match_reason": [
       "title:黑客松",
@@ -704,7 +704,7 @@
     "discovered_url": "https://modelscope.cn/events/421/%E6%AF%94%E8%B5%9B%E4%BB%8B%E7%BB%8D?from=list",
     "source_tier": "trusted-platform",
     "first_seen": "2026-11-20",
-    "last_seen": "2026-11-22",
+    "last_seen": "2026-11-23",
     "status": "new",
     "match_reason": [
       "title:黑客松",
@@ -718,7 +718,7 @@
     "discovered_url": "https://modelscope.cn/events/380/%E6%AF%94%E8%B5%9B%E4%BB%8B%E7%BB%8D?from=list",
     "source_tier": "trusted-platform",
     "first_seen": "2026-11-22",
-    "last_seen": "2026-11-22",
+    "last_seen": "2026-11-23",
     "status": "new",
     "match_reason": [
       "title:黑客松",
@@ -736,6 +736,20 @@
     "status": "new",
     "match_reason": [
       "title:挑战赛",
+      "url:/events/"
+    ]
+  },
+  {
+    "id": "modelscope-events-598d5de4bd854147",
+    "source_id": "modelscope-events",
+    "title": "2026 SPARK S全球AI硬件创新大赛正式启动",
+    "discovered_url": "https://modelscope.cn/events/439/%E6%AF%94%E8%B5%9B%E4%BB%8B%E7%BB%8D?from=list",
+    "source_tier": "trusted-platform",
+    "first_seen": "2026-11-23",
+    "last_seen": "2026-11-23",
+    "status": "new",
+    "match_reason": [
+      "title:大赛",
       "url:/events/"
     ]
   },
